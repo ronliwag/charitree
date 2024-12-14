@@ -81,7 +81,11 @@ html, body {
   left: 0;
 
   svg {
-    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 0;
+    height: 0;
   }
 
 
