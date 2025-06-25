@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charitree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <!--Main Header-->
+        <header class="main-header">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="src/image/Charitree Logo.svg" alt="ChariTree Logo">
+                    <span>ChariTree</span>
+                </a>
+            </div>
+            <div class="search-bar">
+                <form action="/search" method="get">
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                    <button type="submit" class="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="user-controls">
+                <a href="/logout" class="logout-button">Log Out</a>
+                <div class="user-avatar">
+                    <img src="src/image/user.png" alt="User Avatar">
+                </div>
+            </div>
+        </header>
+
+    <div class="content-container">
+    <!--Side Navigation Bar-->
+    <div class="not-bg">
+      <aside class="sidebar">
+        <div class="user-greeting">
+            <p>Hey, Alfred Joshua!</p>
+        </div>
+                
+        <div class="user-profile">
+          <div class="profile-icon">
+              <img src="src/image/tree icon.svg" alt="Tree Icon">
+          </div>
+          <div class="xp-info">
+            <p class="xp-label">Total XP</p>
+            <p class="xp-value">0 XP</p>
+          </div>
+          <button class="plant-tree-button">PLANT TREE</button>
+        </div>
+                
+        <nav class="sidebar-navigation">
+          <ul>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#donate">Donate</a></li>
+            <li><a href="#transparency">Transparency</a></li>
+            <li><a href="#visualization">Visualization</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="main-content-wrapper">
+        <section id="home" class="content-section active">
+          <div class="landing-content">
+            <div class="text-button">
+              <h1 class="title-text">
+                <span class="white" id="w1">Grow Change</span>
+                <span class="white" id="w2">Give Hope</span>
+                <span class="white" id="w3">Earn Rewards</span>
+                <span class="orange" id="o1">Turn Donations Into Impact</span>
+                <span class="orange" id="o2">One Tree at a Time</span>
+              </h1>
+              <div class="btns">
+                <button class="donate-now-button">DONATE NOW</button>
+                <button class="learn-more-button">LEARN MORE</button>
+              </div>
+              
+            </div>
+            <img src="src/image/ph.png" alt="Philippines Map with Tree Locations" class="phmap">
+          </div>
+        </section>
+        <section id="donate" class="content-section">
+          <div class="donate-content">
+            <h2>Donate Section</h2>
+          </div>
+
+        </section>
+        <section id="transparency" class="content-section">
+          <div class="transparency-content">
+            <h2>Transparency Section</h2>
+          </div>
+        </section>
+        <section id="visualization" class="content-section">
+          <div class="visualization-content">
+            <h2>Visualization Section</h2>
+          </div>
+        </section>
+       
+    </div>
+    
+      
+  <div class="gradient-bg">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+    <div class="gradients-container">
+      <div class="g1"></div>
+      <div class="g2"></div>
+      <div class="g3"></div>
+      <div class="g4"></div>
+      <div class="g5"></div>
+      <div class="interactive"></div>
+    </div>
+  </div>
+
+  </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
