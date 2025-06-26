@@ -67,6 +67,7 @@
             --text-secondary: #DDDDDD;
             --card-bg: rgba(18, 18, 18, 0.7);
             --card-border: rgba(255, 255, 255, 0.1);
+            --admin-accent: #4285F4;
         }
 
         @keyframes moveInCircle {
@@ -176,6 +177,7 @@
 
         .header-content {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             width: 100%;
             max-width: 1400px;
@@ -183,12 +185,33 @@
             gap: 20px;
         }
 
+        .header-left {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: flex-start;
+        }
+
+        .header-center {
+            display: flex;
+            justify-content: center;
+            flex: 2;
+            min-width: 300px;
+            max-width: 600px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: flex-end;
+        }
+
         .brand-logo {
             display: flex;
             align-items: center;
             text-decoration: none;
             color: white;
-            margin-right: auto;
         }
 
         .brand-logo img {
@@ -203,9 +226,7 @@
         }
 
         .search-container {
-            flex: 1;
-            max-width: 600px;
-            margin: 0 20px;
+            width: 100%;
         }
 
         .search-form {
@@ -263,7 +284,6 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            margin-left: auto;
         }
 
         .btn {
@@ -318,6 +338,19 @@
             width: 100%;
         }
 
+        .btn-admin {
+            background-color: var(--admin-accent);
+            color: white;
+            border: 2px solid var(--admin-accent);
+        }
+
+        .btn-admin:hover {
+            background-color: transparent;
+            color: var(--admin-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+        }
+
         .user-avatar img {
             width: 45px;
             height: 45px;
@@ -353,6 +386,133 @@
             display: flex;
             min-height: calc(100vh - 71px);
             position: relative;
+        }
+
+        /* Login/Register Modal */
+        .auth-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+        }
+
+        .auth-container {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--primary-accent);
+            position: relative;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .auth-header h2 {
+            font-size: 28px;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+        }
+
+        .auth-header p {
+            color: var(--text-secondary);
+        }
+
+        .auth-tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .auth-tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .auth-tab.active {
+            color: var(--primary-accent);
+            border-bottom: 2px solid var(--primary-accent);
+        }
+
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-accent);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text-secondary);
+        }
+
+        .auth-footer a {
+            color: var(--primary-accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-accent);
         }
 
         /* Sidebar Styles */
@@ -458,6 +618,59 @@
             box-shadow: 0 8px 25px rgba(73, 246, 42, 0.4);
         }
 
+        /* Team Members Section */
+        .team-members {
+            margin-top: 30px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .team-members h3 {
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .team-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 10px;
+            border: 2px solid var(--primary-accent);
+        }
+
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-name {
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 3px;
+        }
+
+        .team-role {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
         .main-navigation {
             margin-top: 20px;
         }
@@ -526,6 +739,196 @@
             padding: 0 20px;
         }
 
+        /* Admin Dashboard Styles */
+        .admin-dashboard {
+            display: none;
+            width: 100%;
+        }
+
+        .admin-dashboard.active {
+            display: block;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .admin-header h2 {
+            color: var(--admin-accent);
+            font-size: 28px;
+        }
+
+        .admin-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .admin-stat-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid var(--card-border);
+            transition: all 0.3s ease;
+        }
+
+        .admin-stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--admin-accent);
+        }
+
+        .admin-stat-card h3 {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .admin-stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--admin-accent);
+        }
+
+        .admin-stat-change {
+            font-size: 14px;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .admin-stat-change.positive {
+            color: var(--primary-accent);
+        }
+
+        .admin-stat-change.negative {
+            color: #FF5252;
+        }
+
+        .admin-tables {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .admin-tables {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .admin-table-container {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid var(--card-border);
+        }
+
+        .admin-table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .admin-table-header h3 {
+            color: var(--admin-accent);
+            font-size: 20px;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .admin-table th {
+            text-align: left;
+            padding: 12px 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            font-weight: bold;
+        }
+
+        .admin-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+        }
+
+        .admin-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .admin-table tr:hover td {
+            background-color: rgba(255, 255, 255, 0.03);
+            color: var(--text-primary);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .status-success {
+            background-color: rgba(73, 246, 42, 0.2);
+            color: var(--primary-accent);
+        }
+
+        .status-pending {
+            background-color: rgba(255, 214, 0, 0.2);
+            color: #FFD600;
+        }
+
+        .status-failed {
+            background-color: rgba(255, 82, 82, 0.2);
+            color: #FF5252;
+        }
+
+        .admin-charts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 1200px) {
+            .admin-charts {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .admin-chart-container {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid var(--card-border);
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chart-placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-secondary);
+        }
+
         /* Hero Section */
         .hero-section {
             padding: 60px 0 80px;
@@ -553,15 +956,6 @@
             display: block;
             margin-bottom: 10px;
         }
-
-        .hero-content h1 .hero-subtitle {
-        font-size: 35px; 
-        line-height: 1.3;
-        margin-top: 15px;
-        display: inline-block;
-        color: var(--text-secondary); /* Softer color than the highlights */
-        font-weight: normal;
-    }
 
         .highlight-accent {
             color: var(--primary-accent);
@@ -786,6 +1180,10 @@
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             border-color: var(--primary-accent);
+        }
+
+        .highlight-card:hover {
+            transform: scale(1.05) translateY(-10px);
         }
 
         .xp-card h3 {
@@ -1421,7 +1819,6 @@
         .stat-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            border-color: var(--primary-accent);
         }
 
         .stat-card .stat-value {
@@ -1461,6 +1858,84 @@
             color: var(--text-secondary);
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        /* Team Page Styles */
+        .team-page {
+            padding: 40px;
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .team-header h2 {
+            font-size: 36px;
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+        }
+
+        .team-header p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .team-members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .team-member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary-accent);
+        }
+
+        .team-member-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 3px solid var(--primary-accent);
+        }
+
+        .team-member-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-member-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .team-member-role {
+            font-size: 16px;
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+        }
+
+        .team-member-bio {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
         }
 
         /* Responsive Styles */
@@ -1564,27 +2039,28 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .header-left,
+            .header-center,
+            .header-right {
+                flex: none;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
 
         @media (max-width: 576px) {
             .global-header {
-                flex-direction: column;
                 padding: 15px;
             }
             
             .brand-logo {
-                margin-bottom: 15px;
-                margin-right: 0;
-            }
-            
-            .search-container {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-            
-            .user-actions {
-                width: 100%;
-                justify-content: center;
+                margin-bottom: 0;
             }
             
             .hero-content h1 {
@@ -1626,6 +2102,84 @@
     <!-- Skip to Content Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
+    <!-- Login/Register Modal (Initially hidden) -->
+    <div id="auth-modal" class="auth-modal" style="display: none;">
+        <div class="auth-container">
+            <button class="close-modal" aria-label="Close modal">&times;</button>
+            <div class="auth-header">
+                <h2>Welcome to ChariTree</h2>
+                <p>Login or register to continue</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <div class="auth-tab active" data-tab="login">Login</div>
+                <div class="auth-tab" data-tab="register">Register</div>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-username" class="form-label">Username</label>
+                    <input type="text" id="login-username" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password" class="form-label">Password</label>
+                    <input type="password" id="login-password" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Login as:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="login-type" value="user" checked>
+                            <span>User</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="login-type" value="admin">
+                            <span>Admin</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                
+                <div class="auth-footer">
+                    Don't have an account? <a href="#" class="switch-to-register">Register here</a>
+                </div>
+            </form>
+            
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label for="register-username" class="form-label">Username</label>
+                    <input type="text" id="register-username" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-email" class="form-label">Email</label>
+                    <input type="email" id="register-email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-password" class="form-label">Password</label>
+                    <input type="password" id="register-password" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-confirm" class="form-label">Confirm Password</label>
+                    <input type="password" id="register-confirm" class="form-control" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+                
+                <div class="auth-footer">
+                    Already have an account? <a href="#" class="switch-to-login">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
     <!-- Gradient Background -->
     <div class="gradient-bg">
         <div class="gradients-container">
@@ -1640,28 +2194,36 @@
     <!-- Global Header -->
     <header class="global-header" role="banner">
         <div class="container header-content">
-            <a href="home.html" class="brand-logo">
-                <img src="src/image/ctnbg.png" alt="ChariTree Logo" width="40" height="40">
-                <span class="brand-name">ChariTree</span>
-            </a>
-            
-            <div class="search-container">
-                <form class="search-form" role="search">
-                    <label for="search-input" class="visually-hidden">Search</label>
-                    <input type="search" id="search-input" placeholder="Search charities, locations..." aria-label="Search">
-                    <button type="submit" class="search-button" aria-label="Submit search">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </button>
-                </form>
+            <div class="header-left">
+                <a href="home.html" class="brand-logo">
+                    <img src="src/image/ctnbg.png" alt="ChariTree Logo" width="40" height="40">
+                    <span class="brand-name">ChariTree</span>
+                </a>
             </div>
             
-            <div class="user-actions">
-                <a href="/logout" class="btn btn-sm btn-outline">Logout</a>
-                <div class="user-avatar">
-                    <img src="src/image/leo.jpg" alt="User profile" width="45" height="45">
+            <div class="header-center">
+                <div class="search-container">
+                    <form class="search-form" role="search">
+                        <label for="search-input" class="visually-hidden">Search</label>
+                        <input type="search" id="search-input" placeholder="Search charities, locations..." aria-label="Search">
+                        <button type="submit" class="search-button" aria-label="Submit search">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <div class="user-actions">
+                    <button id="login-btn" class="btn btn-sm btn-outline">Login</button>
+                    <button id="register-btn" class="btn btn-sm btn-primary">Register</button>
+                    <div class="user-avatar" id="user-avatar" style="display: none;">
+                        <img src="src/image/leo.jpg" alt="User profile" width="45" height="45">
+                    </div>
+                    <button id="logout-btn" class="btn btn-sm btn-outline" style="display: none;">Logout</button>
                 </div>
             </div>
         </div>
@@ -1670,20 +2232,20 @@
     <!-- App Layout -->
     <div class="app-container">
         <!-- Sidebar Navigation -->
-        <aside class="app-sidebar" role="navigation">
+        <aside class="app-sidebar" role="navigation" id="app-sidebar" style="display: none;">
             <div class="user-profile-card">
                 <div class="welcome-message">
-                    <p>Welcome back, <strong>Leo</strong>!</p>
+                    <p>Welcome back, <strong id="username-display">Guest</strong>!</p>
                 </div>
                 
                 <div class="profile-summary">
                     <div class="avatar-container">
-                        <img src="src/image/leo.jpg" alt="Leo's profile picture">
+                        <img id="profile-avatar" src="src/image/leo.jpg" alt="User profile picture">
                     </div>
                     
                     <div class="xp-summary">
                         <p class="label">Total XP</p>
-                        <p class="value">15,800</p>
+                        <p class="value" id="total-xp">0</p>
                     </div>
                     
                     <button class="btn btn-primary btn-block plant-tree-button">
@@ -1731,23 +2293,189 @@
                             <span>Visualization</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="#team">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>Our Team</span>
+                        </a>
+                    </li>
+                    <li id="admin-nav-item" style="display: none;">
+                        <a href="#admin">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                            <span>Admin Dashboard</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </aside>
         
         <!-- Main Content -->
         <main id="main-content" class="app-main-content" role="main">
+            <!-- Admin Dashboard -->
+            <section id="admin" class="admin-dashboard">
+                <div class="container">
+                    <div class="admin-header">
+                        <h2>Admin Dashboard</h2>
+                        <button id="admin-logout-btn" class="btn btn-admin">Logout</button>
+                    </div>
+                    
+                    <div class="admin-stats">
+                        <div class="admin-stat-card">
+                            <h3>Total Donations</h3>
+                            <div class="admin-stat-value">₱1,245,678</div>
+                            <div class="admin-stat-change positive">↑ 12% from last month</div>
+                        </div>
+                        <div class="admin-stat-card">
+                            <h3>Total Trees Planted</h3>
+                            <div class="admin-stat-value">60,532</div>
+                            <div class="admin-stat-change positive">↑ 8% from last month</div>
+                        </div>
+                        <div class="admin-stat-card">
+                            <h3>Active Users</h3>
+                            <div class="admin-stat-value">12,543</div>
+                            <div class="admin-stat-change positive">↑ 5% from last month</div>
+                        </div>
+                        <div class="admin-stat-card">
+                            <h3>Charity Partners</h3>
+                            <div class="admin-stat-value">24</div>
+                            <div class="admin-stat-change">No change</div>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-charts">
+                        <div class="admin-chart-container">
+                            <div class="chart-placeholder">Monthly Donations Chart</div>
+                        </div>
+                        <div class="admin-chart-container">
+                            <div class="chart-placeholder">User Growth Chart</div>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-tables">
+                        <div class="admin-table-container">
+                            <div class="admin-table-header">
+                                <h3>Recent Donations</h3>
+                            </div>
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Amount</th>
+                                        <th>Type</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Maria S.</td>
+                                        <td>₱2,500</td>
+                                        <td>Monetary</td>
+                                        <td>2023-06-15</td>
+                                        <td><span class="status-badge status-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Juan D.</td>
+                                        <td>10kg</td>
+                                        <td>Food</td>
+                                        <td>2023-06-14</td>
+                                        <td><span class="status-badge status-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Community Center</td>
+                                        <td>50 packs</td>
+                                        <td>Clothes</td>
+                                        <td>2023-06-13</td>
+                                        <td><span class="status-badge status-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anna L.</td>
+                                        <td>₱1,000</td>
+                                        <td>Monetary</td>
+                                        <td>2023-06-12</td>
+                                        <td><span class="status-badge status-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Robert K.</td>
+                                        <td>5kg</td>
+                                        <td>Essentials</td>
+                                        <td>2023-06-11</td>
+                                        <td><span class="status-badge status-pending">Processing</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="admin-table-container">
+                            <div class="admin-table-header">
+                                <h3>Recent Users</h3>
+                            </div>
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Joined</th>
+                                        <th>XP</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>MariaS</td>
+                                        <td>maria@example.com</td>
+                                        <td>2023-06-10</td>
+                                        <td>12,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>JuanD</td>
+                                        <td>juan@example.com</td>
+                                        <td>2023-06-09</td>
+                                        <td>1,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CommunityPH</td>
+                                        <td>community@example.com</td>
+                                        <td>2023-06-08</td>
+                                        <td>5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AnnaL</td>
+                                        <td>anna@example.com</td>
+                                        <td>2023-06-07</td>
+                                        <td>3,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RobertK</td>
+                                        <td>robert@example.com</td>
+                                        <td>2023-06-06</td>
+                                        <td>750</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Hero Section -->
             <section id="home" class="content-section active">
                 <div class="hero-section">
                     <div class="container">
                         <div class="hero-content">
-                          <h1>
-                              <span class="highlight-accent">Grow Change</span>
-                              <span class="highlight-accent">Give Hope</span>
-                              <span class="highlight-accent">Earn Rewards</span>
-                              <span class="hero-subtitle">Turn Donations Into Impact One Tree at a Time</span>
-                          </h1>
+                            <h1>
+                                <span class="highlight-accent">Grow Change</span>
+                                <span class="highlight-accent">Give Hope</span>
+                                <span class="highlight-accent">Earn Rewards</span>
+                                <span>Turn Donations Into Impact</span>
+                                <span>One Tree at a Time</span>
+                            </h1>
                             <p>ChariTree bridges philanthropy and sustainability by converting your donations into planted trees, creating measurable environmental and social impact.</p>
                             <div class="hero-actions">
                                 <a href="#donate" class="btn btn-primary btn-lg donate-now-button">Donate Now</a>
@@ -2235,6 +2963,54 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Team Section -->
+            <section id="team" class="content-section">
+                <div class="team-page">
+                    <div class="team-header">
+                        <h2>Our Team</h2>
+                        <p>The passionate individuals behind ChariTree who are working to make a difference</p>
+                    </div>
+                    
+                    <div class="team-members-grid">
+                        <div class="team-member-card">
+                            <div class="team-member-avatar">
+                                <img src="src/image/leo.jpg" alt="Team Member">
+                            </div>
+                            <h3 class="team-member-name">Leo</h3>
+                            <p class="team-member-role">Fullstack Developer</p>
+                            <p class="team-member-bio">The visionary behind ChariTree's technical implementation.</p>
+                        </div>
+                        
+                        <div class="team-member-card">
+                            <div class="team-member-avatar">
+                                <img src="assets/users/user2.jpg" alt="Team Member">
+                            </div>
+                            <h3 class="team-member-name">Member 2</h3>
+                            <p class="team-member-role">Position</p>
+                            <p class="team-member-bio">Description of their role and contributions.</p>
+                        </div>
+                        
+                        <div class="team-member-card">
+                            <div class="team-member-avatar">
+                                <img src="assets/users/user3.jpg" alt="Team Member">
+                            </div>
+                            <h3 class="team-member-name">Member 3</h3>
+                            <p class="team-member-role">Position</p>
+                            <p class="team-member-bio">Description of their role and contributions.</p>
+                        </div>
+                        
+                        <div class="team-member-card">
+                            <div class="team-member-avatar">
+                                <img src="assets/users/user4.jpg" alt="Team Member">
+                            </div>
+                            <h3 class="team-member-name">Member 4</h3>
+                            <p class="team-member-role">Position</p>
+                            <p class="team-member-bio">Description of their role and contributions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 
@@ -2256,6 +3032,7 @@
                         <li><a href="#donate">Donate</a></li>
                         <li><a href="#transparency">Transparency</a></li>
                         <li><a href="#visualization">Visualization</a></li>
+                        <li><a href="#team">Our Team</a></li>
                     </ul>
                 </div>
                 <div class="link-group">
@@ -2312,36 +3089,253 @@
     
     <!-- JavaScript -->
     <script>
-        // Handle navigation between sections
-        document.addEventListener('DOMContentLoaded', function() {
-            // Function to handle hash changes
-            function handleHashChange() {
-                const hash = window.location.hash.substring(1);
-                const validSections = ['home', 'donate', 'transparency', 'visualization'];
-                
-                if (validSections.includes(hash)) {
-                    // Hide all sections
-                    document.querySelectorAll('.content-section').forEach(section => {
-                        section.classList.remove('active');
-                    });
-                    
-                    // Show the target section
-                    document.getElementById(hash).classList.add('active');
-                    
-                    // Update active state in navigation
-                    document.querySelectorAll('.main-navigation li').forEach(item => {
-                        item.classList.remove('active');
-                        if (item.querySelector('a').getAttribute('href') === `#${hash}`) {
-                            item.classList.add('active');
-                        }
-                    });
-                    
-                    // Scroll to top of the section
-                    document.getElementById(hash).scrollTo(0, 0);
+        // User authentication state
+        let currentUser = null;
+        let isAdmin = false;
+
+        // Sample user data
+        const users = [
+            { username: "Leo", password: "1111", email: "leo@example.com", isAdmin: true, xp: 15800 },
+            { username: "user1", password: "password1", email: "user1@example.com", isAdmin: false, xp: 5000 },
+            { username: "user2", password: "password2", email: "user2@example.com", isAdmin: false, xp: 2500 }
+        ];
+
+        // DOM elements
+        const authModal = document.getElementById('auth-modal');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const loginBtn = document.getElementById('login-btn');
+        const registerBtn = document.getElementById('register-btn');
+        const logoutBtn = document.getElementById('logout-btn');
+        const adminLogoutBtn = document.getElementById('admin-logout-btn');
+        const userAvatar = document.getElementById('user-avatar');
+        const appSidebar = document.getElementById('app-sidebar');
+        const usernameDisplay = document.getElementById('username-display');
+        const totalXp = document.getElementById('total-xp');
+        const adminNavItem = document.getElementById('admin-nav-item');
+        const adminDashboard = document.getElementById('admin');
+        const contentSections = document.querySelectorAll('.content-section');
+        const authTabs = document.querySelectorAll('.auth-tab');
+        const switchToRegister = document.querySelector('.switch-to-register');
+        const switchToLogin = document.querySelector('.switch-to-login');
+        const closeModal = document.querySelector('.close-modal');
+
+        // Show login modal
+        loginBtn.addEventListener('click', () => {
+            authModal.style.display = 'flex';
+            document.getElementById('login-form').style.display = 'flex';
+            document.getElementById('register-form').style.display = 'none';
+            authTabs.forEach(tab => {
+                if (tab.dataset.tab === 'login') {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
                 }
+            });
+        });
+
+        // Show register modal
+        registerBtn.addEventListener('click', () => {
+            authModal.style.display = 'flex';
+            document.getElementById('register-form').style.display = 'flex';
+            document.getElementById('login-form').style.display = 'none';
+            authTabs.forEach(tab => {
+                if (tab.dataset.tab === 'register') {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            authModal.style.display = 'none';
+        });
+
+        // Switch to register form
+        switchToRegister.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'flex';
+            authTabs.forEach(tab => {
+                if (tab.dataset.tab === 'register') {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+        });
+
+        // Switch to login form
+        switchToLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'flex';
+            authTabs.forEach(tab => {
+                if (tab.dataset.tab === 'login') {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+        });
+
+        // Auth tab switching
+        authTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                authTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                if (tab.dataset.tab === 'login') {
+                    document.getElementById('login-form').style.display = 'flex';
+                    document.getElementById('register-form').style.display = 'none';
+                } else {
+                    document.getElementById('login-form').style.display = 'none';
+                    document.getElementById('register-form').style.display = 'flex';
+                }
+            });
+        });
+
+        // Login form submission
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+            const loginType = document.querySelector('input[name="login-type"]:checked').value;
+            
+            const user = users.find(u => u.username === username && u.password === password);
+            
+            if (user) {
+                currentUser = user;
+                isAdmin = loginType === 'admin' && user.isAdmin;
+                updateUIAfterLogin();
+                authModal.style.display = 'none';
+            } else {
+                alert('Invalid username or password');
+            }
+        });
+
+        // Register form submission
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('register-username').value;
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('register-confirm').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
             }
             
-            // Initial load
+            if (users.some(u => u.username === username)) {
+                alert('Username already exists');
+                return;
+            }
+            
+            // Add new user
+            const newUser = {
+                username,
+                email,
+                password,
+                isAdmin: false,
+                xp: 0
+            };
+            
+            users.push(newUser);
+            currentUser = newUser;
+            isAdmin = false;
+            updateUIAfterLogin();
+            authModal.style.display = 'none';
+        });
+
+        // Logout
+        function handleLogout() {
+            currentUser = null;
+            isAdmin = false;
+            updateUIAfterLogout();
+        }
+
+        logoutBtn.addEventListener('click', handleLogout);
+        adminLogoutBtn.addEventListener('click', handleLogout);
+
+        // Update UI after login
+        function updateUIAfterLogin() {
+            // Hide login/register buttons, show avatar and logout
+            loginBtn.style.display = 'none';
+            registerBtn.style.display = 'none';
+            userAvatar.style.display = 'block';
+            logoutBtn.style.display = 'inline-block';
+            
+            // Show sidebar
+            appSidebar.style.display = 'block';
+            
+            // Update user info
+            usernameDisplay.textContent = currentUser.username;
+            totalXp.textContent = currentUser.xp.toLocaleString();
+            document.getElementById('profile-avatar').src = 'src/image/leo.jpg';
+            
+            // Show admin nav item if admin
+            if (isAdmin) {
+                adminNavItem.style.display = 'block';
+                window.location.hash = 'admin';
+            } else {
+                adminNavItem.style.display = 'none';
+                window.location.hash = 'home';
+            }
+        }
+
+        // Update UI after logout
+        function updateUIAfterLogout() {
+            // Show login/register buttons, hide avatar and logout
+            loginBtn.style.display = 'inline-block';
+            registerBtn.style.display = 'inline-block';
+            userAvatar.style.display = 'none';
+            logoutBtn.style.display = 'none';
+            
+            // Hide sidebar
+            appSidebar.style.display = 'none';
+            
+            // Redirect to home
+            window.location.hash = 'home';
+        }
+
+        // Handle navigation between sections
+        function handleHashChange() {
+            const hash = window.location.hash.substring(1);
+            
+            // Hide all sections
+            document.querySelectorAll('.content-section, .admin-dashboard').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the target section
+            if (hash === 'admin' && isAdmin) {
+                document.getElementById('admin').classList.add('active');
+            } else if (hash === 'admin' && !isAdmin) {
+                window.location.hash = 'home';
+            } else {
+                const targetSection = document.getElementById(hash) || document.getElementById('home');
+                targetSection.classList.add('active');
+            }
+            
+            // Update active state in navigation
+            document.querySelectorAll('.main-navigation li').forEach(item => {
+                item.classList.remove('active');
+                const link = item.querySelector('a');
+                if (link && link.getAttribute('href') === `#${hash}`) {
+                    item.classList.add('active');
+                }
+            });
+            
+            // Scroll to top of the section
+            const targetElement = document.getElementById(hash) || document.getElementById('home');
+            targetElement.scrollTo(0, 0);
+        }
+
+        // Initial load
+        document.addEventListener('DOMContentLoaded', function() {
             if (!window.location.hash) {
                 window.location.hash = 'home';
             } else {
@@ -2396,6 +3390,13 @@
             revealElements.forEach(element => {
                 observer.observe(element);
             });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === authModal) {
+                authModal.style.display = 'none';
+            }
         });
     </script>
 </body>
