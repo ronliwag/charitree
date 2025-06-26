@@ -952,6 +952,12 @@
             flex-direction: column;
         }
 
+        .hero-content h1 .smaller-text {
+        font-size: 2.5rem; 
+        margin-top: 15px; 
+        opacity: 0.9; 
+}
+
         .hero-content h1 span {
             display: block;
             margin-bottom: 10px;
@@ -1732,13 +1738,26 @@
         }
 
         .donation-item {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            margin-bottom: 20px; /* Add space between items */
+            padding: 15px; /* Add inner padding */
+            background: rgba(255, 255, 255, 0.05); /* Slightly lighter background */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .donation-details h4 {
+            margin-bottom: 5px; /* Space between name and donation */
+            font-size: 18px; /* Slightly larger name */
+        }
+
+        .donation-details p {
+            margin-bottom: 8px; /* Space between donation and XP */
+            font-size: 16px; /* Slightly larger text */
+        }
+
+        .xp-badge {
+            margin-top: 5px; /* Space above XP badge */
+            display: inline-block;
+            padding: 3px 10px; /* Better padding */
         }
 
         .donation-avatar img {
@@ -1769,6 +1788,44 @@
         }
 
         /* Impact Card */
+        .impact-potential-header {
+            margin-bottom: 15px !important; /* Reduced from 40px */
+        }
+
+        .impact-potential-header h2 {
+            margin-bottom: 5px !important; /* Reduced from 15px */
+        }
+
+        .stats-grid {
+            gap: 15px; /* Space between cards */
+        }
+
+        .stat-card {
+            padding: 20px; /* Inner padding */
+            min-width: 180px; /* Slightly wider */
+        }
+
+        .stat-value {
+            font-size: 36px; /* Larger value */
+            margin-bottom: 10px; /* Space between value and label */
+        }
+
+        .stat-label {
+            font-size: 16px; /* Larger label */
+        }
+
+        .recent-donations {
+            margin-bottom: 40px; /* Space before impact section */
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2); /* Slightly darker background */
+            border-radius: 15px; /* Rounded corners */
+        }
+
+        .recent-donations h3 {
+            margin-bottom: 25px; /* Space below heading */
+            font-size: 22px; /* Larger heading */
+        }
+
         .impact-card {
             background: var(--card-bg);
             border: 1px solid var(--primary-accent);
@@ -1851,7 +1908,7 @@
         .section-header h2 {
             font-size: 32px;
             color: var(--secondary-accent);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .section-header p {
@@ -2378,35 +2435,35 @@
                                         <td>Maria S.</td>
                                         <td>₱2,500</td>
                                         <td>Monetary</td>
-                                        <td>2023-06-15</td>
+                                        <td>2025-06-15</td>
                                         <td><span class="status-badge status-success">Completed</span></td>
                                     </tr>
                                     <tr>
                                         <td>Juan D.</td>
                                         <td>10kg</td>
                                         <td>Food</td>
-                                        <td>2023-06-14</td>
+                                        <td>2025-06-14</td>
                                         <td><span class="status-badge status-success">Completed</span></td>
                                     </tr>
                                     <tr>
                                         <td>Community Center</td>
                                         <td>50 packs</td>
                                         <td>Clothes</td>
-                                        <td>2023-06-13</td>
+                                        <td>2025-06-13</td>
                                         <td><span class="status-badge status-success">Completed</span></td>
                                     </tr>
                                     <tr>
                                         <td>Anna L.</td>
                                         <td>₱1,000</td>
                                         <td>Monetary</td>
-                                        <td>2023-06-12</td>
+                                        <td>2025-06-12</td>
                                         <td><span class="status-badge status-success">Completed</span></td>
                                     </tr>
                                     <tr>
                                         <td>Robert K.</td>
                                         <td>5kg</td>
                                         <td>Essentials</td>
-                                        <td>2023-06-11</td>
+                                        <td>2025-06-11</td>
                                         <td><span class="status-badge status-pending">Processing</span></td>
                                     </tr>
                                 </tbody>
@@ -2430,31 +2487,31 @@
                                     <tr>
                                         <td>MariaS</td>
                                         <td>maria@example.com</td>
-                                        <td>2023-06-10</td>
+                                        <td>2025-06-10</td>
                                         <td>12,500</td>
                                     </tr>
                                     <tr>
                                         <td>JuanD</td>
                                         <td>juan@example.com</td>
-                                        <td>2023-06-09</td>
+                                        <td>2025-06-09</td>
                                         <td>1,000</td>
                                     </tr>
                                     <tr>
                                         <td>CommunityPH</td>
                                         <td>community@example.com</td>
-                                        <td>2023-06-08</td>
+                                        <td>2025-6-08</td>
                                         <td>5,000</td>
                                     </tr>
                                     <tr>
                                         <td>AnnaL</td>
                                         <td>anna@example.com</td>
-                                        <td>2023-06-07</td>
+                                        <td>2025-6-07</td>
                                         <td>3,200</td>
                                     </tr>
                                     <tr>
                                         <td>RobertK</td>
                                         <td>robert@example.com</td>
-                                        <td>2023-06-06</td>
+                                        <td>2025-06-06</td>
                                         <td>750</td>
                                     </tr>
                                 </tbody>
@@ -2473,8 +2530,7 @@
                                 <span class="highlight-accent">Grow Change</span>
                                 <span class="highlight-accent">Give Hope</span>
                                 <span class="highlight-accent">Earn Rewards</span>
-                                <span>Turn Donations Into Impact</span>
-                                <span>One Tree at a Time</span>
+                                 <span class="smaller-text">Turn Donations Into Impact, One Tree at a Time</span>
                             </h1>
                             <p>ChariTree bridges philanthropy and sustainability by converting your donations into planted trees, creating measurable environmental and social impact.</p>
                             <div class="hero-actions">
@@ -2483,7 +2539,7 @@
                             </div>
                         </div>
                         <div class="hero-visual">
-                            <img src="src/image/treeplanting.jpeg" alt="Visualization of trees planted across the Philippines" loading="lazy">
+                            <img src="src/image/treeplanting.jpeg" alt="Visualization of trees planted across Manila" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -2554,7 +2610,7 @@
                                     </svg>
                                 </div>
                                 <h3>Plant</h3>
-                                <p>Convert your XP into real trees planted across the Philippines through our partner organizations.</p>
+                                <p>Convert your XP into real trees planted across Manila through our partner organizations.</p>
                             </div>
                         </div>
                     </div>
@@ -2598,7 +2654,7 @@
                     <div class="container">
                         <div class="section-header">
                             <h2 class="section-title">Charity Centers</h2>
-                            <p class="section-subtitle">Our verified network of donation centers across the Philippines</p>
+                            <p class="section-subtitle">Our verified network of donation centers across Manila</p>
                         </div>
                         
                         <div class="charity-carousel">
@@ -2813,10 +2869,10 @@
                         <div class="donation-grid">
                             <div class="donation-item">
                                 <div class="donation-avatar">
-                                    <img src="src/image/leo.jpg" alt="User avatar" loading="lazy">
+                                    <img src="src/image/fyang.jpg" alt="User avatar" loading="lazy">
                                 </div>
                                 <div class="donation-details">
-                                    <h4>Maria S.</h4>
+                                    <h4>Fyang Smith</h4>
                                     <p>Donated ₱2,500</p>
                                     <span class="xp-badge">+12,500XP</span>
                                 </div>
@@ -2824,10 +2880,10 @@
                             
                             <div class="donation-item">
                                 <div class="donation-avatar">
-                                    <img src="assets/users/user2.jpg" alt="User avatar" loading="lazy">
+                                    <img src="src/image/mica.jpg" alt="User avatar" loading="lazy">
                                 </div>
                                 <div class="donation-details">
-                                    <h4>Juan D.</h4>
+                                    <h4>Mika Salamanca</h4>
                                     <p>Donated 10kg food</p>
                                     <span class="xp-badge">+1,000XP</span>
                                 </div>
@@ -2835,19 +2891,19 @@
                             
                             <div class="donation-item">
                                 <div class="donation-avatar">
-                                    <img src="assets/users/user3.jpg" alt="User avatar" loading="lazy">
+                                    <img src="src/image/pup.jpg" alt="User avatar" loading="lazy">
                                 </div>
                                 <div class="donation-details">
-                                    <h4>Community Center</h4>
-                                    <p>Donated 50 packs</p>
-                                    <span class="xp-badge">+5,000XP</span>
+                                    <h4>PUP - Manila</h4>
+                                    <p>Donated 50 sacks of Rice</p>
+                                    <span class="xp-badge">+50,000XP</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Impact Stats -->
-                    <div class="section-header">
+                    <div class="section-header impact-potential-header">
                         <h2>Your Impact Potential</h2>
                     </div>
                     <div class="stats-grid">
@@ -2959,7 +3015,7 @@
                                 <p>Map would appear here</p>
                             </div>
                         </div>
-                        <p style="color: var(--text-secondary); text-align: center;">The trees you've helped plant across the Philippines</p>
+                        <p style="color: var(--text-secondary); text-align: center;">The trees you've helped plant across Manila</p>
                     </div>
                 </div>
             </section>
@@ -2975,38 +3031,40 @@
                     <div class="team-members-grid">
                         <div class="team-member-card">
                             <div class="team-member-avatar">
-                                <img src="src/image/leo.jpg" alt="Team Member">
+                                <img src="src/image/leo1.jpg" alt="Team Member">
                             </div>
                             <h3 class="team-member-name">Leo</h3>
                             <p class="team-member-role">Fullstack Developer</p>
-                            <p class="team-member-bio">The visionary behind ChariTree's technical implementation.</p>
+                            <p class="team-member-bio"> Responsible for the end-to-end development of ChariTree’s system architecture, ensuring seamless integration between front-end interfaces and back-end services.</p>
                         </div>
                         
                         <div class="team-member-card">
                             <div class="team-member-avatar">
-                                <img src="assets/users/user2.jpg" alt="Team Member">
+                                <img src="src/image/ei.jpg" alt="Team Member">
                             </div>
-                            <h3 class="team-member-name">Member 2</h3>
-                            <p class="team-member-role">Position</p>
-                            <p class="team-member-bio">Description of their role and contributions.</p>
+                            <h3 class="team-member-name">Alfred Joshua Palpalatoc</h3>
+                            <p class="team-member-role">UI/UX Lead</p>
+                            <p class="team-member-bio">Spearheaded the visual and interactive design of ChariTree, ensuring every interface was intuitive, accessible, and visually engaging.</p>
                         </div>
                         
                         <div class="team-member-card">
                             <div class="team-member-avatar">
-                                <img src="assets/users/user3.jpg" alt="Team Member">
+                                <img src="src/image/ron.jpg" alt="Team Member">
                             </div>
-                            <h3 class="team-member-name">Member 3</h3>
-                            <p class="team-member-role">Position</p>
-                            <p class="team-member-bio">Description of their role and contributions.</p>
+                            <h3 class="team-member-name">Ron Corwin Liwag</h3>
+                            <p class="team-member-role">Database Architect</p>
+                            <p class="team-member-bio">Designed and optimized the backbone of ChariTree’s data systems. With a keen eye for structure and efficiency, 
+                                he built scalable and secure databases.</p>
                         </div>
                         
                         <div class="team-member-card">
                             <div class="team-member-avatar">
-                                <img src="assets/users/user4.jpg" alt="Team Member">
+                                <img src="src/image/francis.jpg" alt="Team Member">
                             </div>
-                            <h3 class="team-member-name">Member 4</h3>
-                            <p class="team-member-role">Position</p>
-                            <p class="team-member-bio">Description of their role and contributions.</p>
+                            <h3 class="team-member-name">Francis Erick Romasanta</h3>
+                            <p class="team-member-role">Technical Project Lead</p>
+                            <p class="team-member-bio">Guided the team from conception to completion, overseeing every technical decision with strategic insight. He ensured timely progress,
+                                and facilitated collaboration across the development lifecycle.</p>
                         </div>
                     </div>
                 </div>
@@ -3082,7 +3140,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 ChariTree. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p>&copy; 2025 ChariTree. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
             </div>
         </div>
     </footer>
