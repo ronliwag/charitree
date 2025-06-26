@@ -444,6 +444,7 @@ body {
   height: calc(100vh - 71px); // Fixed height
   position: relative;
   width: 100%; // Ensure full width
+  overflow-y: hidden;
 }
 
 .content-section {
@@ -562,4 +563,95 @@ section{
     height: auto;
     padding: 0;
     margin: 0;
+}
+
+/* Donation Section Styles */
+.donate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.donation-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.donation-card {
+  background: rgba(18, 18, 18, 0.7); /* Match your sidebar transparency */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border like your sidebar */
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 350px;
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.donation-card h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.donation-description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.donation-benefits {
+  text-align: left;
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  list-style-type: none;
+  
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+    
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #49F62A;
+      font-weight: bold;
+    }
+  }
+}
+
+.donate-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #49F62A;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+
+  &:hover {
+    background: #49F62A;
+    color: #121212;
+  }
+}
+
+@media (max-width: 768px) {
+  .donation-card {
+    width: 100%;
+    max-width: 400px;
+  }
 }
