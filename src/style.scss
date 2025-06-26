@@ -193,7 +193,7 @@ img {
     .gradients-container {
         width: 100%;
         height: 100%;
-        filter: url(#goo) blur(40px);
+        filter: url(#goo) blur(80px);
     }
     
     .g1, .g2, .g3, .g4, .g5 {
@@ -203,7 +203,7 @@ img {
         height: 80%;
         top: 10%;
         left: 10%;
-        opacity: 0.3;
+        opacity: 1;
     }
     
     .g1 {
@@ -226,7 +226,7 @@ img {
     }
     
     .g4 {
-        background: radial-gradient(circle at center, rgba(244, 225, 34, 0.8) 0, rgba(244, 225, 34, 0) 50%) no-repeat;
+        background: radial-gradient(circle at center, #ffc802 0, rgba(244, 225, 34, 0) 50%) no-repeat;
         transform-origin: calc(50% - 200px);
         animation: moveHorizontal 40s ease infinite;
     }
