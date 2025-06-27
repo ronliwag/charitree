@@ -25,6 +25,8 @@
     
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="module" src="src/firebaseConfig.js"></script>
     
     <!-- CSS -->
     <style>
@@ -2910,7 +2912,7 @@
                                 <span class="highlight-accent">Grow Change</span>
                                 <span class="highlight-accent">Give Hope</span>
                                 <span class="highlight-accent">Earn Rewards</span>
-                                 <span class="smaller-text">Turn Donations Into Impact, One Tree at a Time</span>
+                                <span class="smaller-text">Turn Donations Into Impact, One Tree at a Time</span>
                             </h1>
                             <p>ChariTree bridges philanthropy and sustainability by converting your donations into planted trees, creating measurable environmental and social impact.</p>
                             <div class="hero-actions">
@@ -3138,8 +3140,8 @@
                     </div>
                     
                     <!-- Monetary Donation Form -->
-                    <div class="donation-form-container" id="monetary-form">
-                        <form class="donation-form">
+                    <div class="donation-form-container" id="monetary-form-container">
+                        <form class="donation-form" id="monetary-form">
                             <h3>Monetary Donation</h3>
                             
                             <div class="form-group">
@@ -3204,8 +3206,8 @@
                     </div>
                     
                     <!-- Item Donation Form -->
-                    <div class="donation-form-container" id="item-form" style="display: none;">
-                        <form class="donation-form">
+                    <div class="donation-form-container" id="item-form-container" style="display: none;">
+                        <form class="donation-form" id="item-form">
                             <h3>Item Donation</h3>
                             
                             <div class="form-group">
@@ -3738,110 +3740,6 @@
             });
         });
 
-        // Login form submission
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const username = document.getElementById('login-username').value;
-            const password = document.getElementById('login-password').value;
-            const loginType = document.querySelector('input[name="login-type"]:checked').value;
-            
-            const user = users.find(u => u.username === username && u.password === password);
-            
-            if (user) {
-                currentUser = user;
-                isAdmin = loginType === 'admin' && user.isAdmin;
-                updateUIAfterLogin();
-                authModal.style.display = 'none';
-            } else {
-                alert('Invalid username or password');
-            }
-        });
-
-        // Register form submission
-        registerForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const username = document.getElementById('register-username').value;
-            const email = document.getElementById('register-email').value;
-            const password = document.getElementById('register-password').value;
-            const confirmPassword = document.getElementById('register-confirm').value;
-            
-            if (password !== confirmPassword) {
-                alert('Passwords do not match');
-                return;
-            }
-            
-            if (users.some(u => u.username === username)) {
-                alert('Username already exists');
-                return;
-            }
-            
-            // Add new user
-            const newUser = {
-                username,
-                email,
-                password,
-                isAdmin: false,
-                xp: 0
-            };
-            
-            users.push(newUser);
-            currentUser = newUser;
-            isAdmin = false;
-            updateUIAfterLogin();
-            authModal.style.display = 'none';
-        });
-
-        // Logout
-        function handleLogout() {
-            currentUser = null;
-            isAdmin = false;
-            updateUIAfterLogout();
-        }
-
-        logoutBtn.addEventListener('click', handleLogout);
-        adminLogoutBtn.addEventListener('click', handleLogout);
-
-        // Update UI after login
-        function updateUIAfterLogin() {
-            // Hide login/register buttons, show avatar and logout
-            loginBtn.style.display = 'none';
-            registerBtn.style.display = 'none';
-            userAvatar.style.display = 'block';
-            logoutBtn.style.display = 'inline-block';
-            
-            // Show sidebar
-            appSidebar.style.display = 'block';
-            
-            // Update user info
-            usernameDisplay.textContent = currentUser.username;
-            totalXp.textContent = currentUser.xp.toLocaleString();
-            document.getElementById('profile-avatar').src = 'src/image/leo.jpg';
-            
-            // Show admin nav item if admin
-            if (isAdmin) {
-                adminNavItem.style.display = 'block';
-                window.location.hash = 'admin';
-            } else {
-                adminNavItem.style.display = 'none';
-                window.location.hash = 'home';
-            }
-        }
-
-        // Update UI after logout
-        function updateUIAfterLogout() {
-            // Show login/register buttons, hide avatar and logout
-            loginBtn.style.display = 'inline-block';
-            registerBtn.style.display = 'inline-block';
-            userAvatar.style.display = 'none';
-            logoutBtn.style.display = 'none';
-            
-            // Hide sidebar
-            appSidebar.style.display = 'none';
-            
-            // Redirect to home
-            window.location.hash = 'home';
-        }
-
         // Plant Tree Button
         plantTreeBtn.addEventListener('click', () => {
             if (!currentUser) {
@@ -4295,6 +4193,7 @@
             });
             
             // Donation type toggle
+            // Donation type toggle
             const donationTypeBtns = document.querySelectorAll('.donation-type-btn');
             donationTypeBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
@@ -4303,14 +4202,16 @@
                     // Add active class to clicked button
                     this.classList.add('active');
                     
-                    // Hide all forms
-                    document.querySelectorAll('.donation-form-container').forEach(form => {
-                        form.style.display = 'none';
+                    // Get the form container ID from data attribute
+                    const formContainerId = this.getAttribute('data-form') + '-form-container';
+                    
+                    // Hide all form containers
+                    document.querySelectorAll('.donation-form-container').forEach(container => {
+                        container.style.display = 'none';
                     });
                     
-                    // Show the selected form
-                    const formId = this.getAttribute('data-form') + '-form';
-                    document.getElementById(formId).style.display = 'block';
+                    // Show the selected form container
+                    document.getElementById(formContainerId).style.display = 'block';
                 });
             });
             
