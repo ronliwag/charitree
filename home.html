@@ -23,6 +23,9 @@
     <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
     
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <!-- CSS -->
     <style>
         @font-face {
@@ -515,6 +518,107 @@
             color: var(--primary-accent);
         }
 
+        /* Plant Tree Modal */
+        .plant-tree-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+            display: none;
+        }
+
+        .plant-tree-container {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--primary-accent);
+            position: relative;
+        }
+
+        .plant-tree-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .plant-tree-header h2 {
+            font-size: 28px;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+        }
+
+        .plant-tree-header p {
+            color: var(--text-secondary);
+        }
+
+        .plant-tree-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tree-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .tree-option {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tree-option:hover {
+            border-color: var(--primary-accent);
+            background-color: rgba(73, 246, 42, 0.1);
+        }
+
+        .tree-option.selected {
+            border-color: var(--primary-accent);
+            background-color: rgba(73, 246, 42, 0.2);
+        }
+
+        .tree-option h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        .tree-option p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .tree-option .xp-cost {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 3px 10px;
+            background-color: rgba(73, 246, 42, 0.2);
+            color: var(--primary-accent);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .plant-tree-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
         /* Sidebar Styles */
         .app-sidebar {
             width: 350px;
@@ -759,7 +863,7 @@
         }
 
         .admin-header h2 {
-            color: var(--admin-accent);
+            color: var(--secondary-accent);
             font-size: 28px;
         }
 
@@ -781,7 +885,7 @@
         .admin-stat-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            border-color: var(--admin-accent);
+            border-color: var(--secondary-accent);
         }
 
         .admin-stat-card h3 {
@@ -793,7 +897,7 @@
         .admin-stat-value {
             font-size: 32px;
             font-weight: bold;
-            color: var(--admin-accent);
+            color: var(--secondary-accent);
         }
 
         .admin-stat-change {
@@ -839,7 +943,7 @@
         }
 
         .admin-table-header h3 {
-            color: var(--admin-accent);
+            color: var(--secondary-accent);
             font-size: 20px;
         }
 
@@ -918,17 +1022,6 @@
             align-items: center;
         }
 
-        .chart-placeholder {
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--text-secondary);
-        }
-
         /* Hero Section */
         .hero-section {
             padding: 60px 0 80px;
@@ -953,10 +1046,10 @@
         }
 
         .hero-content h1 .smaller-text {
-        font-size: 2.5rem; 
-        margin-top: 15px; 
-        opacity: 0.9; 
-}
+            font-size: 2.5rem; 
+            margin-top: 15px; 
+            opacity: 0.9; 
+        }
 
         .hero-content h1 span {
             display: block;
@@ -1000,14 +1093,18 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        /* Stats Marquee */
+        /* Stats Marquee - Elevated Position */
         .stats-marquee {
             background-color: rgba(0, 0, 0, 0.4);
             border-radius: 15px;
             padding: 30px;
-            margin: 60px 0;
+            margin: -30px auto 60px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 1200px;
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .marquee-content {
@@ -1738,26 +1835,26 @@
         }
 
         .donation-item {
-            margin-bottom: 20px; /* Add space between items */
-            padding: 15px; /* Add inner padding */
-            background: rgba(255, 255, 255, 0.05); /* Slightly lighter background */
-            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
         }
 
         .donation-details h4 {
-            margin-bottom: 5px; /* Space between name and donation */
-            font-size: 18px; /* Slightly larger name */
+            margin-bottom: 5px;
+            font-size: 18px;
         }
 
         .donation-details p {
-            margin-bottom: 8px; /* Space between donation and XP */
-            font-size: 16px; /* Slightly larger text */
+            margin-bottom: 8px;
+            font-size: 16px;
         }
 
         .xp-badge {
-            margin-top: 5px; /* Space above XP badge */
+            margin-top: 5px;
             display: inline-block;
-            padding: 3px 10px; /* Better padding */
+            padding: 3px 10px;
         }
 
         .donation-avatar img {
@@ -1789,41 +1886,41 @@
 
         /* Impact Card */
         .impact-potential-header {
-            margin-bottom: 15px !important; /* Reduced from 40px */
+            margin-bottom: 15px !important;
         }
 
         .impact-potential-header h2 {
-            margin-bottom: 5px !important; /* Reduced from 15px */
+            margin-bottom: 5px !important;
         }
 
         .stats-grid {
-            gap: 15px; /* Space between cards */
+            gap: 15px;
         }
 
         .stat-card {
-            padding: 20px; /* Inner padding */
-            min-width: 180px; /* Slightly wider */
+            padding: 20px;
+            min-width: 180px;
         }
 
         .stat-value {
-            font-size: 36px; /* Larger value */
-            margin-bottom: 10px; /* Space between value and label */
+            font-size: 36px;
+            margin-bottom: 10px;
         }
 
         .stat-label {
-            font-size: 16px; /* Larger label */
+            font-size: 16px;
         }
 
         .recent-donations {
-            margin-bottom: 40px; /* Space before impact section */
+            margin-bottom: 40px;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.2); /* Slightly darker background */
-            border-radius: 15px; /* Rounded corners */
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
         }
 
         .recent-donations h3 {
-            margin-bottom: 25px; /* Space below heading */
-            font-size: 22px; /* Larger heading */
+            margin-bottom: 25px;
+            font-size: 22px;
         }
 
         .impact-card {
@@ -1995,6 +2092,197 @@
             line-height: 1.6;
         }
 
+        /* Enhanced Chart Styles */
+        .chart-container {
+            width: 100%;
+            height: 400px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .chart-wrapper {
+            width: 100%;
+            height: 100%;
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .chart-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-accent);
+        }
+
+        .chart-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: var(--text-primary);
+        }
+
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+        }
+
+        .legend-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Tree Map Visualization */
+        .tree-map-container {
+            width: 100%;
+            height: 500px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--primary-accent);
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tree-map-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: var(--text-primary);
+        }
+
+        .tree-map {
+            width: 100%;
+            height: calc(100% - 40px);
+            position: relative;
+        }
+
+        .tree-map-item {
+            position: absolute;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .tree-map-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(73, 246, 42, 0.5);
+            z-index: 10;
+        }
+
+        .tree-map-item .tree-count {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 10px;
+        }
+
+        /* Impact Timeline */
+        .timeline-container {
+            width: 100%;
+            margin: 40px 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-accent);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-accent);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::after {
+            right: -10px;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+        }
+
+        .timeline-text {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
         /* Responsive Styles */
         @media (max-width: 1200px) {
             .hero-content h1 {
@@ -2030,6 +2318,28 @@
             
             .section-subtitle {
                 font-size: 16px;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .left::after, .right::after {
+                left: 21px;
+            }
+
+            .right {
+                left: 0%;
             }
         }
 
@@ -2108,6 +2418,21 @@
             .header-content {
                 flex-direction: column;
                 gap: 15px;
+            }
+            
+            .stats-marquee {
+                margin: 0 auto 40px;
+                width: calc(100% - 40px);
+            }
+            
+            .marquee-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat-item {
+                width: 100%;
+                max-width: 300px;
             }
         }
 
@@ -2237,6 +2562,61 @@
         </div>
     </div>
     
+    <!-- Plant Tree Modal -->
+    <div id="plant-tree-modal" class="plant-tree-modal">
+        <div class="plant-tree-container">
+            <div class="plant-tree-header">
+                <h2>Plant a Tree</h2>
+                <p>Convert your XP points to plant trees in Manila</p>
+            </div>
+            
+            <form class="plant-tree-form">
+                <div class="form-group">
+                    <label for="tree-location" class="form-label">Planting Location</label>
+                    <select id="tree-location" class="form-control" required>
+                        <option value="">Select planting location</option>
+                        <option value="rizal-park">Rizal Park, Manila</option>
+                        <option value="la-mesa">La Mesa Watershed</option>
+                        <option value="araneta">Araneta City, Quezon City</option>
+                        <option value="bgc">Bonifacio Global City</option>
+                        <option value="marikina">Marikina Watershed</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Tree Type</label>
+                    <div class="tree-options">
+                        <div class="tree-option selected">
+                            <h3>Narra Tree</h3>
+                            <p>The national tree of the Philippines, known for its durability and beautiful flowers.</p>
+                            <span class="xp-cost">5,000 XP</span>
+                        </div>
+                        <div class="tree-option">
+                            <h3>Mango Tree</h3>
+                            <p>Provides delicious fruits and excellent shade.</p>
+                            <span class="xp-cost">7,500 XP</span>
+                        </div>
+                        <div class="tree-option">
+                            <h3>Bamboo</h3>
+                            <p>Fast-growing and excellent for preventing soil erosion.</p>
+                            <span class="xp-cost">4,000 XP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tree-message" class="form-label">Dedication Message (Optional)</label>
+                    <textarea id="tree-message" class="form-control" rows="3" placeholder="Add a personal message that will be displayed with your tree"></textarea>
+                </div>
+                
+                <div class="plant-tree-actions">
+                    <button type="button" class="btn btn-outline" id="cancel-plant-tree">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Plant Tree</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
     <!-- Gradient Background -->
     <div class="gradient-bg">
         <div class="gradients-container">
@@ -2305,7 +2685,7 @@
                         <p class="value" id="total-xp">0</p>
                     </div>
                     
-                    <button class="btn btn-primary btn-block plant-tree-button">
+                    <button class="btn btn-primary btn-block plant-tree-button" id="plant-tree-btn">
                         Plant a Tree
                     </button>
                 </div>
@@ -2408,10 +2788,10 @@
                     
                     <div class="admin-charts">
                         <div class="admin-chart-container">
-                            <div class="chart-placeholder">Monthly Donations Chart</div>
+                            <canvas id="adminDonationsChart"></canvas>
                         </div>
                         <div class="admin-chart-container">
-                            <div class="chart-placeholder">User Growth Chart</div>
+                            <canvas id="adminUsersChart"></canvas>
                         </div>
                     </div>
                     
@@ -2544,7 +2924,7 @@
                     </div>
                 </div>
                 
-                <!-- Stats Marquee -->
+                <!-- Stats Marquee - Elevated Position -->
                 <section class="stats-marquee">
                     <div class="container">
                         <div class="marquee-content">
@@ -2659,7 +3039,7 @@
                         
                         <div class="charity-carousel">
                             <div class="carousel-container">
-                                <div class="charity-grid" role="list">
+                                <div class="charity-grid">
                                     <div class="charity-card" role="listitem">
                                         <img src="src/image/Caritas Manila1.png" alt="Caritas Manila facility" loading="lazy">
                                         <div class="charity-info">
@@ -2713,12 +3093,12 @@
                             </div>
                             
                             <div class="carousel-controls">
-                                <button class="carousel-prev" aria-label="Previous charities">
+                                <button class="carousel-prev" aria-label="Previous">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                         <polyline points="15 18 9 12 15 6"></polyline>
                                     </svg>
                                 </button>
-                                <button class="carousel-next" aria-label="Next charities">
+                                <button class="carousel-next" aria-label="Next">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                         <polyline points="9 18 15 12 9 6"></polyline>
                                     </svg>
@@ -2761,6 +3141,27 @@
                     <div class="donation-form-container" id="monetary-form">
                         <form class="donation-form">
                             <h3>Monetary Donation</h3>
+                            
+                            <div class="form-group">
+                                <label for="donor-name" class="form-label">Full Name</label>
+                                <input type="text" id="donor-name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donor-email" class="form-label">Email</label>
+                                <input type="email" id="donor-email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donor-phone" class="form-label">Contact Number</label>
+                                <input type="tel" id="donor-phone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donor-org" class="form-label">Organization (if applicable)</label>
+                                <input type="text" id="donor-org" class="form-control">
+                            </div>
+                            
                             <div class="form-group">
                                 <label for="amount" class="form-label">Donation Amount (₱)</label>
                                 <input type="number" id="amount" class="form-control" min="100" step="100" value="500" required>
@@ -2806,6 +3207,27 @@
                     <div class="donation-form-container" id="item-form" style="display: none;">
                         <form class="donation-form">
                             <h3>Item Donation</h3>
+                            
+                            <div class="form-group">
+                                <label for="item-donor-name" class="form-label">Full Name</label>
+                                <input type="text" id="item-donor-name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="item-donor-email" class="form-label">Email</label>
+                                <input type="email" id="item-donor-email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="item-donor-phone" class="form-label">Contact Number</label>
+                                <input type="tel" id="item-donor-phone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="item-donor-org" class="form-label">Organization (if applicable)</label>
+                                <input type="text" id="item-donor-org" class="form-control">
+                            </div>
+                            
                             <div class="form-group">
                                 <label class="form-label">Donation Type</label>
                                 <div class="radio-group">
@@ -2950,22 +3372,62 @@
                         </div>
                     </div>
                     
-                    <!-- Placeholder for Charts -->
+                    <!-- Donation Distribution Chart -->
                     <div class="impact-card">
                         <div class="section-header">
                             <h3>Donation Distribution</h3>
                         </div>
-                        <div style="height: 300px; background: rgba(0,0,0,0.2); border-radius: 8px; display: flex; justify-content: center; align-items: center;">
-                            <p>Chart would appear here</p>
+                        <div class="chart-container">
+                            <div class="chart-wrapper">
+                                <canvas id="donationDistributionChart"></canvas>
+                            </div>
                         </div>
                     </div>
                     
+                    <!-- Monthly Donations Chart -->
                     <div class="impact-card">
                         <div class="section-header">
                             <h3>Monthly Donations</h3>
                         </div>
-                        <div style="height: 300px; background: rgba(0,0,0,0.2); border-radius: 8px; display: flex; justify-content: center; align-items: center;">
-                            <p>Chart would appear here</p>
+                        <div class="chart-container">
+                            <div class="chart-wrapper">
+                                <canvas id="monthlyDonationsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Impact Timeline -->
+                    <div class="impact-card">
+                        <div class="section-header">
+                            <h3>Our Impact Timeline</h3>
+                        </div>
+                        <div class="timeline-container">
+                            <div class="timeline">
+                                <div class="timeline-item left">
+                                    <div class="timeline-content">
+                                        <div class="timeline-date">January 2025</div>
+                                        <div class="timeline-text">Launched ChariTree platform with 5 charity partners in Metro Manila</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item right">
+                                    <div class="timeline-content">
+                                        <div class="timeline-date">March 2025</div>
+                                        <div class="timeline-text">Reached milestone of 10,000 trees planted across Manila</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item left">
+                                    <div class="timeline-content">
+                                        <div class="timeline-date">May 2025</div>
+                                        <div class="timeline-text">Expanded to 15 charity partners and introduced item donations</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item right">
+                                    <div class="timeline-content">
+                                        <div class="timeline-date">June 2025</div>
+                                        <div class="timeline-text">Surpassed 50,000 trees planted and ₱1M in donations</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2976,6 +3438,7 @@
                 <div class="donate-content">
                     <div class="section-header">
                         <h2>Your Impact Visualization</h2>
+                        <p>See your personal contribution to our reforestation efforts</p>
                     </div>
                     
                     <div class="impact-stats">
@@ -2997,25 +3460,41 @@
                         </div>
                     </div>
                     
+                    <!-- Your Donation History Chart -->
                     <div class="impact-card">
                         <div class="section-header">
                             <h3>Your Donation History</h3>
                         </div>
-                        <div style="height: 300px; background: rgba(0,0,0,0.2); border-radius: 8px; display: flex; justify-content: center; align-items: center;">
-                            <p>Chart would appear here</p>
+                        <div class="chart-container">
+                            <div class="chart-wrapper">
+                                <canvas id="userDonationChart"></canvas>
+                            </div>
                         </div>
                     </div>
                     
+                    <!-- Tree Map Visualization -->
                     <div class="impact-card">
                         <div class="section-header">
                             <h3>Your Tree Planting Locations</h3>
                         </div>
-                        <div class="map-container">
-                            <div style="height: 100%; background: rgba(0,0,0,0.2); display: flex; justify-content: center; align-items: center;">
-                                <p>Map would appear here</p>
+                        <div class="tree-map-container">
+                            <h3 class="tree-map-title">Trees You've Planted Across Manila</h3>
+                            <div class="tree-map" id="treeMap">
+                                <!-- Tree map items will be generated by JavaScript -->
                             </div>
                         </div>
-                        <p style="color: var(--text-secondary); text-align: center;">The trees you've helped plant across Manila</p>
+                    </div>
+                    
+                    <!-- XP Progress Chart -->
+                    <div class="impact-card">
+                        <div class="section-header">
+                            <h3>Your XP Progress</h3>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-wrapper">
+                                <canvas id="xpProgressChart"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -3035,7 +3514,7 @@
                             </div>
                             <h3 class="team-member-name">Leo</h3>
                             <p class="team-member-role">Fullstack Developer</p>
-                            <p class="team-member-bio"> Responsible for the end-to-end development of ChariTree’s system architecture, ensuring seamless integration between front-end interfaces and back-end services.</p>
+                            <p class="team-member-bio"> Responsible for the end-to-end development of ChariTree's system architecture, ensuring seamless integration between front-end interfaces and back-end services.</p>
                         </div>
                         
                         <div class="team-member-card">
@@ -3053,7 +3532,7 @@
                             </div>
                             <h3 class="team-member-name">Ron Corwin Liwag</h3>
                             <p class="team-member-role">Database Architect</p>
-                            <p class="team-member-bio">Designed and optimized the backbone of ChariTree’s data systems. With a keen eye for structure and efficiency, 
+                            <p class="team-member-bio">Designed and optimized the backbone of ChariTree's data systems. With a keen eye for structure and efficiency, 
                                 he built scalable and secure databases.</p>
                         </div>
                         
@@ -3177,6 +3656,10 @@
         const switchToRegister = document.querySelector('.switch-to-register');
         const switchToLogin = document.querySelector('.switch-to-login');
         const closeModal = document.querySelector('.close-modal');
+        const plantTreeBtn = document.getElementById('plant-tree-btn');
+        const plantTreeModal = document.getElementById('plant-tree-modal');
+        const cancelPlantTree = document.getElementById('cancel-plant-tree');
+        const treeOptions = document.querySelectorAll('.tree-option');
 
         // Show login modal
         loginBtn.addEventListener('click', () => {
@@ -3359,6 +3842,29 @@
             window.location.hash = 'home';
         }
 
+        // Plant Tree Button
+        plantTreeBtn.addEventListener('click', () => {
+            if (!currentUser) {
+                authModal.style.display = 'flex';
+                return;
+            }
+            
+            plantTreeModal.style.display = 'flex';
+        });
+
+        // Cancel Plant Tree
+        cancelPlantTree.addEventListener('click', () => {
+            plantTreeModal.style.display = 'none';
+        });
+
+        // Tree Option Selection
+        treeOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                treeOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+
         // Handle navigation between sections
         function handleHashChange() {
             const hash = window.location.hash.substring(1);
@@ -3392,6 +3898,376 @@
             targetElement.scrollTo(0, 0);
         }
 
+        // Initialize Charts
+        function initCharts() {
+            // Admin Donations Chart
+            const adminDonationsCtx = document.getElementById('adminDonationsChart').getContext('2d');
+            const adminDonationsChart = new Chart(adminDonationsCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Monthly Donations (₱)',
+                        data: [45000, 52000, 68000, 75000, 92000, 105000, 120000, 115000, 98000, 110000, 125000, 140000],
+                        borderColor: '#49F62A',
+                        backgroundColor: 'rgba(73, 246, 42, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#FFFFFF'
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#49F62A',
+                            bodyColor: '#FFFFFF',
+                            borderColor: '#49F62A',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#DDDDDD'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#DDDDDD'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Admin Users Chart
+            const adminUsersCtx = document.getElementById('adminUsersChart').getContext('2d');
+            const adminUsersChart = new Chart(adminUsersCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'New Users',
+                        data: [320, 450, 520, 680, 750, 920, 1050, 980, 1100, 1250, 1400, 1500],
+                        backgroundColor: 'rgba(73, 246, 42, 0.7)',
+                        borderColor: '#49F62A',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#FFFFFF'
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#49F62A',
+                            bodyColor: '#FFFFFF',
+                            borderColor: '#49F62A',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#DDDDDD'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#DDDDDD'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Donation Distribution Chart
+            const donationDistributionCtx = document.getElementById('donationDistributionChart').getContext('2d');
+            const donationDistributionChart = new Chart(donationDistributionCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Food', 'Clothes', 'Money', 'Essentials', 'Medical', 'Books', 'Toys', 'Other'],
+                    datasets: [{
+                        data: [35, 20, 25, 15, 10, 5, 3, 2],
+                        backgroundColor: [
+                            '#49F62A',
+                            '#36D620',
+                            '#2EBF1B',
+                            '#27A816',
+                            '#209112',
+                            '#197A0D',
+                            '#126309',
+                            '#0B4C05'
+                        ],
+                        borderColor: 'rgba(18, 18, 18, 0.8)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#FFFFFF',
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#49F62A',
+                            bodyColor: '#FFFFFF',
+                            borderColor: '#49F62A',
+                            borderWidth: 1
+                        }
+                    },
+                    cutout: '70%'
+                }
+            });
+
+            // Monthly Donations Chart
+            const monthlyDonationsCtx = document.getElementById('monthlyDonationsChart').getContext('2d');
+            const monthlyDonationsChart = new Chart(monthlyDonationsCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    datasets: [{
+                        label: 'Donations (₱)',
+                        data: [25000, 32000, 40000, 48000, 55000, 62000, 70000, 65000, 72000],
+                        backgroundColor: 'rgba(73, 246, 42, 0.7)',
+                        borderColor: '#49F62A',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#49F62A',
+                            bodyColor: '#FFFFFF',
+                            borderColor: '#49F62A',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#DDDDDD'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#DDDDDD'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // User Donation Chart
+            const userDonationCtx = document.getElementById('userDonationChart').getContext('2d');
+            const userDonationChart = new Chart(userDonationCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    datasets: [{
+                        label: 'Your Donations (₱)',
+                        data: [500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500],
+                        borderColor: '#49F62A',
+                        backgroundColor: 'rgba(73, 246, 42, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#FFFFFF'
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#49F62A',
+                            bodyColor: '#FFFFFF',
+                            borderColor: '#49F62A',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#DDDDDD'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            ticks: {
+                                color: '#DDDDDD'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // XP Progress Chart
+            const xpProgressCtx = document.getElementById('xpProgressChart').getContext('2d');
+            const xpProgressChart = new Chart(xpProgressCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Monetary', 'Food', 'Clothes', 'Essentials', 'Medical', 'Other'],
+                    datasets: [{
+                        label: 'Your XP Distribution',
+                        data: [12000, 2500, 800, 500, 300, 200],
+                        backgroundColor: 'rgba(73, 246, 42, 0.2)',
+                        borderColor: '#49F62A',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#49F62A',
+                        pointBorderColor: '#FFFFFF',
+                        pointHoverRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#FFFFFF'
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#49F62A',
+                            bodyColor: '#FFFFFF',
+                            borderColor: '#49F62A',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            pointLabels: {
+                                color: '#DDDDDD'
+                            },
+                            ticks: {
+                                backdropColor: 'rgba(18, 18, 18, 0.8)',
+                                color: '#DDDDDD',
+                                showLabelBackdrop: false
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Tree Map Visualization
+            const treeMap = document.getElementById('treeMap');
+            const locations = [
+                { name: 'Rizal Park', trees: 2, color: '#49F62A' },
+                { name: 'La Mesa Watershed', trees: 1, color: '#36D620' },
+                { name: 'Araneta City', trees: 0, color: '#2EBF1B' },
+                { name: 'BGC', trees: 0, color: '#27A816' },
+                { name: 'Marikina Watershed', trees: 0, color: '#209112' }
+            ];
+
+            // Generate tree map items
+            locations.forEach(location => {
+                const item = document.createElement('div');
+                item.className = 'tree-map-item';
+                item.style.backgroundColor = location.color;
+                item.innerHTML = `
+                    <span>${location.name}</span>
+                    <span class="tree-count">${location.trees} tree${location.trees !== 1 ? 's' : ''}</span>
+                `;
+                
+                // Random position and size for visualization
+                const width = 20 + Math.random() * 30;
+                const height = 20 + Math.random() * 30;
+                const left = Math.random() * (100 - width);
+                const top = Math.random() * (100 - height);
+                
+                item.style.width = `${width}%`;
+                item.style.height = `${height}%`;
+                item.style.left = `${left}%`;
+                item.style.top = `${top}%`;
+                
+                // Make planted trees larger
+                if (location.trees > 0) {
+                    item.style.width = `${width * 1.5}%`;
+                    item.style.height = `${height * 1.5}%`;
+                    item.style.zIndex = '5';
+                }
+                
+                treeMap.appendChild(item);
+            });
+        }
+
         // Initial load
         document.addEventListener('DOMContentLoaded', function() {
             if (!window.location.hash) {
@@ -3399,6 +4275,9 @@
             } else {
                 handleHashChange();
             }
+            
+            // Initialize all charts
+            initCharts();
             
             // Handle hash changes
             window.addEventListener('hashchange', handleHashChange);
@@ -3454,6 +4333,9 @@
         window.addEventListener('click', (e) => {
             if (e.target === authModal) {
                 authModal.style.display = 'none';
+            }
+            if (e.target === plantTreeModal) {
+                plantTreeModal.style.display = 'none';
             }
         });
     </script>
