@@ -25,6 +25,8 @@
     
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="module" src="src/firebaseConfig.js"></script>
     
     <!-- CSS -->
     <style>
@@ -3453,7 +3455,7 @@
                                 <span class="highlight-accent">Grow Change</span>
                                 <span class="highlight-accent">Give Hope</span>
                                 <span class="highlight-accent">Earn Rewards</span>
-                                 <span class="smaller-text">Turn Donations Into Impact, One Tree at a Time</span>
+                                <span class="smaller-text">Turn Donations Into Impact, One Tree at a Time</span>
                             </h1>
                             <p>ChariTree bridges philanthropy and sustainability by converting your donations into planted trees, creating measurable environmental and social impact.</p>
                             <div class="hero-actions">
@@ -3731,114 +3733,210 @@
                         <button class="donation-type-btn active" data-form="monetary">Monetary Donation</button>
                         <button class="donation-type-btn" data-form="item">Item Donation</button>
                     </div>
-                    <div class="donation-flex-row">
-                        <!-- Donation Form Card -->
-                        <div class="donation-card-modern">
-                            <form class="donation-form" id="monetary-form" style="display:block;">
-                                <h3>Monetary Donation</h3>
-                                <div class="form-group">
-                                    <label for="amount" class="form-label">Donation Amount (₱)</label>
-                                    <input type="number" id="amount" class="form-control" min="100" step="100" value="500" required>
-                                    <div class="form-hint">Minimum donation: ₱100</div>
+                    
+                    <!-- Monetary Donation Form -->
+                    <div class="donation-form-container" id="monetary-form">
+                        <form class="donation-form">
+                            <h3>Monetary Donation</h3>
+                            
+                            <div class="form-group">
+                                <label for="donor-name" class="form-label">Full Name</label>
+                                <input type="text" id="donor-name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donor-email" class="form-label">Email</label>
+                                <input type="email" id="donor-email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donor-phone" class="form-label">Contact Number</label>
+                                <input type="tel" id="donor-phone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="donor-org" class="form-label">Organization (if applicable)</label>
+                                <input type="text" id="donor-org" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="amount" class="form-label">Donation Amount (₱)</label>
+                                <input type="number" id="amount" class="form-control" min="100" step="100" value="500" required>
+                                <div class="form-hint">Minimum donation: ₱100</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="payment-method" class="form-label">Payment Method</label>
+                                <select id="payment-method" class="form-control" required>
+                                    <option value="">Select payment method</option>
+                                    <option value="gcash">GCash</option>
+                                    <option value="paymaya">PayMaya</option>
+                                    <option value="credit-card">Credit Card</option>
+                                    <option value="bank-transfer">Bank Transfer</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="charity" class="form-label">Select Charity</label>
+                                <select id="charity" class="form-control" required>
+                                    <option value="">Select charity</option>
+                                    <option value="caritas">Caritas Manila</option>
+                                    <option value="segunda">Segunda Mana</option>
+                                    <option value="immaculate">Immaculate Heart Parish</option>
+                                    <option value="reign">Reign in Life Christ</option>
+                                    <option value="ulcci">ULCCI</option>
+                                    <option value="winners">Winners Church</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Optional Message</label>
+                                <textarea id="message" class="form-control" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Proceed to Payment</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Item Donation Form -->
+                    <div class="donation-form-container" id="item-form" style="display: none;">
+                        <form class="donation-form">
+                            <h3>Item Donation</h3>
+                            
+                            <div class="form-group">
+                                <label for="item-donor-name" class="form-label">Full Name</label>
+                                <input type="text" id="item-donor-name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="item-donor-email" class="form-label">Email</label>
+                                <input type="email" id="item-donor-email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="item-donor-phone" class="form-label">Contact Number</label>
+                                <input type="tel" id="item-donor-phone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="item-donor-org" class="form-label">Organization (if applicable)</label>
+                                <input type="text" id="item-donor-org" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Donation Type</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="donation-type" value="food" checked>
+                                        <span>Food</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="donation-type" value="clothes">
+                                        <span>Clothes</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="donation-type" value="essentials">
+                                        <span>Essentials</span>
+                                    </label>
                                 </div>
-                                <div class="form-group">
-                                    <label for="payment-method" class="form-label">Payment Method</label>
-                                    <select id="payment-method" class="form-control" required>
-                                        <option value="">Select payment method</option>
-                                        <option value="gcash">GCash</option>
-                                        <option value="paymaya">PayMaya</option>
-                                        <option value="credit-card">Credit Card</option>
-                                        <option value="bank-transfer">Bank Transfer</option>
-                                    </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="item-weight" class="form-label">Estimated Weight (kg)</label>
+                                <input type="number" id="item-weight" class="form-control" min="1" value="5" required>
+                                <div class="form-hint">Minimum donation: 1kg</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="delivery-method" class="form-label">Delivery Method</label>
+                                <select id="delivery-method" class="form-control" required>
+                                    <option value="">Select delivery method</option>
+                                    <option value="drop-off">Drop-off at Center</option>
+                                    <option value="pickup">Schedule Pickup</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="item-charity" class="form-label">Select Charity</label>
+                                <select id="item-charity" class="form-control" required>
+                                    <option value="">Select charity</option>
+                                    <option value="caritas">Caritas Manila</option>
+                                    <option value="segunda">Segunda Mana</option>
+                                    <option value="immaculate">Immaculate Heart Parish</option>
+                                    <option value="reign">Reign in Life Christ</option>
+                                    <option value="ulcci">ULCCI</option>
+                                    <option value="winners">Winners Church</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="item-message" class="form-label">Optional Message</label>
+                                <textarea id="item-message" class="form-control" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Submit Donation</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Recent Donations -->
+                    <div class="recent-donations">
+                        <h3>Recent Community Donations</h3>
+                        <div class="donation-grid">
+                            <div class="donation-item">
+                                <div class="donation-avatar">
+                                    <img src="src/image/fyang.jpg" alt="User avatar" loading="lazy">
                                 </div>
-                                <div class="form-group">
-                                    <label for="charity" class="form-label">Select Charity</label>
-                                    <select id="charity" class="form-control" required>
-                                        <option value="">Select charity</option>
-                                        <option value="caritas">Caritas Manila</option>
-                                        <option value="segunda">Segunda Mana</option>
-                                        <option value="immaculate">Immaculate Heart Parish</option>
-                                        <option value="reign">Reign in Life Christ</option>
-                                        <option value="ulcci">ULCCI</option>
-                                        <option value="winners">Winners Church</option>
-                                    </select>
+                                <div class="donation-details">
+                                    <h4>Fyang Smith</h4>
+                                    <p>Donated ₱2,500</p>
+                                    <span class="xp-badge">+12,500XP</span>
                                 </div>
-                                <div class="form-group">
-                                    <label for="message" class="form-label">Optional Message</label>
-                                    <textarea id="message" class="form-control" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="donation-item">
+                                <div class="donation-avatar">
+                                    <img src="src/image/mica.jpg" alt="User avatar" loading="lazy">
                                 </div>
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Proceed to Payment</button>
+                                <div class="donation-details">
+                                    <h4>Mika Salamanca</h4>
+                                    <p>Donated 10kg food</p>
+                                    <span class="xp-badge">+1,000XP</span>
                                 </div>
-                            </form>
-                            <form class="donation-form" id="item-form" style="display:none;">
-                                <h3 class="form-section-title">Item Donation</h3>
-                                <div class="form-group">
-                                    <label class="form-label">Donation Type</label>
-                                    <div class="radio-group">
-                                        <label class="radio-option">
-                                            <input type="radio" name="donation-type" value="food" checked aria-label="Food">
-                                            <span>Food</span>
-                                        </label>
-                                        <label class="radio-option">
-                                            <input type="radio" name="donation-type" value="apparel" aria-label="Apparel">
-                                            <span>Apparel</span>
-                                        </label>
-                                        <label class="radio-option">
-                                            <input type="radio" name="donation-type" value="Others" aria-label="Others">
-                                            <span>Others</span>
-                                        </label>
-                                    </div>
+                            </div>
+                            
+                            <div class="donation-item">
+                                <div class="donation-avatar">
+                                    <img src="src/image/pup.jpg" alt="User avatar" loading="lazy">
                                 </div>
-                                <div class="form-group">
-                                    <label for="item-weight" class="form-label">Estimated Weight (kg)</label>
-                                    <input type="number" id="item-weight" class="form-control" min="1" value="5" required>
-                                    <div class="form-hint">Minimum donation: 1kg</div>
+                                <div class="donation-details">
+                                    <h4>PUP - Manila</h4>
+                                    <p>Donated 50 sacks of Rice</p>
+                                    <span class="xp-badge">+50,000XP</span>
                                 </div>
-                                <div class="form-group">
-                                    <label for="delivery-method" class="form-label">Delivery Method</label>
-                                    <select id="delivery-method" class="form-control" required>
-                                        <option value="">Select delivery method</option>
-                                        <option value="drop-off">Drop-off at Center</option>
-                                        <option value="pickup">Schedule Pickup</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="item-charity" class="form-label">Select Charity</label>
-                                    <select id="item-charity" class="form-control" required>
-                                        <option value="">Select charity</option>
-                                        <option value="caritas">Caritas Manila</option>
-                                        <option value="segunda">Segunda Mana</option>
-                                        <option value="immaculate">Immaculate Heart Parish</option>
-                                        <option value="reign">Reign in Life Christ</option>
-                                        <option value="ulcci">ULCCI</option>
-                                        <option value="winners">Winners Church</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="item-message" class="form-label">Optional Message</label>
-                                    <textarea id="item-message" class="form-control" rows="3"></textarea>
-                                </div>
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Submit Donation</button>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                        <!-- Summary/Visual Card -->
-                        <div class="donation-card-modern summary-card">
-                            <div style="margin-bottom:1.5rem;">
-                                <h4>Donor</h4>
-                                <div id="donor-summary-info"></div>
-                            </div>
-                            <div style="margin-bottom:1.5rem;">
-                                <h4>How it works</h4>
-                                <ul style="margin-left:1.2em;">
-                                    <li id="donation-summary-1">Donate money, earn XP</li>
-                                    <li>Track your impact</li>
-                                    <li>Convert XP to trees</li>
-                                </ul>
-                            </div>
-                            <img id="donation-summary-img" src="src/image/treeplanting.jpeg" alt="Donation Visual" style="width:100%;border-radius:12px;max-height:260px;object-fit:cover;">
+                    </div>
+                    
+                    <!-- Impact Stats -->
+                    <div class="section-header impact-potential-header">
+                        <h2>Your Impact Potential</h2>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Trees Plantable</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">15,800</span>
+                            <span class="stat-label">Total XP</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">120+</span>
+                            <span class="stat-label">People Helped</span>
                         </div>
                     </div>
                 </div>
@@ -4186,8 +4284,6 @@
                 isAdmin = loginType === 'admin' && user.isAdmin;
                 updateUIAfterLogin();
                 authModal.style.display = 'none';
-                // Reset form
-                loginForm.reset();
             } else {
                 alert('Invalid username or password');
             }
@@ -4196,63 +4292,36 @@
         // Register form submission
         registerForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const fullName = document.getElementById('register-fullname').value;
             const username = document.getElementById('register-username').value;
             const email = document.getElementById('register-email').value;
-            const contactNumber = document.getElementById('register-contact').value;
             const password = document.getElementById('register-password').value;
             const confirmPassword = document.getElementById('register-confirm').value;
+            
             if (password !== confirmPassword) {
                 alert('Passwords do not match');
                 return;
             }
+            
             if (users.some(u => u.username === username)) {
                 alert('Username already exists');
                 return;
             }
+            
             // Add new user
             const newUser = {
                 username,
-                fullName,
-                contactNumber,
                 email,
                 password,
                 isAdmin: false,
-                xp: 0,
-                avatarUrl: '' // No image by default
+                xp: 0
             };
+            
             users.push(newUser);
             currentUser = newUser;
             isAdmin = false;
-            // Show success message before redirect
-            showRegistrationSuccess();
+            updateUIAfterLogin();
+            authModal.style.display = 'none';
         });
-
-        // Show registration success message
-        function showRegistrationSuccess() {
-            // Hide forms
-            document.getElementById('register-form').style.display = 'none';
-            document.getElementById('login-form').style.display = 'none';
-            // Create or update the success message element
-            let successMsg = document.getElementById('register-success-msg');
-            if (!successMsg) {
-                successMsg = document.createElement('div');
-                successMsg.id = 'register-success-msg';
-                successMsg.style.textAlign = 'center';
-                successMsg.style.color = 'var(--primary-accent)';
-                successMsg.style.fontWeight = 'bold';
-                successMsg.style.fontSize = '1.2rem';
-                successMsg.style.margin = '30px 0 10px 0';
-                document.querySelector('.auth-container').appendChild(successMsg);
-            }
-            successMsg.textContent = 'Account successfully created! Redirecting...';
-            setTimeout(() => {
-                // Remove message and proceed to dashboard
-                if (successMsg) successMsg.remove();
-                authModal.style.display = 'none';
-                updateUIAfterLogin();
-            }, 1500);
-        }
 
         // Logout
         function handleLogout() {
@@ -4262,6 +4331,7 @@
         }
 
         logoutBtn.addEventListener('click', handleLogout);
+        adminLogoutBtn.addEventListener('click', handleLogout);
 
         // Update UI after login
         function updateUIAfterLogin() {
@@ -4275,19 +4345,9 @@
             appSidebar.style.display = 'block';
             
             // Update user info
-            usernameDisplay.textContent = currentUser.fullName || currentUser.username;
+            usernameDisplay.textContent = currentUser.username;
             totalXp.textContent = currentUser.xp.toLocaleString();
-            // Avatar logic
-            let avatarSrc = '';
-            if (currentUser.username === 'Leo') {
-                avatarSrc = 'src/image/leo.jpg';
-            } else if (currentUser.avatarUrl) {
-                avatarSrc = currentUser.avatarUrl;
-            } else {
-                avatarSrc = 'src/image/user.png'; // Use a blank or placeholder image
-            }
-            document.getElementById('profile-avatar').src = avatarSrc;
-            document.querySelector('#user-avatar img').src = avatarSrc;
+            document.getElementById('profile-avatar').src = 'src/image/leo.jpg';
             
             // Show admin nav item if admin
             if (isAdmin) {
@@ -4297,7 +4357,6 @@
                 adminNavItem.style.display = 'none';
                 window.location.hash = 'home';
             }
-            updateDonationSummaryCard();
         }
 
         // Update UI after logout
@@ -4313,7 +4372,6 @@
             
             // Redirect to home
             window.location.hash = 'home';
-            updateDonationSummaryCard();
         }
 
         // Plant Tree Button
@@ -4778,107 +4836,24 @@
             });
             
             // Donation type toggle
+            // Donation type toggle
             const donationTypeBtns = document.querySelectorAll('.donation-type-btn');
             donationTypeBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
                     donationTypeBtns.forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
-                    document.getElementById('monetary-form').style.display = this.dataset.form === 'monetary' ? 'block' : 'none';
-                    document.getElementById('item-form').style.display = this.dataset.form === 'item' ? 'block' : 'none';
-                    document.getElementById('donation-summary-1').textContent = this.dataset.form === 'monetary' ? 'Donate money, earn XP' : 'Donate items, earn XP';
-                    document.getElementById('donation-summary-img').src = this.dataset.form === 'monetary' ? 'src/image/treeplanting.jpeg' : 'src/image/Caritas Manila1.png';
+                    
+                    // Hide all forms
+                    document.querySelectorAll('.donation-form-container').forEach(form => {
+                        form.style.display = 'none';
+                    });
+                    
+                    // Show the selected form
+                    const formId = this.getAttribute('data-form') + '-form';
+                    document.getElementById(formId).style.display = 'block';
                 });
             });
             
-            // Donation form submission handlers
-            const monetaryForm = document.getElementById('monetary-form');
-            const itemForm = document.getElementById('item-form');
-
-            monetaryForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                if (!currentUser) {
-                    alert('Please log in to make a donation');
-                    authModal.style.display = 'flex';
-                    return;
-                }
-                
-                const amount = document.getElementById('amount').value;
-                const paymentMethod = document.getElementById('payment-method').value;
-                const charity = document.getElementById('charity').value;
-                const message = document.getElementById('message').value;
-                
-                if (!amount || !paymentMethod || !charity) {
-                    alert('Please fill in all required fields');
-                    return;
-                }
-                
-                // Simulate donation processing
-                alert(`Thank you for your donation of ₱${amount}! Your donation is being processed.`);
-                
-                // Update user XP (1 XP per peso)
-                currentUser.xp += parseInt(amount);
-                updateUIAfterLogin();
-                
-                // Reset form
-                monetaryForm.reset();
-            });
-
-            itemForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                if (!currentUser) {
-                    alert('Please log in to make a donation');
-                    authModal.style.display = 'flex';
-                    return;
-                }
-                
-                const donationType = document.querySelector('input[name="donation-type"]:checked').value;
-                const weight = document.getElementById('item-weight').value;
-                const deliveryMethod = document.getElementById('delivery-method').value;
-                const charity = document.getElementById('item-charity').value;
-                const message = document.getElementById('item-message').value;
-                
-                if (!weight || !deliveryMethod || !charity) {
-                    alert('Please fill in all required fields');
-                    return;
-                }
-                
-                // Simulate donation processing
-                alert(`Thank you for your ${donationType} donation of ${weight}kg! Your donation is being processed.`);
-                
-                // Update user XP (100 XP per kg)
-                currentUser.xp += parseInt(weight) * 100;
-                updateUIAfterLogin();
-                
-                // Reset form
-                itemForm.reset();
-            });
-
-            // Charity Registration Form Handler
-            const charityRegistrationForm = document.getElementById('charity-registration-form');
-            if (charityRegistrationForm) {
-                charityRegistrationForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const charityName = document.getElementById('charity-name').value;
-                    const charityLocation = document.getElementById('charity-location').value;
-                    const charityEmail = document.getElementById('charity-email').value;
-                    const charityPhone = document.getElementById('charity-phone').value;
-                    const charityDescription = document.getElementById('charity-description').value;
-                    const charityImage = document.getElementById('charity-image').value;
-                    
-                    if (!charityName || !charityLocation || !charityEmail || !charityPhone || !charityDescription) {
-                        alert('Please fill in all required fields');
-                        return;
-                    }
-                    
-                    // Simulate charity registration
-                    alert(`Charity "${charityName}" has been successfully registered!`);
-                    
-                    // Reset form
-                    charityRegistrationForm.reset();
-                });
-            }
-
             // Intersection Observer for reveal animations
             const revealElements = document.querySelectorAll('.section-reveal');
             const observer = new IntersectionObserver((entries) => {
