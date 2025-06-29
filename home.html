@@ -3054,19 +3054,6 @@
                     <input type="password" id="login-password" class="form-control" required>
                 </div>
                 
-                <div class="form-group">
-                    <label class="form-label">Login as:</label>
-                    <div class="radio-group">
-                        <label class="radio-option">
-                            <input type="radio" name="login-type" value="user" checked>
-                            <span>User</span>
-                        </label>
-                        <label class="radio-option">
-                            <input type="radio" name="login-type" value="admin">
-                            <span>Admin</span>
-                        </label>
-                    </div>
-                </div>
                 
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
                 
@@ -3123,7 +3110,7 @@
                 <p>Convert your XP points to plant trees in Manila</p>
             </div>
             
-            <form class="plant-tree-form">
+            <form class="plant-tree-form" id="plant-tree-form">
                 <div class="form-group">
                     <label for="tree-location" class="form-label">Planting Location</label>
                     <select id="tree-location" class="form-control" required>
@@ -3139,17 +3126,17 @@
                 <div class="form-group">
                     <label class="form-label">Tree Type</label>
                     <div class="tree-options">
-                        <div class="tree-option selected">
+                        <div class="tree-option selected" data-tree-type="narra">
                             <h3>Narra Tree</h3>
                             <p>The national tree of the Philippines, known for its durability and beautiful flowers.</p>
                             <span class="xp-cost">5,000 XP</span>
                         </div>
-                        <div class="tree-option">
+                        <div class="tree-option" data-tree-type="mango">
                             <h3>Mango Tree</h3>
                             <p>Provides delicious fruits and excellent shade.</p>
                             <span class="xp-cost">7,500 XP</span>
                         </div>
-                        <div class="tree-option">
+                        <div class="tree-option" data-tree-type="bamboo">
                             <h3>Bamboo</h3>
                             <p>Fast-growing and excellent for preventing soil erosion.</p>
                             <span class="xp-cost">4,000 XP</span>
