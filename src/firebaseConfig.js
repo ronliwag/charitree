@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const storedAdmin = localStorage.getItem("isAdmin");
     const monetaryForm = document.getElementById("monetary-form");
     const itemForm = document.getElementById("item-form");
+    const charityForm = document.getElementById("charity-registration-form");
+    const treeForm = document.getElementById("plant-tree-form");
 
     if (storedUser) {
         window.currentUser = JSON.parse(storedUser);
@@ -42,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //register logic
     if (registerForm) {
-        registerForm.addEventListener("submit", (e) => {
+        registerForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         const username = document.getElementById("register-username").value;
@@ -75,7 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     password: password, // Note: In production, never store plain text passwords
                     avatar: "", // Empty string for new users - no default image
                     joinDate: serverTimestamp(),
-                    totalXp: 0
+                    totalXp: 0,
+                    isAdmin: false
                 })
                 .then(() => {
                     alert("User registered successfully! Please login with your new account.");
@@ -107,49 +110,51 @@ document.addEventListener("DOMContentLoaded", () => {
     // Login logic
     if (loginForm) {
         loginForm.addEventListener("submit", (e) => {
-        e.preventDefault();
+            e.preventDefault();
 
-        const username = document.getElementById("login-username").value;
-        const password = document.getElementById("login-password").value;
+            const username = document.getElementById("login-username").value;
+            const password = document.getElementById("login-password").value;
 
-        const userRef = ref(db, "users/" + username);
+            const userRef = ref(db, "users/" + username);
 
-        get(userRef)
-            .then((snapshot) => {
-            if (snapshot.exists()) {
-                const userData = snapshot.val();
-                if (userData.password === password) {
-                window.currentUser = {
-                    username: username,
-                    fullName: userData.name,
-                    email: userData.email,
-                    contactNumber: userData.contactNumber,
-                    xp: userData.totalXp || 0,
-                    avatar: userData.avatar || ""
-                };
+            get(userRef)
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        const userData = snapshot.val();
+                        if (userData.password === password) {
+                            window.currentUser = {
+                                username: username,
+                                fullName: userData.name,
+                                email: userData.email,
+                                contactNumber: userData.contactNumber,
+                                xp: userData.totalXp || 0,
+                                avatar: userData.avatar || ""
+                            };
 
-                window.isAdmin = document.querySelector('input[name="login-type"]:checked')?.value === "admin";
+                            // ✅ get admin flag from DB
+                            window.isAdmin = userData.isAdmin === true;
 
-                // Optional: save to localStorage if you want session persistence
-                localStorage.setItem("currentUser", JSON.stringify(window.currentUser));
-                localStorage.setItem("isAdmin", window.isAdmin);
+                            // Optional: save to localStorage
+                            localStorage.setItem("currentUser", JSON.stringify(window.currentUser));
+                            localStorage.setItem("isAdmin", window.isAdmin);
 
-                alert("Login successful!");
-                updateUIAfterLogin();
-                document.getElementById('auth-modal').style.display = 'none';
-                } else {
-                alert("Incorrect password.");
-                }
-            } else {
-                alert("User not found.");
-            }
-            })
-            .catch((error) => {
-            console.error("Login error: ", error);
-            alert("Login failed: " + error.message);
-            });
+                            alert("Login successful!");
+                            updateUIAfterLogin();
+                            document.getElementById('auth-modal').style.display = 'none';
+                        } else {
+                            alert("Incorrect password.");
+                        }
+                    } else {
+                        alert("User not found.");
+                    }
+                })
+                .catch((error) => {
+                    console.error("Login error: ", error);
+                    alert("Login failed: " + error.message);
+                });
         });
-    }
+    }   
+
 
     // Logout Logic
     const logoutBtn = document.getElementById("logout-btn");
@@ -239,14 +244,156 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    if (charityForm) {
+        charityForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const charityName = document.getElementById("charity-name").value; // <== moved here
+            const charityAddress = document.getElementById("charity-location").value;
+            const charityEmail = document.getElementById("charity-email").value;
+            const charityPhone = document.getElementById("charity-phone").value;
+            const charityDescription = document.getElementById("charity-description").value;
+            const charityLogo = document.getElementById("charity-image").value;
+
+            if (!charityName || !charityAddress || !charityEmail || !charityPhone || !charityDescription) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            const charityId = charityName.toLowerCase().replace(/\s+/g, '_');
+            const charityRef = ref(db, `charities/${charityId}`);
+            const snapshot = await get(charityRef);
+
+            if (snapshot.exists()) {
+                alert("Charity name already exists. Please choose a different one.");
+                return;
+            }
+
+
+            const data = {
+                name: charityName,
+                address: charityAddress,
+                email: charityEmail,
+                phone: charityPhone,
+                description: charityDescription,
+                logo: charityLogo,
+                registeredAt: serverTimestamp(),
+                verified: false
+            };
+
+            set(ref(db, `charities/${charityId}`), data)
+                .then(() => {
+                    alert("Charity registered successfully and pending verification.");
+                    charityForm.reset();
+                })
+            .catch((err) => {
+                console.error("Error registering charity:", err);
+                alert("Failed to register charity. Please try again.");
+            });
+        });
+    }
+
+    document.querySelectorAll('.tree-option').forEach(option => {
+        option.addEventListener('click', () => {
+        document.querySelectorAll('.tree-option').forEach(o => o.classList.remove('selected'));
+        option.classList.add('selected');
+        });
+    });
+
+    if (treeForm) {
+    treeForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        if (!window.currentUser) {
+        alert("Please login to plant a tree.");
+        return;
+        }
+
+        try {
+        const currentUserId = window.currentUser.username;
+        const userRef = ref(db, `users/${currentUserId}`);
+        const userSnapshot = await get(userRef);
+        const userData = userSnapshot.val();
+        if (!userData) throw new Error("User not found");
+
+        const currentXp = userData.totalXp || 0;
+
+        // Get selected tree type and XP cost
+        const selectedOption = document.querySelector(".tree-option.selected");
+        if (!selectedOption) throw new Error("No tree type selected");
+
+        const treeType = selectedOption.dataset.treeType || "Unknown";
+        const xpCost = parseInt(
+            selectedOption.querySelector(".xp-cost").textContent.replace(/\D/g, "")
+        );
+        if (currentXp < xpCost)
+            throw new Error(`Not enough XP. You need ${xpCost}, but only have ${currentXp}.`);
+
+        const treeLocation = document.getElementById("tree-location").value;
+        if (!treeLocation) throw new Error("Please select a location.");
+
+        // Create tree ID and data
+        const timestamp = Date.now();
+        const treeId = `${currentUserId}_${timestamp}`;
+
+        const dedicationMessage = document.getElementById("tree-message").value.trim();
+
+        const treeData = {
+            userId: currentUserId,
+            type: treeType,
+            location: treeLocation,
+            xpCost: xpCost,
+            plantedAt: new Date(timestamp).toISOString(),
+            message: dedicationMessage || null // Optional
+        };
+
+        // Save to Firebase
+        await set(ref(db, `trees/${treeId}`), treeData);
+
+        // Deduct XP and update Firebase
+        const newXp = currentXp - xpCost;
+        await set(ref(db, `users/${currentUserId}/totalXp`), newXp);
+
+        // Update UI
+        window.currentUser.xp = newXp;
+        localStorage.setItem("currentUser", JSON.stringify(window.currentUser));
+        updateUIAfterLogin();
+
+        // Clear form and hide modal
+        treeForm.reset();
+        alert(`🌱 ${treeType} planted! You used ${xpCost} XP. Remaining XP: ${newXp}`);
+        document.getElementById("plant-tree-modal").style.display = "none";
+        } catch (error) {
+        console.error("Tree planting error:", error);
+        alert(error.message);
+        }
+    });
+    }
+
+
+
     function generateDonationKey(username) {
         const timestamp = Date.now();
         const random = Math.random().toString(36).substring(2, 15);
         return `${username}_${timestamp}_${random}`;
     }
 
-    function updateUIAfterLogin() {
+    async function updateUIAfterLogin() {
         if (window.currentUser) {
+            try {
+                const userRef = ref(db, "users/" + window.currentUser.username);
+                const snapshot = await get(userRef);
+
+                if (snapshot.exists()) {
+                    const updatedUser = snapshot.val();
+                    window.currentUser.xp = updatedUser.totalXp || 0;
+                    window.currentUser.avatar = updatedUser.avatar || "";
+                    localStorage.setItem("currentUser", JSON.stringify(window.currentUser));
+                }
+            } catch (error) {
+                console.error("Failed to fetch latest user data:", error);
+            }
+
             // Hide login/register buttons
             const loginBtn = document.getElementById('login-btn');
             const registerBtn = document.getElementById('register-btn');
@@ -262,8 +409,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (userAvatar) userAvatar.style.display = 'block';
             if (logoutBtn) logoutBtn.style.display = 'block';
             if (appSidebar) appSidebar.style.display = 'block';
-            if (usernameDisplay) usernameDisplay.textContent = window.currentUser.fullName || window.currentUser.username;
-            if (totalXp) totalXp.textContent = window.currentUser.xp || 0;
+            if (usernameDisplay) {
+                usernameDisplay.textContent = window.currentUser.fullName || window.currentUser.username;
+            }
+            if (totalXp) {
+                totalXp.textContent = window.currentUser.xp.toLocaleString();
+            }
             if (adminNavItem && window.isAdmin) adminNavItem.style.display = 'block';
 
             // Update profile avatar - use default user image if no avatar is set
@@ -288,6 +439,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+
     function updateUIAfterLogout() {
         // Show login/register buttons
         const loginBtn = document.getElementById('login-btn');
@@ -296,6 +448,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const logoutBtn = document.getElementById('logout-btn');
         const appSidebar = document.getElementById('app-sidebar');
         const adminNavItem = document.getElementById('admin-nav-item');
+
+        const totalXp = document.getElementById('total-xp');
+        if (totalXp && window.currentUser) {
+            totalXp.textContent = window.currentUser.xp.toLocaleString();
+        }
 
         if (loginBtn) loginBtn.style.display = 'block';
         if (registerBtn) registerBtn.style.display = 'block';
