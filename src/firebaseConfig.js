@@ -5,7 +5,7 @@ import { getDatabase, ref, set, serverTimestamp, get} from "firebase/database";
 const firebaseConfig = {
     apiKey: "AIzaSyARsMEJn26cCEH3aVrkcVxvt9azZaEaegs",
     authDomain: "charitree-fed4b.firebaseapp.com",
-    databaseURL: "https://charitree-fed4b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    databaseURL: "https://charitree-fed4b-default-rtdb.asia-southeast1.firebasedatabase.app/",
     projectId: "charitree-fed4b",
     storageBucket: "charitree-fed4b.firebasestorage.app",
     messagingSenderId: "770475286583",
@@ -18,6 +18,13 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getDatabase(app);
 
+// Make Firebase functions available globally
+window.db = db;
+window.ref = ref;
+window.set = set;
+window.get = get;
+window.serverTimestamp = serverTimestamp;
+
 // Wait for DOM to be loaded
 document.addEventListener("DOMContentLoaded", () => {
     const registerForm = document.getElementById("register-form");
@@ -26,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const storedAdmin = localStorage.getItem("isAdmin");
     const monetaryForm = document.getElementById("monetary-form");
     const itemForm = document.getElementById("item-form");
-
 
     if (storedUser) {
         window.currentUser = JSON.parse(storedUser);
@@ -42,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const username = document.getElementById("register-username").value;
         const fullname = document.getElementById("register-fullname").value;
         const email = document.getElementById("register-email").value;
+        const contactNumber = document.getElementById("register-contact").value;
         const password = document.getElementById("register-password").value;
         const confirmPassword = document.getElementById("register-confirm").value;
         
@@ -51,22 +58,49 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Set user data in Firebase
-        set(ref(db, "users/" + username), {
-            name: fullname,  //switch to fullname when implemented
-            email: email,
-            password: password, // Note: In production, never store plain text passwords
-            avatar: "",
-            joinDate: serverTimestamp(),
-            totalXp: 0
-        })
-        .then(() => {
-            alert("User registered successfully!");
-        })
-        .catch((error) => {
-            console.error("Error writing to Firebase: ", error);
-            alert("Registration failed: " + error.message);
-        });
+        // Check if username already exists
+        const userRef = ref(db, "users/" + username);
+        get(userRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    alert("Username already exists! Please choose a different username.");
+                    return;
+                }
+
+                // Set user data in Firebase
+                set(ref(db, "users/" + username), {
+                    name: fullname,
+                    email: email,
+                    contactNumber: contactNumber,
+                    password: password, // Note: In production, never store plain text passwords
+                    avatar: "", // Empty string for new users - no default image
+                    joinDate: serverTimestamp(),
+                    totalXp: 0
+                })
+                .then(() => {
+                    alert("User registered successfully! Please login with your new account.");
+                    // Switch to login form
+                    document.getElementById('register-form').style.display = 'none';
+                    document.getElementById('login-form').style.display = 'flex';
+                    document.querySelectorAll('.auth-tab').forEach(tab => {
+                        if (tab.dataset.tab === 'login') {
+                            tab.classList.add('active');
+                        } else {
+                            tab.classList.remove('active');
+                        }
+                    });
+                    // Clear the register form
+                    registerForm.reset();
+                })
+                .catch((error) => {
+                    console.error("Error writing to Firebase: ", error);
+                    alert("Registration failed: " + error.message);
+                });
+            })
+            .catch((error) => {
+                console.error("Error checking username: ", error);
+                alert("Registration failed: " + error.message);
+            });
         });
     }
 
@@ -86,9 +120,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 const userData = snapshot.val();
                 if (userData.password === password) {
                 window.currentUser = {
-                    username: userData.name,
+                    username: username,
+                    fullName: userData.name,
                     email: userData.email,
+                    contactNumber: userData.contactNumber,
                     xp: userData.totalXp || 0,
+                    avatar: userData.avatar || ""
                 };
 
                 window.isAdmin = document.querySelector('input[name="login-type"]:checked')?.value === "admin";
@@ -99,6 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 alert("Login successful!");
                 updateUIAfterLogin();
+                document.getElementById('auth-modal').style.display = 'none';
                 } else {
                 alert("Incorrect password.");
                 }
@@ -201,53 +239,57 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
-});
-
     function generateDonationKey(username) {
-        const safeUsername = username.replace(/[.#$\[\]/]/g, '_');
-        return `${safeUsername}_${Date.now()}`;
+        const timestamp = Date.now();
+        const random = Math.random().toString(36).substring(2, 15);
+        return `${username}_${timestamp}_${random}`;
     }
 
     function updateUIAfterLogin() {
-        const loginBtn = document.getElementById('login-btn');
-        const registerBtn = document.getElementById('register-btn');
-        const userAvatar = document.getElementById('user-avatar');
-        const logoutBtn = document.getElementById('logout-btn');
-        const appSidebar = document.getElementById('app-sidebar');
-        const usernameDisplay = document.getElementById('username-display');
-        const totalXp = document.getElementById('total-xp');
-        const adminNavItem = document.getElementById('admin-nav-item');
+        if (window.currentUser) {
+            // Hide login/register buttons
+            const loginBtn = document.getElementById('login-btn');
+            const registerBtn = document.getElementById('register-btn');
+            const userAvatar = document.getElementById('user-avatar');
+            const logoutBtn = document.getElementById('logout-btn');
+            const appSidebar = document.getElementById('app-sidebar');
+            const usernameDisplay = document.getElementById('username-display');
+            const totalXp = document.getElementById('total-xp');
+            const adminNavItem = document.getElementById('admin-nav-item');
 
-        // Hide login/register buttons, show avatar and logout
-        if (loginBtn) loginBtn.style.display = 'none';
-        if (registerBtn) registerBtn.style.display = 'none';
-        if (userAvatar) {
-            userAvatar.style.display = 'block';
-            userAvatar.src = 'src/image/leo.jpg';
-        }
-        if (logoutBtn) logoutBtn.style.display = 'inline-block';
+            if (loginBtn) loginBtn.style.display = 'none';
+            if (registerBtn) registerBtn.style.display = 'none';
+            if (userAvatar) userAvatar.style.display = 'block';
+            if (logoutBtn) logoutBtn.style.display = 'block';
+            if (appSidebar) appSidebar.style.display = 'block';
+            if (usernameDisplay) usernameDisplay.textContent = window.currentUser.fullName || window.currentUser.username;
+            if (totalXp) totalXp.textContent = window.currentUser.xp || 0;
+            if (adminNavItem && window.isAdmin) adminNavItem.style.display = 'block';
 
-        // Show sidebar
-        if (appSidebar) appSidebar.style.display = 'block';
+            // Update profile avatar - use default user image if no avatar is set
+            const profileAvatar = document.getElementById('profile-avatar');
+            if (profileAvatar) {
+                if (window.currentUser.avatar && window.currentUser.avatar.trim() !== "") {
+                    profileAvatar.src = window.currentUser.avatar;
+                } else {
+                    profileAvatar.src = 'src/image/user.png'; // Default user image for new accounts
+                }
+            }
 
-        // Update user info
-        if (usernameDisplay && window.currentUser) {
-            usernameDisplay.textContent = window.currentUser.username;
+            // Update user avatar in header
+            const headerUserAvatar = document.querySelector('#user-avatar img');
+            if (headerUserAvatar) {
+                if (window.currentUser.avatar && window.currentUser.avatar.trim() !== "") {
+                    headerUserAvatar.src = window.currentUser.avatar;
+                } else {
+                    headerUserAvatar.src = 'src/image/user.png'; // Default user image for new accounts
+                }
+            }
         }
-        if (totalXp && window.currentUser) {
-            totalXp.textContent = window.currentUser.xp.toLocaleString();
-        }
-
-        // Show admin nav item if admin
-        if (adminNavItem) {
-            adminNavItem.style.display = window.isAdmin ? 'block' : 'none';
-        }
-
-        window.location.hash = window.isAdmin ? 'admin' : 'home';
-        }
+    }
 
     function updateUIAfterLogout() {
+        // Show login/register buttons
         const loginBtn = document.getElementById('login-btn');
         const registerBtn = document.getElementById('register-btn');
         const userAvatar = document.getElementById('user-avatar');
@@ -255,25 +297,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const appSidebar = document.getElementById('app-sidebar');
         const adminNavItem = document.getElementById('admin-nav-item');
 
-        if (loginBtn) loginBtn.style.display = 'inline-block';
-        if (registerBtn) registerBtn.style.display = 'inline-block';
+        if (loginBtn) loginBtn.style.display = 'block';
+        if (registerBtn) registerBtn.style.display = 'block';
         if (userAvatar) userAvatar.style.display = 'none';
         if (logoutBtn) logoutBtn.style.display = 'none';
         if (appSidebar) appSidebar.style.display = 'none';
         if (adminNavItem) adminNavItem.style.display = 'none';
 
+        // Reset current section to home
         window.location.hash = 'home';
-        }
+    }
 
     function logoutUser() {
-        // Clear session data
-        localStorage.removeItem("currentUser");
-        localStorage.removeItem("isAdmin");
-
-        // Clear global variables
         window.currentUser = null;
         window.isAdmin = false;
-
-        // Update the UI
+        
+        localStorage.removeItem('currentUser');
+        localStorage.removeItem('isAdmin');
+        
         updateUIAfterLogout();
+        alert('Logged out successfully!');
     }
+});

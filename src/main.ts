@@ -1,4 +1,5 @@
 import './style.scss';
+import './firebaseConfig.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Interactive bubble animation code

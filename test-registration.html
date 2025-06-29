@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Test - ChariTree</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #121212;
+            color: white;
+        }
+        .test-form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #49F62A;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #222;
+            color: white;
+        }
+        button {
+            background-color: #49F62A;
+            color: #121212;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #36d620;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: rgba(73, 246, 42, 0.2);
+            border: 1px solid #49F62A;
+        }
+        .error {
+            background-color: rgba(255, 82, 82, 0.2);
+            border: 1px solid #FF5252;
+        }
+        .info {
+            background-color: rgba(66, 133, 244, 0.2);
+            border: 1px solid #4285F4;
+        }
+    </style>
+</head>
+<body>
+    <h1>ChariTree Registration Test</h1>
+    
+    <div class="test-form">
+        <h2>Test Registration</h2>
+        <form id="test-register-form">
+            <div class="form-group">
+                <label for="test-username">Username:</label>
+                <input type="text" id="test-username" required>
+            </div>
+            <div class="form-group">
+                <label for="test-fullname">Full Name:</label>
+                <input type="text" id="test-fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="test-email">Email:</label>
+                <input type="email" id="test-email" required>
+            </div>
+            <div class="form-group">
+                <label for="test-contact">Contact Number:</label>
+                <input type="tel" id="test-contact" required>
+            </div>
+            <div class="form-group">
+                <label for="test-password">Password:</label>
+                <input type="password" id="test-password" required>
+            </div>
+            <div class="form-group">
+                <label for="test-confirm">Confirm Password:</label>
+                <input type="password" id="test-confirm" required>
+            </div>
+            <button type="submit">Test Registration</button>
+        </form>
+    </div>
+
+    <div class="test-form">
+        <h2>Test Login</h2>
+        <form id="test-login-form">
+            <div class="form-group">
+                <label for="test-login-username">Username:</label>
+                <input type="text" id="test-login-username" required>
+            </div>
+            <div class="form-group">
+                <label for="test-login-password">Password:</label>
+                <input type="password" id="test-login-password" required>
+            </div>
+            <button type="submit">Test Login</button>
+        </form>
+    </div>
+
+    <div id="status" class="status" style="display: none;"></div>
+
+    <script type="module" src="src/firebaseConfig.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const statusDiv = document.getElementById('status');
+            
+            function showStatus(message, type) {
+                statusDiv.textContent = message;
+                statusDiv.className = `status ${type}`;
+                statusDiv.style.display = 'block';
+            }
+
+            // Test registration
+            document.getElementById('test-register-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const username = document.getElementById('test-username').value;
+                const fullname = document.getElementById('test-fullname').value;
+                const email = document.getElementById('test-email').value;
+                const contactNumber = document.getElementById('test-contact').value;
+                const password = document.getElementById('test-password').value;
+                const confirmPassword = document.getElementById('test-confirm').value;
+                
+                if (password !== confirmPassword) {
+                    showStatus('Passwords do not match!', 'error');
+                    return;
+                }
+
+                // Check if Firebase is available
+                if (window.db && window.set && window.ref && window.get) {
+                    // Check if username already exists
+                    const userRef = window.ref(window.db, "users/" + username);
+                    window.get(userRef)
+                        .then((snapshot) => {
+                            if (snapshot.exists()) {
+                                showStatus('Username already exists! Please choose a different username.', 'error');
+                                return;
+                            }
+
+                            // Set user data in Firebase
+                            window.set(window.ref(window.db, "users/" + username), {
+                                name: fullname,
+                                email: email,
+                                contactNumber: contactNumber,
+                                password: password,
+                                avatar: "", // Empty string for new users - no default image
+                                joinDate: window.serverTimestamp(),
+                                totalXp: 0
+                            })
+                            .then(() => {
+                                showStatus('User registered successfully in Firebase! You can now test login.', 'success');
+                                document.getElementById('test-register-form').reset();
+                            })
+                            .catch((error) => {
+                                console.error("Error writing to Firebase: ", error);
+                                showStatus('Registration failed: ' + error.message, 'error');
+                            });
+                        })
+                        .catch((error) => {
+                            console.error("Error checking username: ", error);
+                            showStatus('Registration failed: ' + error.message, 'error');
+                        });
+                } else {
+                    showStatus('Firebase is not available. Please check your configuration.', 'error');
+                }
+            });
+
+            // Test login
+            document.getElementById('test-login-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const username = document.getElementById('test-login-username').value;
+                const password = document.getElementById('test-login-password').value;
+
+                if (window.db && window.get && window.ref) {
+                    const userRef = window.ref(window.db, "users/" + username);
+                    window.get(userRef)
+                        .then((snapshot) => {
+                            if (snapshot.exists()) {
+                                const userData = snapshot.val();
+                                if (userData.password === password) {
+                                    showStatus(`Login successful! Welcome ${userData.name}. XP: ${userData.totalXp || 0}`, 'success');
+                                    document.getElementById('test-login-form').reset();
+                                } else {
+                                    showStatus('Incorrect password.', 'error');
+                                }
+                            } else {
+                                showStatus('User not found.', 'error');
+                            }
+                        })
+                        .catch((error) => {
+                            console.error("Login error: ", error);
+                            showStatus('Login failed: ' + error.message, 'error');
+                        });
+                } else {
+                    showStatus('Firebase is not available. Please check your configuration.', 'error');
+                }
+            });
+
+            // Check Firebase connection
+            setTimeout(() => {
+                if (window.db) {
+                    showStatus('Firebase connection established successfully!', 'info');
+                } else {
+                    showStatus('Firebase connection failed. Check console for errors.', 'error');
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+</html> 
