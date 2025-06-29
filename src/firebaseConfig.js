@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     email: email,
                     contactNumber: contactNumber,
                     password: password, // Note: In production, never store plain text passwords
-                    avatar: "", // Empty string for new users - no default image
+                    avatar: "./assets/user.png", // Empty string for new users - no default image
                     joinDate: serverTimestamp(),
                     totalXp: 0,
                     isAdmin: false
