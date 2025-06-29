@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-    <title>ChariTree | Transforming Donations into Sustainable Impact</title>
+    <title>ChariTree</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ChariTree bridges philanthropy and sustainability by converting donations into planted trees, creating measurable environmental and social impact.">
@@ -15,7 +15,7 @@
     
     <!-- Favicon -->
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/tree icon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     
     <!-- Fonts -->
@@ -26,7 +26,7 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script type="module" src="src/firebaseConfig.js"></script>
+    
     
     <!-- CSS -->
     <style>
@@ -1049,7 +1049,7 @@
             height: 100%;
             z-index: 0;
             pointer-events: none;
-            background: url('./assets/planting1.jpg') 60% center/cover no-repeat;
+            background: url('/assets/planting1-966d2c2a.jpg') 60% center/cover no-repeat;
             filter: blur(2.5px) brightness(0.85) saturate(1.1);
             opacity: 0.85;
         }
@@ -1087,8 +1087,17 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;      /* Added for centering */
+            text-align: center;       /* Added for centering */
             height: 100%;
             max-width: 600px;
+            margin: 0 auto;           /* Optional: ensures it's centered in the container */
+        }
+
+        .hero-content h1,
+        .hero-content p {
+            text-align: center;
+            width: 100%;
         }
 
         .hero-content h1 {
@@ -3014,6 +3023,7 @@
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
     </script>
+  <script type="module" crossorigin src="/assets/index-8a156f37.js"></script>
 </head>
 <body>
     <!-- Skip to Content Link for Accessibility -->
@@ -3045,6 +3055,19 @@
                     <input type="password" id="login-password" class="form-control" required>
                 </div>
                 
+                <div class="form-group">
+                    <label class="form-label">Login as:</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="login-type" value="user" checked>
+                            <span>User</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="login-type" value="admin">
+                            <span>Admin</span>
+                        </label>
+                    </div>
+                </div>
                 
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
                 
@@ -3101,7 +3124,7 @@
                 <p>Convert your XP points to plant trees in Manila</p>
             </div>
             
-            <form class="plant-tree-form" id="plant-tree-form">
+            <form class="plant-tree-form">
                 <div class="form-group">
                     <label for="tree-location" class="form-label">Planting Location</label>
                     <select id="tree-location" class="form-control" required>
@@ -3117,17 +3140,17 @@
                 <div class="form-group">
                     <label class="form-label">Tree Type</label>
                     <div class="tree-options">
-                        <div class="tree-option selected" data-tree-type="narra">
+                        <div class="tree-option selected">
                             <h3>Narra Tree</h3>
                             <p>The national tree of the Philippines, known for its durability and beautiful flowers.</p>
                             <span class="xp-cost">5,000 XP</span>
                         </div>
-                        <div class="tree-option" data-tree-type="mango">
+                        <div class="tree-option">
                             <h3>Mango Tree</h3>
                             <p>Provides delicious fruits and excellent shade.</p>
                             <span class="xp-cost">7,500 XP</span>
                         </div>
-                        <div class="tree-option" data-tree-type="bamboo">
+                        <div class="tree-option">
                             <h3>Bamboo</h3>
                             <p>Fast-growing and excellent for preventing soil erosion.</p>
                             <span class="xp-cost">4,000 XP</span>
@@ -3164,7 +3187,7 @@
         <div class="container header-content">
             <div class="header-left">
                 <a href="home.html" class="brand-logo">
-                    <img src="./assets/ctnbg.png" alt="ChariTree Logo" width="40" height="40">
+                    <img src="/assets/ctnbg-680a6888.png" alt="ChariTree Logo" width="40" height="40">
                     <span class="brand-name">ChariTree</span>
                 </a>
             </div>
@@ -3189,7 +3212,7 @@
                     <button id="login-btn" class="btn btn-sm btn-outline">Login</button>
                     <button id="register-btn" class="btn btn-sm btn-primary">Register</button>
                     <div class="user-avatar" id="user-avatar" style="display: none;">
-                        <img src="./assets/leo.jpg" alt="User profile" width="45" height="45">
+                        <img src="/assets/leo-005c4647.jpg" alt="User profile" width="45" height="45">
                     </div>
                     <button id="logout-btn" class="btn btn-sm btn-outline" style="display: none;">Logout</button>
                 </div>
@@ -3208,7 +3231,7 @@
                 
                 <div class="profile-summary">
                     <div class="avatar-container">
-                        <img id="profile-avatar" src="./assets/leo.jpg" alt="User profile picture">
+                        <img id="profile-avatar" src="/assets/leo-005c4647.jpg" alt="User profile picture">
                     </div>
                     
                     <div class="xp-summary">
@@ -3230,7 +3253,7 @@
                                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
                             </svg>
-                            <span>Dashboard</span>
+                            <span>Home</span>
                         </a>
                     </li>
                     <li>
@@ -3258,7 +3281,7 @@
                                 <line x1="12" y1="20" x2="12" y2="4"></line>
                                 <line x1="6" y1="20" x2="6" y2="14"></line>
                             </svg>
-                            <span>Visualization</span>
+                            <span>Dashboard</span>
                         </a>
                     </li>
                     <li>
@@ -3655,46 +3678,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <div style="margin:56px auto 0 auto;max-width:800px;">
-                            <h3 style="color:var(--primary-accent);margin-bottom:18px;text-align:center;">Frequently Asked Questions</h3>
-                            <div id="faq-accordion">
-                                <div class="faq-item" style="margin-bottom:18px;">
-                                    <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;color:var(--text-primary);font-size:1.1rem;font-weight:bold;padding:12px 0;cursor:pointer;">How do I earn XP points?</button>
-                                    <div class="faq-answer" style="display:none;color:var(--text-secondary);padding:0 0 0 8px;">You earn XP for every donation you make. Monetary donations and item donations have different XP rates, as shown above. The more you give, the more XP you earn!</div>
-                                </div>
-                                <div class="faq-item" style="margin-bottom:18px;">
-                                    <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;color:var(--text-primary);font-size:1.1rem;font-weight:bold;padding:12px 0;cursor:pointer;">How are trees actually planted?</button>
-                                    <div class="faq-answer" style="display:none;color:var(--text-secondary);padding:0 0 0 8px;">ChariTree partners with local organizations and communities to plant trees in verified locations. You can see updates and photos of planting events in the Transparency section.</div>
-                                </div>
-                                <div class="faq-item" style="margin-bottom:18px;">
-                                    <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;color:var(--text-primary);font-size:1.1rem;font-weight:bold;padding:12px 0;cursor:pointer;">Can I dedicate a tree to someone?</button>
-                                    <div class="faq-answer" style="display:none;color:var(--text-secondary);padding:0 0 0 8px;">Yes! When you plant a tree, you can add a dedication message. This message will be displayed with your tree in the visualization section.</div>
-                                </div>
-                                <div class="faq-item" style="margin-bottom:18px;">
-                                    <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;color:var(--text-primary);font-size:1.1rem;font-weight:bold;padding:12px 0;cursor:pointer;">Is my donation tax-deductible?</button>
-                                    <div class="faq-answer" style="display:none;color:var(--text-secondary);padding:0 0 0 8px;">ChariTree works with registered charities. For tax deduction eligibility, please check with your chosen charity or contact us for more information.</div>
-                                </div>
-                                <div class="faq-item">
-                                    <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;color:var(--text-primary);font-size:1.1rem;font-weight:bold;padding:12px 0;cursor:pointer;">How can I see the impact of my donations?</button>
-                                    <div class="faq-answer" style="display:none;color:var(--text-secondary);padding:0 0 0 8px;">Log in to your dashboard to see your XP, trees planted, and a map of your impact. The Transparency and Visualization sections show real-time data for all users.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <script>
-                        // FAQ accordion logic
-                        document.addEventListener('DOMContentLoaded', function() {
-                            var faqQuestions = document.querySelectorAll('#faq-accordion .faq-question');
-                            faqQuestions.forEach(function(btn) {
-                                btn.addEventListener('click', function() {
-                                    var answer = btn.nextElementSibling;
-                                    var isOpen = answer.style.display === 'block';
-                                    // Close all
-                                    document.querySelectorAll('#faq-accordion .faq-answer').forEach(function(a) { a.style.display = 'none'; });
-                                    if (!isOpen) answer.style.display = 'block';
-                                });
-                            });
-                        });
-                        </script>
                     </div>
                 </section>
                 
@@ -3764,14 +3747,14 @@
                 // Only 2 slides, each with 3 charity centers
                 const charitySlides = [
                   [
-                    {src: './assets/Caritas Manila1.png', location: 'Caritas Manila', desc: 'Manila'},
-                    {src: './assets/Segunda Mana1.jpg', location: 'Segunda Mana', desc: 'Quezon City'},
-                    {src: './assets/Parish Of The Immaculate Heart Of Mary1.jpg', location: 'Immaculate Heart Parish', desc: 'Makati'},
+                    {src: '/assets/Caritas Manila1.png', location: 'Caritas Manila', desc: 'Manila'},
+                    {src: '/assets/Segunda Mana1.jpg', location: 'Segunda Mana', desc: 'Quezon City'},
+                    {src: '/assets/Parish Of The Immaculate Heart Of Mary1.jpg', location: 'Immaculate Heart Parish', desc: 'Makati'},
                   ],
                   [
-                    {src: './assets/Reign in Life Christ.png', location: 'Reign in Life Christ', desc: 'Pasig'},
-                    {src: './assets/ULCCI.png', location: 'ULCCI', desc: 'Taguig'},
-                    {src: './assets/Winners Church.png', location: 'Winners Church', desc: 'Mandaluyong'},
+                    {src: '/assets/Reign in Life Christ.png', location: 'Reign in Life Christ', desc: 'Pasig'},
+                    {src: '/assets/ULCCI.png', location: 'ULCCI', desc: 'Taguig'},
+                    {src: '/assets/Winners Church.png', location: 'Winners Church', desc: 'Mandaluyong'},
                   ]
                 ];
                 let charityCarouselIndex = 0;
@@ -3806,7 +3789,55 @@
                 });
                 </script>
                 
-                <!-- CTA Section -->
+                <!-- FAQ Section (moved here) -->
+                <section id="faq-section" class="section section-reveal">
+                    <div class="container">
+                        <h3 style="color:var(--primary-accent);margin-bottom:18px;text-align:center;">Frequently Asked Questions</h3>
+                        <div id="faq-accordion">
+                            <div class="faq-item" style="margin-bottom:0;">
+                                <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;color:var(--text-primary);font-size:1.1rem;font-weight:bold;padding:12px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">How do I earn XP points?<span style="margin-left:10px;display:inline-block;vertical-align:middle;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg></span></button>
+                                <div class="faq-answer" style="display:none;color:var(--text-secondary);padding:0 0 0 8px;">You earn XP for every donation you make. Monetary donations and item donations have different XP rates, as shown above. The more you give, the more XP you earn!</div>
+                            </div>
+                            <hr style="border:0;border-top:1px solid rgba(255,255,255,0.12);margin:0 0 0 0;">
+                            <div class="faq-item" style="margin-bottom:0;">
+                                <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;color:var(--text-primary);font-size:1.1rem;font-weight:bold;padding:12px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">How are trees actually planted?<span style="margin-left:10px;display:inline-block;vertical-align:middle;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg></span></button>
+                                <div class="faq-answer" style="display:none;color:var(--text-secondary);padding:0 0 0 8px;">ChariTree partners with local organizations and communities to plant trees in verified locations. You can see updates and photos of planting events in the Transparency section.</div>
+                            </div>
+                            <hr style="border:0;border-top:1px solid rgba(255,255,255,0.12);margin:0 0 0 0;">
+                            <div class="faq-item" style="margin-bottom:0;">
+                                <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;color:var(--text-primary);font-size:1.1rem;font-weight:bold;padding:12px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">Can I dedicate a tree to someone?<span style="margin-left:10px;display:inline-block;vertical-align:middle;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg></span></button>
+                                <div class="faq-answer" style="display:none;color:var(--text-secondary);padding:0 0 0 8px;">Yes! When you plant a tree, you can add a dedication message. This message will be displayed with your tree in the visualization section.</div>
+                            </div>
+                            <hr style="border:0;border-top:1px solid rgba(255,255,255,0.12);margin:0 0 0 0;">
+                            <div class="faq-item" style="margin-bottom:0;">
+                                <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;color:var(--text-primary);font-size:1.1rem;font-weight:bold;padding:12px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">Is my donation tax-deductible?<span style="margin-left:10px;display:inline-block;vertical-align:middle;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg></span></button>
+                                <div class="faq-answer" style="display:none;color:var(--text-secondary);padding:0 0 0 8px;">ChariTree works with registered charities. For tax deduction eligibility, please check with your chosen charity or contact us for more information.</div>
+                            </div>
+                            <hr style="border:0;border-top:1px solid rgba(255,255,255,0.12);margin:0 0 0 0;">
+                            <div class="faq-item">
+                                <button class="faq-question" style="width:100%;text-align:left;background:none;border:none;color:var(--text-primary);font-size:1.1rem;font-weight:bold;padding:12px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">How can I see the impact of my donations?<span style="margin-left:10px;display:inline-block;vertical-align:middle;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg></span></button>
+                                <div class="faq-answer" style="display:none;color:var(--text-secondary);padding:0 0 0 8px;">Log in to your dashboard to see your XP, trees planted, and a map of your impact. The Transparency and Visualization sections show real-time data for all users.</div>
+                            </div>
+                        </div>
+                        <script>
+                        // FAQ accordion logic
+                        document.addEventListener('DOMContentLoaded', function() {
+                            var faqQuestions = document.querySelectorAll('#faq-accordion .faq-question');
+                            faqQuestions.forEach(function(btn) {
+                                btn.addEventListener('click', function() {
+                                    var answer = btn.nextElementSibling;
+                                    var isOpen = answer.style.display === 'block';
+                                    // Close all
+                                    document.querySelectorAll('#faq-accordion .faq-answer').forEach(function(a) { a.style.display = 'none'; });
+                                    if (!isOpen) answer.style.display = 'block';
+                                });
+                            });
+                        });
+                        </script>
+                    </div>
+                </section>
+                
+                <!-- CTA Section (remains after FAQ) -->
                 <section class="section section-cta section-reveal">
                     <div class="container">
                         <div class="cta-card">
@@ -3980,7 +4011,7 @@
                         <div class="donation-grid">
                             <div class="donation-item">
                                 <div class="donation-avatar">
-                                    <img src="./assets/fyang.jpg" alt="User avatar" loading="lazy">
+                                    <img src="/assets/fyang-361d759b.jpg" alt="User avatar" loading="lazy">
                                 </div>
                                 <div class="donation-details">
                                     <h4>Fyang Smith</h4>
@@ -3991,7 +4022,7 @@
                             
                             <div class="donation-item">
                                 <div class="donation-avatar">
-                                    <img src="./assets/mica.jpg" alt="User avatar" loading="lazy">
+                                    <img src="/assets/mica-9684123f.jpg" alt="User avatar" loading="lazy">
                                 </div>
                                 <div class="donation-details">
                                     <h4>Mika Salamanca</h4>
@@ -4002,7 +4033,7 @@
                             
                             <div class="donation-item">
                                 <div class="donation-avatar">
-                                    <img src="./assets/pup.jpg" alt="User avatar" loading="lazy">
+                                    <img src="/assets/pup-86f85d18.jpg" alt="User avatar" loading="lazy">
                                 </div>
                                 <div class="donation-details">
                                     <h4>PUP - Manila</h4>
@@ -4135,7 +4166,7 @@
                     <div class="team-members-grid">
                         <div class="team-member-card">
                             <div class="team-member-avatar">
-                                <img src="./assets/leo1.jpg" alt="Team Member">
+                                <img src="/assets/leo1-a9394a45.jpg" alt="Team Member">
                             </div>
                             <h3 class="team-member-name">Leo</h3>
                             <p class="team-member-role">Fullstack Developer</p>
@@ -4144,7 +4175,7 @@
                         
                         <div class="team-member-card">
                             <div class="team-member-avatar">
-                                <img src="./assets/ei.jpg" alt="Team Member">
+                                <img src="/assets/ei-8da9525c.jpg" alt="Team Member">
                             </div>
                             <h3 class="team-member-name">Alfred Joshua Palpalatoc</h3>
                             <p class="team-member-role">UI/UX Lead</p>
@@ -4153,7 +4184,7 @@
                         
                         <div class="team-member-card">
                             <div class="team-member-avatar">
-                                <img src="./assets/ron.jpg" alt="Team Member">
+                                <img src="/assets/ron-d221d358.jpg" alt="Team Member">
                             </div>
                             <h3 class="team-member-name">Ron Corwin Liwag</h3>
                             <p class="team-member-role">Database Architect</p>
@@ -4163,7 +4194,7 @@
                         
                         <div class="team-member-card">
                             <div class="team-member-avatar">
-                                <img src="./assets/francis.jpg" alt="Team Member">
+                                <img src="/assets/francis-e0a3a183.jpg" alt="Team Member">
                             </div>
                             <h3 class="team-member-name">Francis Erick Romasanta</h3>
                             <p class="team-member-role">Technical Project Lead</p>
@@ -4182,7 +4213,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="home.html" class="footer-logo">
-                        <img src="./assets/ctnbg.png" alt="ChariTree Logo" width="40" height="40">
+                        <img src="/assets/ctnbg-680a6888.png" alt="ChariTree Logo" width="40" height="40">
                         <span class="brand-name">ChariTree</span>
                     </a>
                     <p class="footer-tagline">Transforming donations into sustainable impact through reforestation and community support.</p>
@@ -4874,32 +4905,32 @@
           'Caritas Manila': {
             desc: 'Caritas Manila is the lead social service and development ministry of the Catholic Church in the Philippines. It provides programs for poverty reduction, disaster response, and community development.',
             location: 'Manila',
-            img: './assets/Caritas Manila1.png'
+            img: '/assets/Caritas Manila1.png'
           },
           'Segunda Mana': {
             desc: 'Segunda Mana is a donation-in-kind program under Caritas Manila, focusing on collecting and redistributing pre-loved items to support the poor and marginalized.',
             location: 'Quezon City',
-            img: './assets/Segunda Mana1.jpg'
+            img: '/assets/Segunda Mana1.jpg'
           },
           'Immaculate Heart Parish': {
             desc: 'The Parish of the Immaculate Heart of Mary in Makati is a vibrant faith community known for its outreach and charity work in the local area.',
             location: 'Makati',
-            img: './assets/Parish Of The Immaculate Heart Of Mary1.jpg'
+            img: '/assets/Parish Of The Immaculate Heart Of Mary1.jpg'
           },
           'Reign in Life Christ': {
             desc: 'Reign in Life Christ is a Christian organization in Pasig dedicated to spiritual growth and community service, especially among the youth.',
             location: 'Pasig',
-            img: './assets/Reign in Life Christ.png'
+            img: '/assets/Reign in Life Christ.png'
           },
           'ULCCI': {
             desc: 'ULCCI (United Life Christian Church International) in Taguig is committed to holistic ministry, providing both spiritual and material support to the community.',
             location: 'Taguig',
-            img: './assets/ULCCI.png'
+            img: '/assets/ULCCI.png'
           },
           'Winners Church': {
             desc: 'Winners Church in Mandaluyong is a dynamic church community focused on outreach, education, and support for families and children in need.',
             location: 'Mandaluyong',
-            img: './assets/Winners Church.png'
+            img: '/assets/Winners Church.png'
           }
         };
 
@@ -5167,7 +5198,7 @@
                     if (currentUser.avatar && currentUser.avatar.trim() !== "") {
                         profileAvatar.src = currentUser.avatar;
                     } else {
-                        profileAvatar.src = './assets/user.png'; // Default user image for new accounts
+                        profileAvatar.src = '/assets/user.png'; // Default user image for new accounts
                     }
                 }
 
@@ -5177,7 +5208,7 @@
                     if (currentUser.avatar && currentUser.avatar.trim() !== "") {
                         headerUserAvatar.src = currentUser.avatar;
                     } else {
-                        headerUserAvatar.src = './assets/user.png'; // Default user image for new accounts
+                        headerUserAvatar.src = '/assets/user.png'; // Default user image for new accounts
                     }
                 }
             }
