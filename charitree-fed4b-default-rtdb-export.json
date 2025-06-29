@@ -1,0 +1,4212 @@
+{
+  "charities": {
+    "caritas_manila": {
+      "address": "2002 Jesus St, Pandacan, City Of Manila, 1011 Metro Manila",
+      "description": "Caritas Manila is a non-profit organization that serves as the lead social service and development ministry of the Catholic Church in the Philippines. The organization is geared towards total human development, poverty alleviation, and the creation of a Christian community with a strong social conscience.",
+      "email": "donation_inkind@caritasmanila.org.ph",
+      "logo": "",
+      "name": "Caritas Manila",
+      "phone": "0285620020",
+      "registeredAt": 1751197779000,
+      "verified": true
+    },
+    "immaculate_heart_parish": {
+      "address": "4 Sacred Heart St, Makati City, 1203 Metro Manila",
+      "description": "The Parish of the Immaculate Heart of Mary in Makati is a vibrant faith community known for its outreach and charity work in the local area.",
+      "email": "immaculateheartparish@gmail.com",
+      "logo": "",
+      "name": "Immaculate Heart Parish",
+      "phone": "289216683",
+      "registeredAt": 1751197779000,
+      "verified": true
+    },
+    "reign_in_life_christ": {
+      "address": "114 P. Burgos, Pasig, Metro Manila",
+      "description": "Reign in Life Christ is a Christian organization in Pasig dedicated to spiritual growth and community service, especially among the youth.",
+      "email": "reigninlifechrist@gmail.com",
+      "logo": "",
+      "name": "Reign in Life Christ",
+      "phone": "09257773446",
+      "registeredAt": 1751197779000,
+      "verified": true
+    },
+    "segunda_mana": {
+      "address": "2002 Jesus St, Pandacan, City Of Manila, 1011 Metro Manila",
+      "description": "Segunda Mana is the special donations-in-kind program of Caritas Manila.",
+      "email": "donation_inkind@caritasmanila.org.ph",
+      "logo": "",
+      "name": "Segunda Mana",
+      "phone": "0285620020",
+      "registeredAt": 1751197779000,
+      "verified": true
+    },
+    "ulcci": {
+      "address": "123 Unity Street, Quezon City, Metro Manila",
+      "description": "ULCCI (United Life Christian Church International) in Taguig is committed to holistic ministry, providing both spiritual and material support to the community.",
+      "email": "contact@ulcci.org",
+      "logo": "",
+      "name": "ULCCI",
+      "phone": "09171234567",
+      "registeredAt": 1751197779000,
+      "verified": true
+    },
+    "winners_church": {
+      "address": "Victory Ave, Makati City, Metro Manila",
+      "description": "Winners Church in Mandaluyong is a dynamic church community focused on outreach, education, and support for families and children in need.",
+      "email": "donate@winnerschurch.ph",
+      "logo": "",
+      "name": "Winners Church",
+      "phone": "09281234567",
+      "registeredAt": 1751197779000,
+      "verified": true
+    }
+  },
+  "donations": {
+    "ameliascott98_1656667137000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 1097,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2022-07-01T17:18:57",
+      "message": "Donation from ameliascott98",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "ameliascott98",
+      "xpEarned": 14
+    },
+    "ameliascott98_1664299519000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 1235,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2022-09-28T01:25:19",
+      "message": "Donation from ameliascott98",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "ameliascott98",
+      "xpEarned": 36
+    },
+    "avasmith39_1674330642000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 15.51
+      },
+      "donationDate": "2023-01-22T03:50:42",
+      "message": "Donation from avasmith39",
+      "status": "verified",
+      "type": "item",
+      "userId": "avasmith39",
+      "xpEarned": 22
+    },
+    "avasmith39_1678372326000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 9520,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2023-03-09T22:32:06",
+      "message": "Donation from avasmith39",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "avasmith39",
+      "xpEarned": 28
+    },
+    "charlottejohnson88_1650406031000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 4.18
+      },
+      "donationDate": "2022-04-20T06:07:11",
+      "message": "Donation from charlottejohnson88",
+      "status": "completed",
+      "type": "item",
+      "userId": "charlottejohnson88",
+      "xpEarned": 42
+    },
+    "charlottejohnson88_1656997070000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 1047,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2022-07-05T12:57:50",
+      "message": "Donation from charlottejohnson88",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "charlottejohnson88",
+      "xpEarned": 34
+    },
+    "charlottejohnson88_1698868187000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 9167,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2023-11-02T03:49:47",
+      "message": "Donation from charlottejohnson88",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "charlottejohnson88",
+      "xpEarned": 32
+    },
+    "charlottejohnson88_1708628864000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 935,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2024-02-23T03:07:44",
+      "message": "Donation from charlottejohnson88",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "charlottejohnson88",
+      "xpEarned": 49
+    },
+    "charlotteyoung31_1704712153000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 847,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-01-08T19:09:13",
+      "message": "Donation from charlotteyoung31",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "charlotteyoung31",
+      "xpEarned": 45
+    },
+    "charlotteyoung31_1705482165000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 7549,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2024-01-17T17:02:45",
+      "message": "Donation from charlotteyoung31",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "charlotteyoung31",
+      "xpEarned": 34
+    },
+    "charlotteyoung31_1723009928000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 4.46
+      },
+      "donationDate": "2024-08-07T13:52:08",
+      "message": "Donation from charlotteyoung31",
+      "status": "completed",
+      "type": "item",
+      "userId": "charlotteyoung31",
+      "xpEarned": 48
+    },
+    "danielbrown34_1650651856000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 6665,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2022-04-23T02:24:16",
+      "message": "Donation from danielbrown34",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "danielbrown34",
+      "xpEarned": 21
+    },
+    "danielbrown34_1732006086000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 793,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-11-19T16:48:06",
+      "message": "Donation from danielbrown34",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "danielbrown34",
+      "xpEarned": 27
+    },
+    "danielbrown34_1734028467000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 1955,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2024-12-13T02:34:27",
+      "message": "Donation from danielbrown34",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "danielbrown34",
+      "xpEarned": 10
+    },
+    "danielbrown34_1734827912000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 13.99
+      },
+      "donationDate": "2024-12-22T08:38:32",
+      "message": "Donation from danielbrown34",
+      "status": "pending",
+      "type": "item",
+      "userId": "danielbrown34",
+      "xpEarned": 31
+    },
+    "danielclark33_1658538773000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 7478,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2022-07-23T09:12:53",
+      "message": "Donation from danielclark33",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "danielclark33",
+      "xpEarned": 35
+    },
+    "danielclark33_1724466770000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 19.44
+      },
+      "donationDate": "2024-08-24T10:32:50",
+      "message": "Donation from danielclark33",
+      "status": "verified",
+      "type": "item",
+      "userId": "danielclark33",
+      "xpEarned": 32
+    },
+    "danielclark33_1729517857000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 3
+      },
+      "donationDate": "2024-10-21T21:37:37",
+      "message": "Donation from danielclark33",
+      "status": "completed",
+      "type": "item",
+      "userId": "danielclark33",
+      "xpEarned": 26
+    },
+    "danielhill55_1676006447000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 10.88
+      },
+      "donationDate": "2023-02-10T13:20:47",
+      "message": "Donation from danielhill55",
+      "status": "verified",
+      "type": "item",
+      "userId": "danielhill55",
+      "xpEarned": 32
+    },
+    "danielhill55_1735690883000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 19.99
+      },
+      "donationDate": "2025-01-01T08:21:23",
+      "message": "Donation from danielhill55",
+      "status": "pending",
+      "type": "item",
+      "userId": "danielhill55",
+      "xpEarned": 43
+    },
+    "danielscott82_1661865599000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 14.32
+      },
+      "donationDate": "2022-08-30T21:19:59",
+      "message": "Donation from danielscott82",
+      "status": "verified",
+      "type": "item",
+      "userId": "danielscott82",
+      "xpEarned": 44
+    },
+    "danielscott82_1708242268000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 9668,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2024-02-18T15:44:28",
+      "message": "Donation from danielscott82",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "danielscott82",
+      "xpEarned": 47
+    },
+    "danielscott82_1748826800000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 7310,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-06-02T09:13:20",
+      "message": "Donation from danielscott82",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "danielscott82",
+      "xpEarned": 33
+    },
+    "danielwright85_1665461754000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 13.5
+      },
+      "donationDate": "2022-10-11T12:15:54",
+      "message": "Donation from danielwright85",
+      "status": "verified",
+      "type": "item",
+      "userId": "danielwright85",
+      "xpEarned": 22
+    },
+    "danielwright85_1688009584000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 16.42
+      },
+      "donationDate": "2023-06-29T11:33:04",
+      "message": "Donation from danielwright85",
+      "status": "pending",
+      "type": "item",
+      "userId": "danielwright85",
+      "xpEarned": 32
+    },
+    "danielwright85_1744366689000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 8931,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2025-04-11T18:18:09",
+      "message": "Donation from danielwright85",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "danielwright85",
+      "xpEarned": 35
+    },
+    "davidanderson10_1648826483000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 10.52
+      },
+      "donationDate": "2022-04-01T23:21:23",
+      "message": "Donation from davidanderson10",
+      "status": "pending",
+      "type": "item",
+      "userId": "davidanderson10",
+      "xpEarned": 23
+    },
+    "davidanderson10_1670294641000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 19.38
+      },
+      "donationDate": "2022-12-06T10:44:01",
+      "message": "Donation from davidanderson10",
+      "status": "pending",
+      "type": "item",
+      "userId": "davidanderson10",
+      "xpEarned": 28
+    },
+    "davidanderson10_1693849482000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 19.07
+      },
+      "donationDate": "2023-09-05T01:44:42",
+      "message": "Donation from davidanderson10",
+      "status": "completed",
+      "type": "item",
+      "userId": "davidanderson10",
+      "xpEarned": 16
+    },
+    "davidnguyen88_1642029642000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 1744,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2022-01-13T07:20:42",
+      "message": "Donation from davidnguyen88",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "davidnguyen88",
+      "xpEarned": 46
+    },
+    "davidnguyen88_1700774619000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 13.31
+      },
+      "donationDate": "2023-11-24T05:23:39",
+      "message": "Donation from davidnguyen88",
+      "status": "verified",
+      "type": "item",
+      "userId": "davidnguyen88",
+      "xpEarned": 42
+    },
+    "davidnguyen88_1716556235000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 0.63
+      },
+      "donationDate": "2024-05-24T21:10:35",
+      "message": "Donation from davidnguyen88",
+      "status": "pending",
+      "type": "item",
+      "userId": "davidnguyen88",
+      "xpEarned": 25
+    },
+    "emilyjohnson35_1660793026000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 6637,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2022-08-18T11:23:46",
+      "message": "Donation from emilyjohnson35",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "emilyjohnson35",
+      "xpEarned": 16
+    },
+    "emilynguyen71_1645839551000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 13.67
+      },
+      "donationDate": "2022-02-26T09:39:11",
+      "message": "Donation from emilynguyen71",
+      "status": "pending",
+      "type": "item",
+      "userId": "emilynguyen71",
+      "xpEarned": 42
+    },
+    "emilynguyen71_1685054041000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 2.17
+      },
+      "donationDate": "2023-05-26T06:34:01",
+      "message": "Donation from emilynguyen71",
+      "status": "completed",
+      "type": "item",
+      "userId": "emilynguyen71",
+      "xpEarned": 36
+    },
+    "emilynguyen71_1699639853000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 11.67
+      },
+      "donationDate": "2023-11-11T02:10:53",
+      "message": "Donation from emilynguyen71",
+      "status": "completed",
+      "type": "item",
+      "userId": "emilynguyen71",
+      "xpEarned": 38
+    },
+    "emilynguyen71_1738674879000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 1.95
+      },
+      "donationDate": "2025-02-04T21:14:39",
+      "message": "Donation from emilynguyen71",
+      "status": "completed",
+      "type": "item",
+      "userId": "emilynguyen71",
+      "xpEarned": 42
+    },
+    "emmabrown76_1661297234000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 9684,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2022-08-24T07:27:14",
+      "message": "Donation from emmabrown76",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "emmabrown76",
+      "xpEarned": 50
+    },
+    "emmabrown76_1717065853000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 7823,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-05-30T18:44:13",
+      "message": "Donation from emmabrown76",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "emmabrown76",
+      "xpEarned": 20
+    },
+    "emmabrown76_1757493706000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 1142,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-09-10T16:41:46",
+      "message": "Donation from emmabrown76",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "emmabrown76",
+      "xpEarned": 25
+    },
+    "emmahill17_1733529312000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 2418,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2024-12-07T07:55:12",
+      "message": "Donation from emmahill17",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "emmahill17",
+      "xpEarned": 50
+    },
+    "emmahill17_1745769792000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 6.67
+      },
+      "donationDate": "2025-04-28T00:03:12",
+      "message": "Donation from emmahill17",
+      "status": "verified",
+      "type": "item",
+      "userId": "emmahill17",
+      "xpEarned": 11
+    },
+    "emmahill17_1766823577000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 3799,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-12-27T16:19:37",
+      "message": "Donation from emmahill17",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "emmahill17",
+      "xpEarned": 15
+    },
+    "emmasmith75_1676063210000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 0.86
+      },
+      "donationDate": "2023-02-11T05:06:50",
+      "message": "Donation from emmasmith75",
+      "status": "completed",
+      "type": "item",
+      "userId": "emmasmith75",
+      "xpEarned": 22
+    },
+    "emmasmith75_1759927920000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 7.84
+      },
+      "donationDate": "2025-10-08T20:52:00",
+      "message": "Donation from emmasmith75",
+      "status": "verified",
+      "type": "item",
+      "userId": "emmasmith75",
+      "xpEarned": 38
+    },
+    "emmawright69_1739148249000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 9.56
+      },
+      "donationDate": "2025-02-10T08:44:09",
+      "message": "Donation from emmawright69",
+      "status": "pending",
+      "type": "item",
+      "userId": "emmawright69",
+      "xpEarned": 27
+    },
+    "emmawright69_1759333926000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 19.97
+      },
+      "donationDate": "2025-10-01T23:52:06",
+      "message": "Donation from emmawright69",
+      "status": "pending",
+      "type": "item",
+      "userId": "emmawright69",
+      "xpEarned": 24
+    },
+    "ethananderson97_1661042831000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 2886,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2022-08-21T08:47:11",
+      "message": "Donation from ethananderson97",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "ethananderson97",
+      "xpEarned": 39
+    },
+    "ethananderson97_1765664757000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 15.41
+      },
+      "donationDate": "2025-12-14T06:25:57",
+      "message": "Donation from ethananderson97",
+      "status": "pending",
+      "type": "item",
+      "userId": "ethananderson97",
+      "xpEarned": 46
+    },
+    "ethangreen34_1649359952000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 12.67
+      },
+      "donationDate": "2022-04-08T03:32:32",
+      "message": "Donation from ethangreen34",
+      "status": "verified",
+      "type": "item",
+      "userId": "ethangreen34",
+      "xpEarned": 10
+    },
+    "ethangreen34_1675504430000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 12.72
+      },
+      "donationDate": "2023-02-04T17:53:50",
+      "message": "Donation from ethangreen34",
+      "status": "completed",
+      "type": "item",
+      "userId": "ethangreen34",
+      "xpEarned": 17
+    },
+    "ethangreen34_1712591225000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 19.53
+      },
+      "donationDate": "2024-04-08T23:47:05",
+      "message": "Donation from ethangreen34",
+      "status": "pending",
+      "type": "item",
+      "userId": "ethangreen34",
+      "xpEarned": 13
+    },
+    "ethangreen34_1764754332000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 5482,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2025-12-03T17:32:12",
+      "message": "Donation from ethangreen34",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "ethangreen34",
+      "xpEarned": 17
+    },
+    "ethanhall62_1642630933000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 6483,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2022-01-20T06:22:13",
+      "message": "Donation from ethanhall62",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "ethanhall62",
+      "xpEarned": 43
+    },
+    "ethanhall62_1653449391000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 3796,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2022-05-25T11:29:51",
+      "message": "Donation from ethanhall62",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "ethanhall62",
+      "xpEarned": 27
+    },
+    "ethanhall62_1721596644000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 16.86
+      },
+      "donationDate": "2024-07-22T05:17:24",
+      "message": "Donation from ethanhall62",
+      "status": "verified",
+      "type": "item",
+      "userId": "ethanhall62",
+      "xpEarned": 27
+    },
+    "isabellawright41_1659227053000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 5.76
+      },
+      "donationDate": "2022-07-31T08:24:13",
+      "message": "Donation from isabellawright41",
+      "status": "verified",
+      "type": "item",
+      "userId": "isabellawright41",
+      "xpEarned": 34
+    },
+    "isabellawright41_1688139031000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 3077,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2023-06-30T23:30:31",
+      "message": "Donation from isabellawright41",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "isabellawright41",
+      "xpEarned": 13
+    },
+    "isabellawright41_1698620182000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 298,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2023-10-30T06:56:22",
+      "message": "Donation from isabellawright41",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "isabellawright41",
+      "xpEarned": 36
+    },
+    "isabellawright41_1716048642000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 8592,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-05-19T00:10:42",
+      "message": "Donation from isabellawright41",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "isabellawright41",
+      "xpEarned": 13
+    },
+    "isabellawright41_1733947879000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 639,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2024-12-12T04:11:19",
+      "message": "Donation from isabellawright41",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "isabellawright41",
+      "xpEarned": 38
+    },
+    "isabellawright41_1734525123000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 8
+      },
+      "donationDate": "2024-12-18T20:32:03",
+      "message": "Donation from isabellawright41",
+      "status": "completed",
+      "type": "item",
+      "userId": "isabellawright41",
+      "xpEarned": 10
+    },
+    "jameslee44_1660962656000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 17.05
+      },
+      "donationDate": "2022-08-20T10:30:56",
+      "message": "Donation from jameslee44",
+      "status": "pending",
+      "type": "item",
+      "userId": "jameslee44",
+      "xpEarned": 26
+    },
+    "jameslee44_1666072475000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 1903,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2022-10-18T13:54:35",
+      "message": "Donation from jameslee44",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "jameslee44",
+      "xpEarned": 37
+    },
+    "jameslee44_1716491691000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 5.99
+      },
+      "donationDate": "2024-05-24T03:14:51",
+      "message": "Donation from jameslee44",
+      "status": "pending",
+      "type": "item",
+      "userId": "jameslee44",
+      "xpEarned": 47
+    },
+    "jameslee44_1735920311000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 4456,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2025-01-04T00:05:11",
+      "message": "Donation from jameslee44",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "jameslee44",
+      "xpEarned": 29
+    },
+    "jamestorres12_1670270613000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 17.87
+      },
+      "donationDate": "2022-12-06T04:03:33",
+      "message": "Donation from jamestorres12",
+      "status": "completed",
+      "type": "item",
+      "userId": "jamestorres12",
+      "xpEarned": 37
+    },
+    "jamestorres12_1701129213000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 3332,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2023-11-28T07:53:33",
+      "message": "Donation from jamestorres12",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "jamestorres12",
+      "xpEarned": 41
+    },
+    "jamestorres12_1722780079000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 8421,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-08-04T22:01:19",
+      "message": "Donation from jamestorres12",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "jamestorres12",
+      "xpEarned": 36
+    },
+    "jamestorres12_1758847364000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 0.77
+      },
+      "donationDate": "2025-09-26T08:42:44",
+      "message": "Donation from jamestorres12",
+      "status": "verified",
+      "type": "item",
+      "userId": "jamestorres12",
+      "xpEarned": 48
+    },
+    "jamestorres4_1655109956000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 7.48
+      },
+      "donationDate": "2022-06-13T16:45:56",
+      "message": "Donation from jamestorres4",
+      "status": "completed",
+      "type": "item",
+      "userId": "jamestorres4",
+      "xpEarned": 41
+    },
+    "jamestorres4_1670246587000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 16.99
+      },
+      "donationDate": "2022-12-05T21:23:07",
+      "message": "Donation from jamestorres4",
+      "status": "pending",
+      "type": "item",
+      "userId": "jamestorres4",
+      "xpEarned": 45
+    },
+    "jamestorres4_1684081455000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 19
+      },
+      "donationDate": "2023-05-15T00:24:15",
+      "message": "Donation from jamestorres4",
+      "status": "completed",
+      "type": "item",
+      "userId": "jamestorres4",
+      "xpEarned": 40
+    },
+    "jamestorres4_1703993485000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 3368,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2023-12-31T11:31:25",
+      "message": "Donation from jamestorres4",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "jamestorres4",
+      "xpEarned": 33
+    },
+    "johngreen87_1651136558000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 5.36
+      },
+      "donationDate": "2022-04-28T17:02:38",
+      "message": "Donation from johngreen87",
+      "status": "verified",
+      "type": "item",
+      "userId": "johngreen87",
+      "xpEarned": 42
+    },
+    "johngreen87_1689544943000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 10.93
+      },
+      "donationDate": "2023-07-17T06:02:23",
+      "message": "Donation from johngreen87",
+      "status": "pending",
+      "type": "item",
+      "userId": "johngreen87",
+      "xpEarned": 47
+    },
+    "johngreen87_1714340383000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 2574,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2024-04-29T05:39:43",
+      "message": "Donation from johngreen87",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "johngreen87",
+      "xpEarned": 31
+    },
+    "johngreen87_1723236764000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 4164,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2024-08-10T04:52:44",
+      "message": "Donation from johngreen87",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "johngreen87",
+      "xpEarned": 39
+    },
+    "johngreen87_1756314952000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 262,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2025-08-28T01:15:52",
+      "message": "Donation from johngreen87",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "johngreen87",
+      "xpEarned": 39
+    },
+    "liamanderson93_1657407454000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 17.87
+      },
+      "donationDate": "2022-07-10T06:57:34",
+      "message": "Donation from liamanderson93",
+      "status": "completed",
+      "type": "item",
+      "userId": "liamanderson93",
+      "xpEarned": 13
+    },
+    "liamanderson93_1662978641000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 8921,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2022-09-12T18:30:41",
+      "message": "Donation from liamanderson93",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "liamanderson93",
+      "xpEarned": 36
+    },
+    "liamanderson93_1671937321000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 8.4
+      },
+      "donationDate": "2022-12-25T11:02:01",
+      "message": "Donation from liamanderson93",
+      "status": "verified",
+      "type": "item",
+      "userId": "liamanderson93",
+      "xpEarned": 18
+    },
+    "liamanderson93_1690861888000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 158,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2023-08-01T11:51:28",
+      "message": "Donation from liamanderson93",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "liamanderson93",
+      "xpEarned": 44
+    },
+    "liamanderson93_1700547732000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 13.84
+      },
+      "donationDate": "2023-11-21T14:22:12",
+      "message": "Donation from liamanderson93",
+      "status": "pending",
+      "type": "item",
+      "userId": "liamanderson93",
+      "xpEarned": 15
+    },
+    "liamgreen62_1649731316000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 15.31
+      },
+      "donationDate": "2022-04-12T10:41:56",
+      "message": "Donation from liamgreen62",
+      "status": "completed",
+      "type": "item",
+      "userId": "liamgreen62",
+      "xpEarned": 47
+    },
+    "liamgreen62_1750505918000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 5424,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-06-21T19:38:38",
+      "message": "Donation from liamgreen62",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "liamgreen62",
+      "xpEarned": 27
+    },
+    "liamgreen62_1755251468000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 2.63
+      },
+      "donationDate": "2025-08-15T17:51:08",
+      "message": "Donation from liamgreen62",
+      "status": "completed",
+      "type": "item",
+      "userId": "liamgreen62",
+      "xpEarned": 23
+    },
+    "liamgreen62_1764131386000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 4003,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2025-11-26T12:29:46",
+      "message": "Donation from liamgreen62",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "liamgreen62",
+      "xpEarned": 40
+    },
+    "liamlee87_1651861351000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 7.39
+      },
+      "donationDate": "2022-05-07T02:22:31",
+      "message": "Donation from liamlee87",
+      "status": "completed",
+      "type": "item",
+      "userId": "liamlee87",
+      "xpEarned": 30
+    },
+    "liamlee87_1725421565000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 10.52
+      },
+      "donationDate": "2024-09-04T11:46:05",
+      "message": "Donation from liamlee87",
+      "status": "verified",
+      "type": "item",
+      "userId": "liamlee87",
+      "xpEarned": 45
+    },
+    "liamlee87_1733453269000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 3.29
+      },
+      "donationDate": "2024-12-06T10:47:49",
+      "message": "Donation from liamlee87",
+      "status": "verified",
+      "type": "item",
+      "userId": "liamlee87",
+      "xpEarned": 19
+    },
+    "liamyoung49_1690807037000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 7622,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2023-07-31T20:37:17",
+      "message": "Donation from liamyoung49",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "liamyoung49",
+      "xpEarned": 40
+    },
+    "liamyoung49_1715959691000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 9.66
+      },
+      "donationDate": "2024-05-17T23:28:11",
+      "message": "Donation from liamyoung49",
+      "status": "verified",
+      "type": "item",
+      "userId": "liamyoung49",
+      "xpEarned": 48
+    },
+    "liamyoung49_1723859984000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 2.46
+      },
+      "donationDate": "2024-08-17T09:59:44",
+      "message": "Donation from liamyoung49",
+      "status": "verified",
+      "type": "item",
+      "userId": "liamyoung49",
+      "xpEarned": 39
+    },
+    "logananderson60_1732736956000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 1.02
+      },
+      "donationDate": "2024-11-28T03:49:16",
+      "message": "Donation from logananderson60",
+      "status": "verified",
+      "type": "item",
+      "userId": "logananderson60",
+      "xpEarned": 12
+    },
+    "loganhill40_1684696855000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 7973,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2023-05-22T03:20:55",
+      "message": "Donation from loganhill40",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "loganhill40",
+      "xpEarned": 47
+    },
+    "loganhill40_1690223378000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 9.6
+      },
+      "donationDate": "2023-07-25T02:29:38",
+      "message": "Donation from loganhill40",
+      "status": "verified",
+      "type": "item",
+      "userId": "loganhill40",
+      "xpEarned": 41
+    },
+    "loganhill40_1694491039000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 1548,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2023-09-12T11:57:19",
+      "message": "Donation from loganhill40",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "loganhill40",
+      "xpEarned": 36
+    },
+    "loganhill40_1715284346000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 2174,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2024-05-10T03:52:26",
+      "message": "Donation from loganhill40",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "loganhill40",
+      "xpEarned": 16
+    },
+    "loganhill40_1726225944000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 14.26
+      },
+      "donationDate": "2024-09-13T19:12:24",
+      "message": "Donation from loganhill40",
+      "status": "verified",
+      "type": "item",
+      "userId": "loganhill40",
+      "xpEarned": 17
+    },
+    "loganhill40_1752489283000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 16.52
+      },
+      "donationDate": "2025-07-14T18:34:43",
+      "message": "Donation from loganhill40",
+      "status": "pending",
+      "type": "item",
+      "userId": "loganhill40",
+      "xpEarned": 23
+    },
+    "loganking86_1661462705000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 18.61
+      },
+      "donationDate": "2022-08-26T05:25:05",
+      "message": "Donation from loganking86",
+      "status": "pending",
+      "type": "item",
+      "userId": "loganking86",
+      "xpEarned": 12
+    },
+    "loganking86_1703472253000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 6.16
+      },
+      "donationDate": "2023-12-25T10:44:13",
+      "message": "Donation from loganking86",
+      "status": "pending",
+      "type": "item",
+      "userId": "loganking86",
+      "xpEarned": 44
+    },
+    "loganking86_1725397068000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 2675,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-09-04T04:57:48",
+      "message": "Donation from loganking86",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "loganking86",
+      "xpEarned": 36
+    },
+    "lucaslewis91_1665013557000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 9978,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2022-10-06T07:45:57",
+      "message": "Donation from lucaslewis91",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "lucaslewis91",
+      "xpEarned": 20
+    },
+    "lucaslewis91_1722548161000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 4487,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2024-08-02T05:36:01",
+      "message": "Donation from lucaslewis91",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "lucaslewis91",
+      "xpEarned": 48
+    },
+    "lucaswright43_1641187088000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 895,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2022-01-03T13:18:08",
+      "message": "Donation from lucaswright43",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "lucaswright43",
+      "xpEarned": 18
+    },
+    "lucaswright43_1710165802000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 8.83
+      },
+      "donationDate": "2024-03-11T22:03:22",
+      "message": "Donation from lucaswright43",
+      "status": "verified",
+      "type": "item",
+      "userId": "lucaswright43",
+      "xpEarned": 22
+    },
+    "lucaswright43_1724622505000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 19.53
+      },
+      "donationDate": "2024-08-26T05:48:25",
+      "message": "Donation from lucaswright43",
+      "status": "verified",
+      "type": "item",
+      "userId": "lucaswright43",
+      "xpEarned": 26
+    },
+    "lucaswright43_1743499068000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 9398,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2025-04-01T17:17:48",
+      "message": "Donation from lucaswright43",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "lucaswright43",
+      "xpEarned": 49
+    },
+    "lucaswright43_1748260315000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 19.93
+      },
+      "donationDate": "2025-05-26T19:51:55",
+      "message": "Donation from lucaswright43",
+      "status": "verified",
+      "type": "item",
+      "userId": "lucaswright43",
+      "xpEarned": 17
+    },
+    "miaallen81_1746528670000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 13.16
+      },
+      "donationDate": "2025-05-06T18:51:10",
+      "message": "Donation from miaallen81",
+      "status": "verified",
+      "type": "item",
+      "userId": "miaallen81",
+      "xpEarned": 42
+    },
+    "miagreen77_1644959446000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 6.71
+      },
+      "donationDate": "2022-02-16T05:10:46",
+      "message": "Donation from miagreen77",
+      "status": "pending",
+      "type": "item",
+      "userId": "miagreen77",
+      "xpEarned": 43
+    },
+    "miamartin8_1681692129000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 8398,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2023-04-17T08:42:09",
+      "message": "Donation from miamartin8",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "miamartin8",
+      "xpEarned": 26
+    },
+    "miamartin8_1714784718000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 7934,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2024-05-04T09:05:18",
+      "message": "Donation from miamartin8",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "miamartin8",
+      "xpEarned": 37
+    },
+    "miamartin8_1722978882000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 11.74
+      },
+      "donationDate": "2024-08-07T05:14:42",
+      "message": "Donation from miamartin8",
+      "status": "completed",
+      "type": "item",
+      "userId": "miamartin8",
+      "xpEarned": 46
+    },
+    "miamartin8_1736231427000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 6.41
+      },
+      "donationDate": "2025-01-07T14:30:27",
+      "message": "Donation from miamartin8",
+      "status": "verified",
+      "type": "item",
+      "userId": "miamartin8",
+      "xpEarned": 11
+    },
+    "michaelallen27_1692420493000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 8041,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2023-08-19T12:48:13",
+      "message": "Donation from michaelallen27",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "michaelallen27",
+      "xpEarned": 49
+    },
+    "michaelallen27_1702863741000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 990,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2023-12-18T09:42:21",
+      "message": "Donation from michaelallen27",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "michaelallen27",
+      "xpEarned": 21
+    },
+    "michaelanderson14_1647668634000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 1328,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2022-03-19T13:43:54",
+      "message": "Donation from michaelanderson14",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "michaelanderson14",
+      "xpEarned": 15
+    },
+    "michaelanderson14_1702103518000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 11.98
+      },
+      "donationDate": "2023-12-09T14:31:58",
+      "message": "Donation from michaelanderson14",
+      "status": "completed",
+      "type": "item",
+      "userId": "michaelanderson14",
+      "xpEarned": 48
+    },
+    "michaelanderson14_1723212630000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 1889,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2024-08-09T22:10:30",
+      "message": "Donation from michaelanderson14",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "michaelanderson14",
+      "xpEarned": 17
+    },
+    "michaelgreen14_1706022407000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 7633,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-01-23T23:06:47",
+      "message": "Donation from michaelgreen14",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "michaelgreen14",
+      "xpEarned": 38
+    },
+    "michaelgreen14_1735324978000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 13.66
+      },
+      "donationDate": "2024-12-28T02:42:58",
+      "message": "Donation from michaelgreen14",
+      "status": "pending",
+      "type": "item",
+      "userId": "michaelgreen14",
+      "xpEarned": 46
+    },
+    "michaelhill57_1728385471000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 15
+      },
+      "donationDate": "2024-10-08T19:04:31",
+      "message": "Donation from michaelhill57",
+      "status": "verified",
+      "type": "item",
+      "userId": "michaelhill57",
+      "xpEarned": 46
+    },
+    "michaelhill57_1731046949000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 1.26
+      },
+      "donationDate": "2024-11-08T14:22:29",
+      "message": "Donation from michaelhill57",
+      "status": "completed",
+      "type": "item",
+      "userId": "michaelhill57",
+      "xpEarned": 12
+    },
+    "michaelhill57_1734058967000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 4.06
+      },
+      "donationDate": "2024-12-13T11:02:47",
+      "message": "Donation from michaelhill57",
+      "status": "verified",
+      "type": "item",
+      "userId": "michaelhill57",
+      "xpEarned": 40
+    },
+    "michaelhill57_1736472248000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 2859,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-01-10T09:24:08",
+      "message": "Donation from michaelhill57",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "michaelhill57",
+      "xpEarned": 37
+    },
+    "michaeljohnson47_1653721425000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 10.18
+      },
+      "donationDate": "2022-05-28T15:03:45",
+      "message": "Donation from michaeljohnson47",
+      "status": "pending",
+      "type": "item",
+      "userId": "michaeljohnson47",
+      "xpEarned": 29
+    },
+    "michaeljohnson47_1661354368000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 2.86
+      },
+      "donationDate": "2022-08-24T23:19:28",
+      "message": "Donation from michaeljohnson47",
+      "status": "verified",
+      "type": "item",
+      "userId": "michaeljohnson47",
+      "xpEarned": 13
+    },
+    "michaeljohnson47_1680110839000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 9897,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2023-03-30T01:27:19",
+      "message": "Donation from michaeljohnson47",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "michaeljohnson47",
+      "xpEarned": 40
+    },
+    "michaeljohnson47_1706563775000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 6570,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2024-01-30T05:29:35",
+      "message": "Donation from michaeljohnson47",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "michaeljohnson47",
+      "xpEarned": 44
+    },
+    "michaeljohnson47_1721138851000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 8121,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-07-16T22:07:31",
+      "message": "Donation from michaeljohnson47",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "michaeljohnson47",
+      "xpEarned": 15
+    },
+    "michaeljohnson47_1740903673000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 9360,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-03-02T16:21:13",
+      "message": "Donation from michaeljohnson47",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "michaeljohnson47",
+      "xpEarned": 48
+    },
+    "michaelnguyen26_1650437765000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 5.26
+      },
+      "donationDate": "2022-04-20T14:56:05",
+      "message": "Donation from michaelnguyen26",
+      "status": "verified",
+      "type": "item",
+      "userId": "michaelnguyen26",
+      "xpEarned": 36
+    },
+    "michaelnguyen26_1741156826000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 2456,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2025-03-05T14:40:26",
+      "message": "Donation from michaelnguyen26",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "michaelnguyen26",
+      "xpEarned": 44
+    },
+    "michaelnguyen26_1751685444000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 3663,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-07-05T11:17:24",
+      "message": "Donation from michaelnguyen26",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "michaelnguyen26",
+      "xpEarned": 13
+    },
+    "michaelsmith47_1687270917000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 14.13
+      },
+      "donationDate": "2023-06-20T22:21:57",
+      "message": "Donation from michaelsmith47",
+      "status": "pending",
+      "type": "item",
+      "userId": "michaelsmith47",
+      "xpEarned": 34
+    },
+    "michaelsmith47_1748583266000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 3087,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2025-05-30T13:34:26",
+      "message": "Donation from michaelsmith47",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "michaelsmith47",
+      "xpEarned": 29
+    },
+    "michaelsmith47_1754378288000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 0.87
+      },
+      "donationDate": "2025-08-05T15:18:08",
+      "message": "Donation from michaelsmith47",
+      "status": "pending",
+      "type": "item",
+      "userId": "michaelsmith47",
+      "xpEarned": 38
+    },
+    "michaelsmith47_1766026696000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 11.66
+      },
+      "donationDate": "2025-12-18T10:58:16",
+      "message": "Donation from michaelsmith47",
+      "status": "completed",
+      "type": "item",
+      "userId": "michaelsmith47",
+      "xpEarned": 46
+    },
+    "noahscott19_1646354033000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 10.98
+      },
+      "donationDate": "2022-03-04T08:33:53",
+      "message": "Donation from noahscott19",
+      "status": "verified",
+      "type": "item",
+      "userId": "noahscott19",
+      "xpEarned": 45
+    },
+    "noahscott19_1712414356000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 11.28
+      },
+      "donationDate": "2024-04-06T22:39:16",
+      "message": "Donation from noahscott19",
+      "status": "pending",
+      "type": "item",
+      "userId": "noahscott19",
+      "xpEarned": 18
+    },
+    "noahscott19_1717530274000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 7376,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2024-06-05T03:44:34",
+      "message": "Donation from noahscott19",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "noahscott19",
+      "xpEarned": 26
+    },
+    "noahscott19_1721032612000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 9890,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2024-07-15T16:36:52",
+      "message": "Donation from noahscott19",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "noahscott19",
+      "xpEarned": 21
+    },
+    "noahscott19_1722459417000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 19.12
+      },
+      "donationDate": "2024-08-01T04:56:57",
+      "message": "Donation from noahscott19",
+      "status": "pending",
+      "type": "item",
+      "userId": "noahscott19",
+      "xpEarned": 12
+    },
+    "noahscott19_1732778842000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 3.37
+      },
+      "donationDate": "2024-11-28T15:27:22",
+      "message": "Donation from noahscott19",
+      "status": "completed",
+      "type": "item",
+      "userId": "noahscott19",
+      "xpEarned": 37
+    },
+    "noahscott19_1745241446000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 9.15
+      },
+      "donationDate": "2025-04-21T21:17:26",
+      "message": "Donation from noahscott19",
+      "status": "verified",
+      "type": "item",
+      "userId": "noahscott19",
+      "xpEarned": 28
+    },
+    "noahwalker44_1646348411000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 9686,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2022-03-04T07:00:11",
+      "message": "Donation from noahwalker44",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "noahwalker44",
+      "xpEarned": 46
+    },
+    "noahwalker44_1672057875000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 5.05
+      },
+      "donationDate": "2022-12-26T20:31:15",
+      "message": "Donation from noahwalker44",
+      "status": "completed",
+      "type": "item",
+      "userId": "noahwalker44",
+      "xpEarned": 20
+    },
+    "noahwalker44_1692830704000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 5663,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2023-08-24T06:45:04",
+      "message": "Donation from noahwalker44",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "noahwalker44",
+      "xpEarned": 39
+    },
+    "oliviabrown87_1643003139000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 18.12
+      },
+      "donationDate": "2022-01-24T13:45:39",
+      "message": "Donation from oliviabrown87",
+      "status": "completed",
+      "type": "item",
+      "userId": "oliviabrown87",
+      "xpEarned": 25
+    },
+    "oliviabrown87_1655814052000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 10.02
+      },
+      "donationDate": "2022-06-21T20:20:52",
+      "message": "Donation from oliviabrown87",
+      "status": "verified",
+      "type": "item",
+      "userId": "oliviabrown87",
+      "xpEarned": 43
+    },
+    "oliviabrown87_1759893242000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 6578,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2025-10-08T11:14:02",
+      "message": "Donation from oliviabrown87",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "oliviabrown87",
+      "xpEarned": 49
+    },
+    "oliviamartin32_1684946152000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 18.04
+      },
+      "donationDate": "2023-05-25T00:35:52",
+      "message": "Donation from oliviamartin32",
+      "status": "completed",
+      "type": "item",
+      "userId": "oliviamartin32",
+      "xpEarned": 22
+    },
+    "oliviamartin32_1708794519000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 3720,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2024-02-25T01:08:39",
+      "message": "Donation from oliviamartin32",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "oliviamartin32",
+      "xpEarned": 30
+    },
+    "oliviamartin32_1715990941000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 15.3
+      },
+      "donationDate": "2024-05-18T08:09:01",
+      "message": "Donation from oliviamartin32",
+      "status": "verified",
+      "type": "item",
+      "userId": "oliviamartin32",
+      "xpEarned": 49
+    },
+    "oliviamartin32_1728581118000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 4003,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2024-10-11T01:25:18",
+      "message": "Donation from oliviamartin32",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "oliviamartin32",
+      "xpEarned": 18
+    },
+    "oliviamartin32_1765801671000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 8164,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-12-15T20:27:51",
+      "message": "Donation from oliviamartin32",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "oliviamartin32",
+      "xpEarned": 41
+    },
+    "oliviataylor43_1713832731000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 4133,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-04-23T08:38:51",
+      "message": "Donation from oliviataylor43",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "oliviataylor43",
+      "xpEarned": 40
+    },
+    "oliviataylor43_1740197926000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 7732,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-02-22T12:18:46",
+      "message": "Donation from oliviataylor43",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "oliviataylor43",
+      "xpEarned": 14
+    },
+    "oliviataylor43_1744931987000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 7267,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2025-04-18T07:19:47",
+      "message": "Donation from oliviataylor43",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "oliviataylor43",
+      "xpEarned": 37
+    },
+    "oliviataylor43_1746163203000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 13.36
+      },
+      "donationDate": "2025-05-02T13:20:03",
+      "message": "Donation from oliviataylor43",
+      "status": "pending",
+      "type": "item",
+      "userId": "oliviataylor43",
+      "xpEarned": 12
+    },
+    "oliviataylor43_1751199357000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 6049,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-06-29T20:15:57",
+      "message": "Donation from oliviataylor43",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "oliviataylor43",
+      "xpEarned": 20
+    },
+    "sarahbrown29_1656837805000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 15.87
+      },
+      "donationDate": "2022-07-03T16:43:25",
+      "message": "Donation from sarahbrown29",
+      "status": "completed",
+      "type": "item",
+      "userId": "sarahbrown29",
+      "xpEarned": 15
+    },
+    "sarahbrown29_1664392277000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 14.42
+      },
+      "donationDate": "2022-09-29T03:11:17",
+      "message": "Donation from sarahbrown29",
+      "status": "completed",
+      "type": "item",
+      "userId": "sarahbrown29",
+      "xpEarned": 14
+    },
+    "sarahbrown29_1697659770000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 10.12
+      },
+      "donationDate": "2023-10-19T04:09:30",
+      "message": "Donation from sarahbrown29",
+      "status": "pending",
+      "type": "item",
+      "userId": "sarahbrown29",
+      "xpEarned": 39
+    },
+    "sarahbrown29_1698102869000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 7399,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2023-10-24T07:14:29",
+      "message": "Donation from sarahbrown29",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "sarahbrown29",
+      "xpEarned": 47
+    },
+    "sarahbrown29_1704954127000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 14.86
+      },
+      "donationDate": "2024-01-11T14:22:07",
+      "message": "Donation from sarahbrown29",
+      "status": "completed",
+      "type": "item",
+      "userId": "sarahbrown29",
+      "xpEarned": 38
+    },
+    "sarahscott47_1654840431000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "electronics",
+        "paymentMethod": "",
+        "weight": 2.87
+      },
+      "donationDate": "2022-06-10T13:53:51",
+      "message": "Donation from sarahscott47",
+      "status": "pending",
+      "type": "item",
+      "userId": "sarahscott47",
+      "xpEarned": 46
+    },
+    "sarahscott47_1667011281000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 11.7
+      },
+      "donationDate": "2022-10-29T10:41:21",
+      "message": "Donation from sarahscott47",
+      "status": "completed",
+      "type": "item",
+      "userId": "sarahscott47",
+      "xpEarned": 40
+    },
+    "sarahscott47_1724425443000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 9826,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2024-08-23T23:04:03",
+      "message": "Donation from sarahscott47",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "sarahscott47",
+      "xpEarned": 17
+    },
+    "sarahscott47_1736610938000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 2926,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "credit-card",
+        "weight": 0
+      },
+      "donationDate": "2025-01-11T23:55:38",
+      "message": "Donation from sarahscott47",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "sarahscott47",
+      "xpEarned": 18
+    },
+    "sarahscott47_1737299445000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 9.46
+      },
+      "donationDate": "2025-01-19T23:10:45",
+      "message": "Donation from sarahscott47",
+      "status": "pending",
+      "type": "item",
+      "userId": "sarahscott47",
+      "xpEarned": 12
+    },
+    "sophiaanderson57_1704631614000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 3888,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-01-07T20:46:54",
+      "message": "Donation from sophiaanderson57",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "sophiaanderson57",
+      "xpEarned": 11
+    },
+    "sophiaanderson57_1756059980000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "furniture",
+        "paymentMethod": "",
+        "weight": 18.91
+      },
+      "donationDate": "2025-08-25T02:26:20",
+      "message": "Donation from sophiaanderson57",
+      "status": "pending",
+      "type": "item",
+      "userId": "sophiaanderson57",
+      "xpEarned": 48
+    },
+    "sophiaclark31_1653932301000": {
+      "charityId": "immaculate_heart_parish",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 19.21
+      },
+      "donationDate": "2022-05-31T01:38:21",
+      "message": "Donation from sophiaclark31",
+      "status": "completed",
+      "type": "item",
+      "userId": "sophiaclark31",
+      "xpEarned": 36
+    },
+    "sophiaclark31_1670470387000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "clothes",
+        "paymentMethod": "",
+        "weight": 15.98
+      },
+      "donationDate": "2022-12-08T11:33:07",
+      "message": "Donation from sophiaclark31",
+      "status": "completed",
+      "type": "item",
+      "userId": "sophiaclark31",
+      "xpEarned": 13
+    },
+    "sophiaclark31_1748853439000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 8.84
+      },
+      "donationDate": "2025-06-02T16:37:19",
+      "message": "Donation from sophiaclark31",
+      "status": "completed",
+      "type": "item",
+      "userId": "sophiaclark31",
+      "xpEarned": 32
+    },
+    "sophiagreen89_1643846800000": {
+      "charityId": "caritas_manila",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 18.46
+      },
+      "donationDate": "2022-02-03T08:06:40",
+      "message": "Donation from sophiagreen89",
+      "status": "completed",
+      "type": "item",
+      "userId": "sophiagreen89",
+      "xpEarned": 48
+    },
+    "sophiagreen89_1726859919000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 8674,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2024-09-21T03:18:39",
+      "message": "Donation from sophiagreen89",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "sophiagreen89",
+      "xpEarned": 50
+    },
+    "sophiagreen89_1738775436000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 1777,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2025-02-06T01:10:36",
+      "message": "Donation from sophiagreen89",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "sophiagreen89",
+      "xpEarned": 19
+    },
+    "sophiagreen89_1744935035000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 2428,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2025-04-18T08:10:35",
+      "message": "Donation from sophiagreen89",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "sophiagreen89",
+      "xpEarned": 12
+    },
+    "sophiamartin19_1733462682000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "pickup",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 16.03
+      },
+      "donationDate": "2024-12-06T13:24:42",
+      "message": "Donation from sophiamartin19",
+      "status": "completed",
+      "type": "item",
+      "userId": "sophiamartin19",
+      "xpEarned": 50
+    },
+    "sophiamartin19_1739206338000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 5247,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2025-02-11T00:52:18",
+      "message": "Donation from sophiamartin19",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "sophiamartin19",
+      "xpEarned": 21
+    },
+    "sophiamartin19_1748982735000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 1915,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2025-06-04T04:32:15",
+      "message": "Donation from sophiamartin19",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "sophiamartin19",
+      "xpEarned": 32
+    },
+    "sophiatorres40_1741141230000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "books",
+        "paymentMethod": "",
+        "weight": 4.75
+      },
+      "donationDate": "2025-03-05T10:20:30",
+      "message": "Donation from sophiatorres40",
+      "status": "verified",
+      "type": "item",
+      "userId": "sophiatorres40",
+      "xpEarned": 45
+    },
+    "sophiatorres40_1750649054000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 3444,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-06-23T11:24:14",
+      "message": "Donation from sophiatorres40",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "sophiatorres40",
+      "xpEarned": 15
+    },
+    "sophiatorres40_1758716379000": {
+      "charityId": "ulcci",
+      "details": {
+        "amount": 8151,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "paymaya",
+        "weight": 0
+      },
+      "donationDate": "2025-09-24T20:19:39",
+      "message": "Donation from sophiatorres40",
+      "status": "verified",
+      "type": "monetary",
+      "userId": "sophiatorres40",
+      "xpEarned": 27
+    },
+    "sophiayoung58_1702505664000": {
+      "charityId": "segunda_mana",
+      "details": {
+        "amount": 4262,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "gcash",
+        "weight": 0
+      },
+      "donationDate": "2023-12-14T06:14:24",
+      "message": "Donation from sophiayoung58",
+      "status": "completed",
+      "type": "monetary",
+      "userId": "sophiayoung58",
+      "xpEarned": 34
+    },
+    "sophiayoung58_1734992954000": {
+      "charityId": "reign_in_life_christ",
+      "details": {
+        "amount": 0,
+        "deliveryMethod": "drop-off",
+        "itemType": "toys",
+        "paymentMethod": "",
+        "weight": 14.24
+      },
+      "donationDate": "2024-12-24T06:29:14",
+      "message": "Donation from sophiayoung58",
+      "status": "pending",
+      "type": "item",
+      "userId": "sophiayoung58",
+      "xpEarned": 22
+    },
+    "sophiayoung58_1746477167000": {
+      "charityId": "winners_church",
+      "details": {
+        "amount": 6939,
+        "deliveryMethod": "",
+        "itemType": "",
+        "paymentMethod": "bank-transfer",
+        "weight": 0
+      },
+      "donationDate": "2025-05-06T04:32:47",
+      "message": "Donation from sophiayoung58",
+      "status": "pending",
+      "type": "monetary",
+      "userId": "sophiayoung58",
+      "xpEarned": 18
+    }
+  },
+  "trees": {
+    "ameliascott98_1654612134000": {
+      "location": "rizal-park",
+      "message": "Planted by ameliascott98",
+      "plantedAt": "2022-06-07T22:28:54",
+      "type": "bamboo",
+      "userId": "ameliascott98",
+      "xpCost": 31
+    },
+    "charlottejohnson88_1667563996000": {
+      "location": "araneta",
+      "message": "Planted by charlottejohnson88",
+      "plantedAt": "2022-11-04T20:13:16",
+      "type": "bamboo",
+      "userId": "charlottejohnson88",
+      "xpCost": 91
+    },
+    "charlotteyoung31_1655228238000": {
+      "location": "rizal-park",
+      "message": "Planted by charlotteyoung31",
+      "plantedAt": "2022-06-15T01:37:18",
+      "type": "mango",
+      "userId": "charlotteyoung31",
+      "xpCost": 20
+    },
+    "danielclark33_1724709834000": {
+      "location": "marikina",
+      "message": "Planted by danielclark33",
+      "plantedAt": "2024-08-27T06:03:54",
+      "type": "mango",
+      "userId": "danielclark33",
+      "xpCost": 22
+    },
+    "danielhill55_1650808270000": {
+      "location": "rizal-park",
+      "message": "Planted by danielhill55",
+      "plantedAt": "2022-04-24T21:51:10",
+      "type": "mango",
+      "userId": "danielhill55",
+      "xpCost": 50
+    },
+    "danielwright85_1661717737000": {
+      "location": "marikina",
+      "message": "Planted by danielwright85",
+      "plantedAt": "2022-08-29T04:15:37",
+      "type": "bamboo",
+      "userId": "danielwright85",
+      "xpCost": 42
+    },
+    "davidanderson10_1710474650000": {
+      "location": "marikina",
+      "message": "Planted by davidanderson10",
+      "plantedAt": "2024-03-15T11:50:50",
+      "type": "bamboo",
+      "userId": "davidanderson10",
+      "xpCost": 68
+    },
+    "davidanderson10_1714740084000": {
+      "location": "bgc",
+      "message": "Planted by davidanderson10",
+      "plantedAt": "2024-05-03T20:41:24",
+      "type": "mango",
+      "userId": "davidanderson10",
+      "xpCost": 38
+    },
+    "davidanderson10_1720069613000": {
+      "location": "rizal-park",
+      "message": "Planted by davidanderson10",
+      "plantedAt": "2024-07-04T13:06:53",
+      "type": "mango",
+      "userId": "davidanderson10",
+      "xpCost": 100
+    },
+    "davidanderson10_1752739357000": {
+      "location": "araneta",
+      "message": "Planted by davidanderson10",
+      "plantedAt": "2025-07-17T16:02:37",
+      "type": "mango",
+      "userId": "davidanderson10",
+      "xpCost": 54
+    },
+    "davidbrown3_1645590253000": {
+      "location": "marikina",
+      "message": "Planted by davidbrown3",
+      "plantedAt": "2022-02-23T12:24:13",
+      "type": "bamboo",
+      "userId": "davidbrown3",
+      "xpCost": 71
+    },
+    "davidbrown3_1669583494000": {
+      "location": "bgc",
+      "message": "Planted by davidbrown3",
+      "plantedAt": "2022-11-28T05:11:34",
+      "type": "narra",
+      "userId": "davidbrown3",
+      "xpCost": 82
+    },
+    "davidnguyen88_1642295695000": {
+      "location": "la-mesa",
+      "message": "Planted by davidnguyen88",
+      "plantedAt": "2022-01-16T09:14:55",
+      "type": "bamboo",
+      "userId": "davidnguyen88",
+      "xpCost": 99
+    },
+    "davidnguyen88_1690558557000": {
+      "location": "bgc",
+      "message": "Planted by davidnguyen88",
+      "plantedAt": "2023-07-28T23:35:57",
+      "type": "bamboo",
+      "userId": "davidnguyen88",
+      "xpCost": 25
+    },
+    "davidnguyen88_1719635647000": {
+      "location": "araneta",
+      "message": "Planted by davidnguyen88",
+      "plantedAt": "2024-06-29T12:34:07",
+      "type": "narra",
+      "userId": "davidnguyen88",
+      "xpCost": 66
+    },
+    "emilyjohnson35_1681666770000": {
+      "location": "araneta",
+      "message": "Planted by emilyjohnson35",
+      "plantedAt": "2023-04-17T01:39:30",
+      "type": "narra",
+      "userId": "emilyjohnson35",
+      "xpCost": 49
+    },
+    "emmabrown76_1683158340000": {
+      "location": "marikina",
+      "message": "Planted by emmabrown76",
+      "plantedAt": "2023-05-04T07:59:00",
+      "type": "bamboo",
+      "userId": "emmabrown76",
+      "xpCost": 45
+    },
+    "ethanhall62_1736340180000": {
+      "location": "marikina",
+      "message": "Planted by ethanhall62",
+      "plantedAt": "2025-01-08T20:43:00",
+      "type": "narra",
+      "userId": "ethanhall62",
+      "xpCost": 58
+    },
+    "isabellawright41_1677135098000": {
+      "location": "araneta",
+      "message": "Planted by isabellawright41",
+      "plantedAt": "2023-02-23T14:51:38",
+      "type": "mango",
+      "userId": "isabellawright41",
+      "xpCost": 73
+    },
+    "jameslee44_1712260666000": {
+      "location": "la-mesa",
+      "message": "Planted by jameslee44",
+      "plantedAt": "2024-04-05T03:57:46",
+      "type": "bamboo",
+      "userId": "jameslee44",
+      "xpCost": 93
+    },
+    "jameslee44_1725219745000": {
+      "location": "bgc",
+      "message": "Planted by jameslee44",
+      "plantedAt": "2024-09-02T03:42:25",
+      "type": "narra",
+      "userId": "jameslee44",
+      "xpCost": 37
+    },
+    "jamestorres12_1654277221000": {
+      "location": "bgc",
+      "message": "Planted by jamestorres12",
+      "plantedAt": "2022-06-04T01:27:01",
+      "type": "narra",
+      "userId": "jamestorres12",
+      "xpCost": 76
+    },
+    "jamestorres12_1664335899000": {
+      "location": "rizal-park",
+      "message": "Planted by jamestorres12",
+      "plantedAt": "2022-09-28T11:31:39",
+      "type": "mango",
+      "userId": "jamestorres12",
+      "xpCost": 28
+    },
+    "jamestorres12_1686514510000": {
+      "location": "marikina",
+      "message": "Planted by jamestorres12",
+      "plantedAt": "2023-06-12T04:15:10",
+      "type": "mango",
+      "userId": "jamestorres12",
+      "xpCost": 91
+    },
+    "jamestorres12_1756143987000": {
+      "location": "marikina",
+      "message": "Planted by jamestorres12",
+      "plantedAt": "2025-08-26T01:46:27",
+      "type": "narra",
+      "userId": "jamestorres12",
+      "xpCost": 79
+    },
+    "johngreen87_1664137084000": {
+      "location": "la-mesa",
+      "message": "Planted by johngreen87",
+      "plantedAt": "2022-09-26T04:18:04",
+      "type": "bamboo",
+      "userId": "johngreen87",
+      "xpCost": 21
+    },
+    "liamanderson93_1656955782000": {
+      "location": "rizal-park",
+      "message": "Planted by liamanderson93",
+      "plantedAt": "2022-07-05T01:29:42",
+      "type": "bamboo",
+      "userId": "liamanderson93",
+      "xpCost": 57
+    },
+    "liamgreen62_1646830660000": {
+      "location": "rizal-park",
+      "message": "Planted by liamgreen62",
+      "plantedAt": "2022-03-09T20:57:40",
+      "type": "mango",
+      "userId": "liamgreen62",
+      "xpCost": 30
+    },
+    "liamgreen62_1708158052000": {
+      "location": "la-mesa",
+      "message": "Planted by liamgreen62",
+      "plantedAt": "2024-02-17T16:20:52",
+      "type": "bamboo",
+      "userId": "liamgreen62",
+      "xpCost": 29
+    },
+    "liamyoung49_1699145218000": {
+      "location": "bgc",
+      "message": "Planted by liamyoung49",
+      "plantedAt": "2023-11-05T08:46:58",
+      "type": "mango",
+      "userId": "liamyoung49",
+      "xpCost": 81
+    },
+    "liamyoung49_1720252669000": {
+      "location": "marikina",
+      "message": "Planted by liamyoung49",
+      "plantedAt": "2024-07-06T15:57:49",
+      "type": "narra",
+      "userId": "liamyoung49",
+      "xpCost": 50
+    },
+    "logananderson60_1663915183000": {
+      "location": "marikina",
+      "message": "Planted by logananderson60",
+      "plantedAt": "2022-09-23T14:39:43",
+      "type": "narra",
+      "userId": "logananderson60",
+      "xpCost": 42
+    },
+    "logananderson60_1719020875000": {
+      "location": "bgc",
+      "message": "Planted by logananderson60",
+      "plantedAt": "2024-06-22T09:47:55",
+      "type": "mango",
+      "userId": "logananderson60",
+      "xpCost": 95
+    },
+    "lucaslewis91_1673190269000": {
+      "location": "rizal-park",
+      "message": "Planted by lucaslewis91",
+      "plantedAt": "2023-01-08T23:04:29",
+      "type": "mango",
+      "userId": "lucaslewis91",
+      "xpCost": 67
+    },
+    "lucaswright43_1658006184000": {
+      "location": "araneta",
+      "message": "Planted by lucaswright43",
+      "plantedAt": "2022-07-17T05:16:24",
+      "type": "narra",
+      "userId": "lucaswright43",
+      "xpCost": 34
+    },
+    "miaallen81_1692704722000": {
+      "location": "rizal-park",
+      "message": "Planted by miaallen81",
+      "plantedAt": "2023-08-22T19:45:22",
+      "type": "mango",
+      "userId": "miaallen81",
+      "xpCost": 22
+    },
+    "miamartin8_1727559554000": {
+      "location": "la-mesa",
+      "message": "Planted by miamartin8",
+      "plantedAt": "2024-09-29T05:39:14",
+      "type": "bamboo",
+      "userId": "miamartin8",
+      "xpCost": 88
+    },
+    "miamartin8_1745995385000": {
+      "location": "bgc",
+      "message": "Planted by miamartin8",
+      "plantedAt": "2025-04-30T14:43:05",
+      "type": "mango",
+      "userId": "miamartin8",
+      "xpCost": 94
+    },
+    "michaelallen27_1665874612000": {
+      "location": "araneta",
+      "message": "Planted by michaelallen27",
+      "plantedAt": "2022-10-16T06:56:52",
+      "type": "bamboo",
+      "userId": "michaelallen27",
+      "xpCost": 88
+    },
+    "michaelanderson14_1647095714000": {
+      "location": "rizal-park",
+      "message": "Planted by michaelanderson14",
+      "plantedAt": "2022-03-12T22:35:14",
+      "type": "bamboo",
+      "userId": "michaelanderson14",
+      "xpCost": 95
+    },
+    "michaelanderson14_1745493496000": {
+      "location": "araneta",
+      "message": "Planted by michaelanderson14",
+      "plantedAt": "2025-04-24T19:18:16",
+      "type": "bamboo",
+      "userId": "michaelanderson14",
+      "xpCost": 46
+    },
+    "michaelhill57_1668048951000": {
+      "location": "rizal-park",
+      "message": "Planted by michaelhill57",
+      "plantedAt": "2022-11-10T10:55:51",
+      "type": "mango",
+      "userId": "michaelhill57",
+      "xpCost": 64
+    },
+    "michaelhill57_1696522435000": {
+      "location": "araneta",
+      "message": "Planted by michaelhill57",
+      "plantedAt": "2023-10-06T00:13:55",
+      "type": "mango",
+      "userId": "michaelhill57",
+      "xpCost": 92
+    },
+    "michaelhill57_1740719710000": {
+      "location": "marikina",
+      "message": "Planted by michaelhill57",
+      "plantedAt": "2025-02-28T13:15:10",
+      "type": "mango",
+      "userId": "michaelhill57",
+      "xpCost": 52
+    },
+    "michaelhill57_1742921766000": {
+      "location": "bgc",
+      "message": "Planted by michaelhill57",
+      "plantedAt": "2025-03-26T00:56:06",
+      "type": "mango",
+      "userId": "michaelhill57",
+      "xpCost": 23
+    },
+    "michaelnguyen26_1668947892000": {
+      "location": "rizal-park",
+      "message": "Planted by michaelnguyen26",
+      "plantedAt": "2022-11-20T20:38:12",
+      "type": "narra",
+      "userId": "michaelnguyen26",
+      "xpCost": 98
+    },
+    "michaelsmith47_1729245919000": {
+      "location": "marikina",
+      "message": "Planted by michaelsmith47",
+      "plantedAt": "2024-10-18T18:05:19",
+      "type": "narra",
+      "userId": "michaelsmith47",
+      "xpCost": 60
+    },
+    "sarahbrown29_1664818987000": {
+      "location": "bgc",
+      "message": "Planted by sarahbrown29",
+      "plantedAt": "2022-10-04T01:43:07",
+      "type": "bamboo",
+      "userId": "sarahbrown29",
+      "xpCost": 97
+    },
+    "sarahbrown29_1747016154000": {
+      "location": "marikina",
+      "message": "Planted by sarahbrown29",
+      "plantedAt": "2025-05-12T10:15:54",
+      "type": "narra",
+      "userId": "sarahbrown29",
+      "xpCost": 83
+    },
+    "sophiaanderson57_1665429416000": {
+      "location": "rizal-park",
+      "message": "Planted by sophiaanderson57",
+      "plantedAt": "2022-10-11T03:16:56",
+      "type": "bamboo",
+      "userId": "sophiaanderson57",
+      "xpCost": 57
+    },
+    "sophiaanderson57_1669488246000": {
+      "location": "la-mesa",
+      "message": "Planted by sophiaanderson57",
+      "plantedAt": "2022-11-27T02:44:06",
+      "type": "narra",
+      "userId": "sophiaanderson57",
+      "xpCost": 93
+    },
+    "sophiaclark31_1649148847000": {
+      "location": "la-mesa",
+      "message": "Planted by sophiaclark31",
+      "plantedAt": "2022-04-05T16:54:07",
+      "type": "narra",
+      "userId": "sophiaclark31",
+      "xpCost": 75
+    },
+    "sophiaclark31_1746808967000": {
+      "location": "la-mesa",
+      "message": "Planted by sophiaclark31",
+      "plantedAt": "2025-05-10T00:42:47",
+      "type": "narra",
+      "userId": "sophiaclark31",
+      "xpCost": 60
+    },
+    "sophiamartin19_1659636758000": {
+      "location": "rizal-park",
+      "message": "Planted by sophiamartin19",
+      "plantedAt": "2022-08-05T02:12:38",
+      "type": "bamboo",
+      "userId": "sophiamartin19",
+      "xpCost": 35
+    },
+    "sophiamartin19_1666713167000": {
+      "location": "marikina",
+      "message": "Planted by sophiamartin19",
+      "plantedAt": "2022-10-25T23:52:47",
+      "type": "bamboo",
+      "userId": "sophiamartin19",
+      "xpCost": 61
+    },
+    "sophiamartin19_1674933700000": {
+      "location": "araneta",
+      "message": "Planted by sophiamartin19",
+      "plantedAt": "2023-01-29T03:21:40",
+      "type": "mango",
+      "userId": "sophiamartin19",
+      "xpCost": 72
+    },
+    "sophiamartin19_1682507674000": {
+      "location": "araneta",
+      "message": "Planted by sophiamartin19",
+      "plantedAt": "2023-04-26T19:14:34",
+      "type": "narra",
+      "userId": "sophiamartin19",
+      "xpCost": 88
+    },
+    "sophiamartin19_1693745905000": {
+      "location": "araneta",
+      "message": "Planted by sophiamartin19",
+      "plantedAt": "2023-09-03T20:58:25",
+      "type": "bamboo",
+      "userId": "sophiamartin19",
+      "xpCost": 34
+    },
+    "sophiayoung58_1660583806000": {
+      "location": "la-mesa",
+      "message": "Planted by sophiayoung58",
+      "plantedAt": "2022-08-16T01:16:46",
+      "type": "bamboo",
+      "userId": "sophiayoung58",
+      "xpCost": 70
+    },
+    "sophiayoung58_1698677315000": {
+      "location": "rizal-park",
+      "message": "Planted by sophiayoung58",
+      "plantedAt": "2023-10-30T22:48:35",
+      "type": "narra",
+      "userId": "sophiayoung58",
+      "xpCost": 56
+    }
+  },
+  "users": {
+    "admin1": {
+      "avatar": "",
+      "contactNumber": "09621718950",
+      "email": "roncorwinrliwag@gmail.com",
+      "isAdmin": true,
+      "joinDate": 1751193128649,
+      "name": "Ron Liwag",
+      "password": "123",
+      "totalXp": 99999
+    },
+    "ameliascott98": {
+      "avatar": "https://example.com/avatars/ameliascott98.png",
+      "contactNumber": "09305531935",
+      "email": "ameliascott98@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-06-12T00:25:12",
+      "name": "Amelia Scott",
+      "password": "oskusujvzdug",
+      "totalXp": 626
+    },
+    "avasmith39": {
+      "avatar": "https://example.com/avatars/avasmith39.png",
+      "contactNumber": "09499066152",
+      "email": "avasmith39@example.com",
+      "isAdmin": false,
+      "joinDate": "2022-03-08T16:22:50",
+      "name": "Ava Smith",
+      "password": "cfjqftujdapa",
+      "totalXp": 32
+    },
+    "charlottejohnson88": {
+      "avatar": "https://example.com/avatars/charlottejohnson88.png",
+      "contactNumber": "09456574125",
+      "email": "charlottejohnson88@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-12-13T14:29:50",
+      "name": "Charlotte Johnson",
+      "password": "gxzxfocnjbzk",
+      "totalXp": 21
+    },
+    "charlotteyoung31": {
+      "avatar": "https://example.com/avatars/charlotteyoung31.png",
+      "contactNumber": "09996864221",
+      "email": "charlotteyoung31@example.com",
+      "isAdmin": false,
+      "joinDate": "2022-11-03T04:08:55",
+      "name": "Charlotte Young",
+      "password": "cuvcudnsciwa",
+      "totalXp": 704
+    },
+    "danielbrown34": {
+      "avatar": "https://example.com/avatars/danielbrown34.png",
+      "contactNumber": "09552802515",
+      "email": "danielbrown34@example.com",
+      "isAdmin": false,
+      "joinDate": "2025-10-09T14:22:29",
+      "name": "Daniel Brown",
+      "password": "jgatcivhbmot",
+      "totalXp": 564
+    },
+    "danielclark33": {
+      "avatar": "https://example.com/avatars/danielclark33.png",
+      "contactNumber": "09925263777",
+      "email": "danielclark33@example.com",
+      "isAdmin": false,
+      "joinDate": "2025-03-21T15:55:32",
+      "name": "Daniel Clark",
+      "password": "yljhkdilabnh",
+      "totalXp": 513
+    },
+    "danielhill55": {
+      "avatar": "https://example.com/avatars/danielhill55.png",
+      "contactNumber": "09807479889",
+      "email": "danielhill55@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-05-13T10:22:59",
+      "name": "Daniel Hill",
+      "password": "uhnkwbxxdfqd",
+      "totalXp": 619
+    },
+    "danielscott82": {
+      "avatar": "https://example.com/avatars/danielscott82.png",
+      "contactNumber": "09544033851",
+      "email": "danielscott82@example.com",
+      "isAdmin": false,
+      "joinDate": "2022-07-22T21:18:19",
+      "name": "Daniel Scott",
+      "password": "hpvcirrfkyej",
+      "totalXp": 452
+    },
+    "danielwright85": {
+      "avatar": "https://example.com/avatars/danielwright85.png",
+      "contactNumber": "09702002122",
+      "email": "danielwright85@example.com",
+      "isAdmin": false,
+      "joinDate": "2025-12-17T10:54:01",
+      "name": "Daniel Wright",
+      "password": "ypacfsrxduuf",
+      "totalXp": 301
+    },
+    "davidanderson10": {
+      "avatar": "https://example.com/avatars/davidanderson10.png",
+      "contactNumber": "09170991023",
+      "email": "davidanderson10@example.com",
+      "isAdmin": true,
+      "joinDate": "2023-05-07T05:13:39",
+      "name": "David Anderson",
+      "password": "qlfakfyzsokx",
+      "totalXp": 277
+    },
+    "davidbrown3": {
+      "avatar": "https://example.com/avatars/davidbrown3.png",
+      "contactNumber": "09857977120",
+      "email": "davidbrown3@example.com",
+      "isAdmin": true,
+      "joinDate": "2023-09-11T10:59:19",
+      "name": "David Brown",
+      "password": "vgdkuiobfcdz",
+      "totalXp": 834
+    },
+    "davidnguyen88": {
+      "avatar": "https://example.com/avatars/davidnguyen88.png",
+      "contactNumber": "09223471013",
+      "email": "davidnguyen88@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-04-02T11:12:52",
+      "name": "David Nguyen",
+      "password": "hzjqvcxlvslw",
+      "totalXp": 387
+    },
+    "emilyjohnson35": {
+      "avatar": "https://example.com/avatars/emilyjohnson35.png",
+      "contactNumber": "09547462710",
+      "email": "emilyjohnson35@example.com",
+      "isAdmin": false,
+      "joinDate": "2022-05-14T06:21:54",
+      "name": "Emily Johnson",
+      "password": "rngobblcoxzi",
+      "totalXp": 612
+    },
+    "emilynguyen71": {
+      "avatar": "https://example.com/avatars/emilynguyen71.png",
+      "contactNumber": "09600747263",
+      "email": "emilynguyen71@example.com",
+      "isAdmin": false,
+      "joinDate": "2022-06-22T21:57:46",
+      "name": "Emily Nguyen",
+      "password": "yaqgqlxkvozc",
+      "totalXp": 139
+    },
+    "emmabrown76": {
+      "avatar": "https://example.com/avatars/emmabrown76.png",
+      "contactNumber": "09847386341",
+      "email": "emmabrown76@example.com",
+      "isAdmin": true,
+      "joinDate": "2023-05-21T03:32:40",
+      "name": "Emma Brown",
+      "password": "oydhgydvhtfq",
+      "totalXp": 433
+    },
+    "emmahill17": {
+      "avatar": "https://example.com/avatars/emmahill17.png",
+      "contactNumber": "09945634012",
+      "email": "emmahill17@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-09-26T06:46:26",
+      "name": "Emma Hill",
+      "password": "zsavtuzixahw",
+      "totalXp": 0
+    },
+    "emmasmith75": {
+      "avatar": "https://example.com/avatars/emmasmith75.png",
+      "contactNumber": "09616802977",
+      "email": "emmasmith75@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-01-18T14:24:32",
+      "name": "Emma Smith",
+      "password": "khefzhxftkoj",
+      "totalXp": 387
+    },
+    "emmawright69": {
+      "avatar": "https://example.com/avatars/emmawright69.png",
+      "contactNumber": "09725703891",
+      "email": "emmawright69@example.com",
+      "isAdmin": true,
+      "joinDate": "2022-11-18T04:23:52",
+      "name": "Emma Wright",
+      "password": "dkzepnjrjcbs",
+      "totalXp": 271
+    },
+    "ethananderson97": {
+      "avatar": "https://example.com/avatars/ethananderson97.png",
+      "contactNumber": "09297253612",
+      "email": "ethananderson97@example.com",
+      "isAdmin": false,
+      "joinDate": "2025-11-08T09:25:34",
+      "name": "Ethan Anderson",
+      "password": "gutkbspunrdz",
+      "totalXp": 347
+    },
+    "ethangreen34": {
+      "avatar": "https://example.com/avatars/ethangreen34.png",
+      "contactNumber": "09157937928",
+      "email": "ethangreen34@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-08-05T02:46:40",
+      "name": "Ethan Green",
+      "password": "calzfyhvgson",
+      "totalXp": 621
+    },
+    "ethanhall62": {
+      "avatar": "https://example.com/avatars/ethanhall62.png",
+      "contactNumber": "09403219898",
+      "email": "ethanhall62@example.com",
+      "isAdmin": false,
+      "joinDate": "2022-10-19T16:47:02",
+      "name": "Ethan Hall",
+      "password": "zcmdxkwumldo",
+      "totalXp": 701
+    },
+    "isabellawright41": {
+      "avatar": "https://example.com/avatars/isabellawright41.png",
+      "contactNumber": "09651098394",
+      "email": "isabellawright41@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-05-08T16:22:54",
+      "name": "Isabella Wright",
+      "password": "mogvlazwqzlb",
+      "totalXp": 734
+    },
+    "jameslee44": {
+      "avatar": "https://example.com/avatars/jameslee44.png",
+      "contactNumber": "09324062857",
+      "email": "jameslee44@example.com",
+      "isAdmin": false,
+      "joinDate": "2025-11-09T10:58:07",
+      "name": "James Lee",
+      "password": "raxbgihiavuk",
+      "totalXp": 125
+    },
+    "jamestorres12": {
+      "avatar": "https://example.com/avatars/jamestorres12.png",
+      "contactNumber": "09522960496",
+      "email": "jamestorres12@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-03-12T02:27:02",
+      "name": "James Torres",
+      "password": "mchrapmtkjyz",
+      "totalXp": 161
+    },
+    "jamestorres4": {
+      "avatar": "https://example.com/avatars/jamestorres4.png",
+      "contactNumber": "09199814163",
+      "email": "jamestorres4@example.com",
+      "isAdmin": true,
+      "joinDate": "2023-05-10T17:08:54",
+      "name": "James Torres",
+      "password": "byezvzvzzpuv",
+      "totalXp": 74
+    },
+    "johngreen87": {
+      "avatar": "https://example.com/avatars/johngreen87.png",
+      "contactNumber": "09869541715",
+      "email": "johngreen87@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-11-12T16:33:20",
+      "name": "John Green",
+      "password": "olkvceasdkib",
+      "totalXp": 324
+    },
+    "liamanderson93": {
+      "avatar": "https://example.com/avatars/liamanderson93.png",
+      "contactNumber": "09446984281",
+      "email": "liamanderson93@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-12-22T10:11:08",
+      "name": "Liam Anderson",
+      "password": "xtpjfacrffcd",
+      "totalXp": 86
+    },
+    "liamgreen62": {
+      "avatar": "https://example.com/avatars/liamgreen62.png",
+      "contactNumber": "09377863344",
+      "email": "liamgreen62@example.com",
+      "isAdmin": true,
+      "joinDate": "2025-06-10T12:22:03",
+      "name": "Liam Green",
+      "password": "pfnevdyepbxs",
+      "totalXp": 945
+    },
+    "liamlee87": {
+      "avatar": "https://example.com/avatars/liamlee87.png",
+      "contactNumber": "09531856160",
+      "email": "liamlee87@example.com",
+      "isAdmin": false,
+      "joinDate": "2022-11-06T22:11:40",
+      "name": "Liam Lee",
+      "password": "ncpxrtrctkrp",
+      "totalXp": 396
+    },
+    "liamyoung49": {
+      "avatar": "https://example.com/avatars/liamyoung49.png",
+      "contactNumber": "09278439099",
+      "email": "liamyoung49@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-12-15T21:38:27",
+      "name": "Liam Young",
+      "password": "ujqixpbfaykt",
+      "totalXp": 15
+    },
+    "logananderson60": {
+      "avatar": "https://example.com/avatars/logananderson60.png",
+      "contactNumber": "09979962572",
+      "email": "logananderson60@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-09-29T13:23:19",
+      "name": "Logan Anderson",
+      "password": "usrgqeltcfhu",
+      "totalXp": 184
+    },
+    "loganhill40": {
+      "avatar": "https://example.com/avatars/loganhill40.png",
+      "contactNumber": "09584824849",
+      "email": "loganhill40@example.com",
+      "isAdmin": true,
+      "joinDate": "2022-01-25T02:00:08",
+      "name": "Logan Hill",
+      "password": "evorkaaxvkde",
+      "totalXp": 453
+    },
+    "loganking86": {
+      "avatar": "https://example.com/avatars/loganking86.png",
+      "contactNumber": "09110586241",
+      "email": "loganking86@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-01-13T02:01:12",
+      "name": "Logan King",
+      "password": "ijausmfoadgn",
+      "totalXp": 551
+    },
+    "lucaslewis91": {
+      "avatar": "https://example.com/avatars/lucaslewis91.png",
+      "contactNumber": "09512841448",
+      "email": "lucaslewis91@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-09-18T08:59:37",
+      "name": "Lucas Lewis",
+      "password": "yvvikkkendjg",
+      "totalXp": 899
+    },
+    "lucaswright43": {
+      "avatar": "https://example.com/avatars/lucaswright43.png",
+      "contactNumber": "09210705550",
+      "email": "lucaswright43@example.com",
+      "isAdmin": false,
+      "joinDate": "2025-02-23T19:37:04",
+      "name": "Lucas Wright",
+      "password": "zdrsoscsacax",
+      "totalXp": 460
+    },
+    "miaallen81": {
+      "avatar": "https://example.com/avatars/miaallen81.png",
+      "contactNumber": "09135657188",
+      "email": "miaallen81@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-11-23T06:01:30",
+      "name": "Mia Allen",
+      "password": "euzylvrjszrh",
+      "totalXp": 616
+    },
+    "miagreen77": {
+      "avatar": "https://example.com/avatars/miagreen77.png",
+      "contactNumber": "09138362735",
+      "email": "miagreen77@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-04-30T12:02:44",
+      "name": "Mia Green",
+      "password": "nxauhjpjmgui",
+      "totalXp": 11
+    },
+    "miamartin8": {
+      "avatar": "https://example.com/avatars/miamartin8.png",
+      "contactNumber": "09672492989",
+      "email": "miamartin8@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-09-01T06:57:12",
+      "name": "Mia Martin",
+      "password": "yjgapsqcdnzi",
+      "totalXp": 235
+    },
+    "michaelallen27": {
+      "avatar": "https://example.com/avatars/michaelallen27.png",
+      "contactNumber": "09540898081",
+      "email": "michaelallen27@example.com",
+      "isAdmin": false,
+      "joinDate": "2025-07-25T14:27:29",
+      "name": "Michael Allen",
+      "password": "iwkavicjaodj",
+      "totalXp": 303
+    },
+    "michaelanderson14": {
+      "avatar": "https://example.com/avatars/michaelanderson14.png",
+      "contactNumber": "09743732328",
+      "email": "michaelanderson14@example.com",
+      "isAdmin": false,
+      "joinDate": "2022-09-11T00:04:45",
+      "name": "Michael Anderson",
+      "password": "uloxibjdutbl",
+      "totalXp": 622
+    },
+    "michaelgreen14": {
+      "avatar": "https://example.com/avatars/michaelgreen14.png",
+      "contactNumber": "09476038560",
+      "email": "michaelgreen14@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-06-13T07:47:58",
+      "name": "Michael Green",
+      "password": "dgefdxzzokmf",
+      "totalXp": 402
+    },
+    "michaelhill57": {
+      "avatar": "https://example.com/avatars/michaelhill57.png",
+      "contactNumber": "09338427195",
+      "email": "michaelhill57@example.com",
+      "isAdmin": true,
+      "joinDate": "2023-06-02T12:50:03",
+      "name": "Michael Hill",
+      "password": "mlimlcvqromu",
+      "totalXp": 121
+    },
+    "michaeljohnson47": {
+      "avatar": "https://example.com/avatars/michaeljohnson47.png",
+      "contactNumber": "09537379496",
+      "email": "michaeljohnson47@example.com",
+      "isAdmin": true,
+      "joinDate": "2024-09-07T19:39:26",
+      "name": "Michael Johnson",
+      "password": "pavvczuxxazj",
+      "totalXp": 492
+    },
+    "michaelnguyen26": {
+      "avatar": "https://example.com/avatars/michaelnguyen26.png",
+      "contactNumber": "09856111313",
+      "email": "michaelnguyen26@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-05-10T06:05:29",
+      "name": "Michael Nguyen",
+      "password": "eagvoryjwglv",
+      "totalXp": 112
+    },
+    "michaelsmith47": {
+      "avatar": "https://example.com/avatars/michaelsmith47.png",
+      "contactNumber": "09231240900",
+      "email": "michaelsmith47@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-06-05T16:58:22",
+      "name": "Michael Smith",
+      "password": "oobblvgepbnx",
+      "totalXp": 574
+    },
+    "noahscott19": {
+      "avatar": "https://example.com/avatars/noahscott19.png",
+      "contactNumber": "09695468005",
+      "email": "noahscott19@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-08-28T23:09:48",
+      "name": "Noah Scott",
+      "password": "ukgezyyvtwqq",
+      "totalXp": 141
+    },
+    "noahwalker44": {
+      "avatar": "https://example.com/avatars/noahwalker44.png",
+      "contactNumber": "09417747730",
+      "email": "noahwalker44@example.com",
+      "isAdmin": true,
+      "joinDate": "2022-05-18T07:16:38",
+      "name": "Noah Walker",
+      "password": "psxhcmctqnwz",
+      "totalXp": 590
+    },
+    "oliviabrown87": {
+      "avatar": "https://example.com/avatars/oliviabrown87.png",
+      "contactNumber": "09669859416",
+      "email": "oliviabrown87@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-07-19T06:20:03",
+      "name": "Olivia Brown",
+      "password": "jxtimiefljhu",
+      "totalXp": 877
+    },
+    "oliviamartin32": {
+      "avatar": "https://example.com/avatars/oliviamartin32.png",
+      "contactNumber": "09900537488",
+      "email": "oliviamartin32@example.com",
+      "isAdmin": true,
+      "joinDate": "2024-05-13T16:49:55",
+      "name": "Olivia Martin",
+      "password": "cvewxxgthovk",
+      "totalXp": 425
+    },
+    "oliviataylor43": {
+      "avatar": "https://example.com/avatars/oliviataylor43.png",
+      "contactNumber": "09305813718",
+      "email": "oliviataylor43@example.com",
+      "isAdmin": true,
+      "joinDate": "2022-04-17T12:58:10",
+      "name": "Olivia Taylor",
+      "password": "qhhqvobxwdqr",
+      "totalXp": 735
+    },
+    "sarahbrown29": {
+      "avatar": "https://example.com/avatars/sarahbrown29.png",
+      "contactNumber": "09485496151",
+      "email": "sarahbrown29@example.com",
+      "isAdmin": false,
+      "joinDate": "2025-03-05T02:09:09",
+      "name": "Sarah Brown",
+      "password": "eagspuuoejai",
+      "totalXp": 66
+    },
+    "sarahscott47": {
+      "avatar": "https://example.com/avatars/sarahscott47.png",
+      "contactNumber": "09339263138",
+      "email": "sarahscott47@example.com",
+      "isAdmin": false,
+      "joinDate": "2025-07-05T12:18:00",
+      "name": "Sarah Scott",
+      "password": "dvjpirfxquvi",
+      "totalXp": 437
+    },
+    "sophiaanderson57": {
+      "avatar": "https://example.com/avatars/sophiaanderson57.png",
+      "contactNumber": "09988863298",
+      "email": "sophiaanderson57@example.com",
+      "isAdmin": false,
+      "joinDate": "2023-11-28T21:53:11",
+      "name": "Sophia Anderson",
+      "password": "bunsqcvsyhgh",
+      "totalXp": 63
+    },
+    "sophiaclark31": {
+      "avatar": "https://example.com/avatars/sophiaclark31.png",
+      "contactNumber": "09899122185",
+      "email": "sophiaclark31@example.com",
+      "isAdmin": false,
+      "joinDate": "2024-10-06T06:34:41",
+      "name": "Sophia Clark",
+      "password": "dnkytnujgdyq",
+      "totalXp": 659
+    },
+    "sophiagreen89": {
+      "avatar": "https://example.com/avatars/sophiagreen89.png",
+      "contactNumber": "09249666262",
+      "email": "sophiagreen89@example.com",
+      "isAdmin": false,
+      "joinDate": "2022-09-29T18:31:32",
+      "name": "Sophia Green",
+      "password": "qqbdtckwthzl",
+      "totalXp": 488
+    },
+    "sophiamartin19": {
+      "avatar": "https://example.com/avatars/sophiamartin19.png",
+      "contactNumber": "09994362984",
+      "email": "sophiamartin19@example.com",
+      "isAdmin": true,
+      "joinDate": "2023-01-25T19:09:16",
+      "name": "Sophia Martin",
+      "password": "drjgrimetlrf",
+      "totalXp": 287
+    },
+    "sophiatorres40": {
+      "avatar": "https://example.com/avatars/sophiatorres40.png",
+      "contactNumber": "09830833564",
+      "email": "sophiatorres40@example.com",
+      "isAdmin": true,
+      "joinDate": "2023-09-15T22:21:00",
+      "name": "Sophia Torres",
+      "password": "jukwvygdwnmq",
+      "totalXp": 46
+    },
+    "sophiayoung58": {
+      "avatar": "https://example.com/avatars/sophiayoung58.png",
+      "contactNumber": "09530999069",
+      "email": "sophiayoung58@example.com",
+      "isAdmin": true,
+      "joinDate": "2023-01-21T04:07:19",
+      "name": "Sophia Young",
+      "password": "cytbggdbhzuq",
+      "totalXp": 707
+    }
+  }
+}
