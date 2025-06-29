@@ -3619,12 +3619,12 @@
   },
   "users": {
     "admin1": {
-      "avatar": "",
+      "avatar": "./assets/user.png",
       "contactNumber": "09621718950",
-      "email": "roncorwinrliwag@gmail.com",
+      "email": "alfredjoshuapalpallatoc@gmail.com",
       "isAdmin": true,
       "joinDate": 1751193128649,
-      "name": "Ron Liwag",
+      "name": "Alfred Palpal-Latoc",
       "password": "123",
       "totalXp": 99999
     },
