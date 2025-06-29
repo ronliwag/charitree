@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         const username = document.getElementById("register-username").value;
-        //const fullname = document.getElementById("register-fullname").value;
+        const fullname = document.getElementById("register-fullname").value;
         const email = document.getElementById("register-email").value;
         const password = document.getElementById("register-password").value;
         const confirmPassword = document.getElementById("register-confirm").value;
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Set user data in Firebase
         set(ref(db, "users/" + username), {
-            name: username,  //switch to fullname when implemented
+            name: fullname,  //switch to fullname when implemented
             email: email,
             password: password, // Note: In production, never store plain text passwords
             avatar: "",
